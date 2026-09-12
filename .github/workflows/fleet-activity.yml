@@ -1,0 +1,54 @@
+name: Fleet activity
+on:
+  push:
+    paths: ['fleet_activity/**', '.github/workflows/fleet-activity.yml']
+  pull_request:
+    paths: ['fleet_activity/**', '.github/workflows/fleet-activity.yml']
+permissions:
+  contents: read
+concurrency:
+  group: fleet-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: fleet_activity/requirements.txt
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - run: python -m pip install -r fleet_activity/requirements.txt
+      - run: python -m pytest fleet_activity/tests -q
+      - run: python fleet_activity/generate_sources.py
+      - run: python fleet_activity/run_notebook.py
+        env:
+          FLEET_OFFLINE: '1'
+      - name: Compare fresh output with published evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          expected = json.loads(Path('fleet_activity/evidence/run_summary.json').read_text())
+          actual = json.loads(Path('fleet_activity/output/run_summary.json').read_text())
+          for field in ['business_output_sha256', 'gold_rows', 'status_counts', 'quarantined_rows']:
+              if actual[field] != expected[field]:
+                  raise ValueError(f'Replayed output differs from evidence: {field}')
+          print('Fresh Linux output matches the published evidence.')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fleet-activity-results
+          path: |
+            fleet_activity/output/*.json
+            fleet_activity/output/*.csv
+            fleet_activity/output/*.html
+            fleet_activity/output/*.png
+            fleet_activity/output/*executed.ipynb

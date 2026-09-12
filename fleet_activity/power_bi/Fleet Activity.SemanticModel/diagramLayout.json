@@ -1,0 +1,85 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 10,
+            "y": 20
+          },
+          "nodeIndex": "DimDate",
+          "nodeLineageTag": "98bee0b0-879e-48e4-8330-50bbba4bd162",
+          "size": {
+            "height": 310,
+            "width": 220
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 270,
+            "y": 20
+          },
+          "nodeIndex": "DimVehicle",
+          "nodeLineageTag": "808f85cf-bd70-4cf1-bc5b-0829e8df756d",
+          "size": {
+            "height": 155,
+            "width": 220
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 530,
+            "y": 20
+          },
+          "nodeIndex": "DimDepot",
+          "nodeLineageTag": "9bb89912-e69b-423a-a1e8-2401dde729c8",
+          "size": {
+            "height": 155,
+            "width": 220
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 275,
+            "y": 390
+          },
+          "nodeIndex": "Fleet",
+          "size": {
+            "height": 400,
+            "width": 300
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 810,
+            "y": 20
+          },
+          "nodeIndex": "Measures table",
+          "size": {
+            "height": 580,
+            "width": 250
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 60,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

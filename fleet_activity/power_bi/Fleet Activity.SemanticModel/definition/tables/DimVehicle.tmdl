@@ -1,0 +1,30 @@
+table DimVehicle
+	lineageTag: 808f85cf-bd70-4cf1-bc5b-0829e8df756d
+
+	column vehicle_id
+		dataType: string
+		isKey
+		lineageTag: 75586b1e-6f04-4b67-9428-f685f911e958
+		summarizeBy: none
+		sourceColumn: vehicle_id
+
+	column model
+		dataType: string
+		lineageTag: 5b697e78-7ce9-43d2-9997-8d5ec4103bd0
+		summarizeBy: none
+		sourceColumn: model
+
+	partition DimVehicle = m
+		mode: import
+		source =
+				let
+				    Source = GoldSource,
+				    Columns = Table.SelectColumns(Source, {"vehicle_id", "model"}),
+				    Vehicles = Table.Distinct(Columns)
+				in
+				    Vehicles
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

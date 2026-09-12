@@ -1,0 +1,101 @@
+{
+  "run_id": "9626b2eb-b549-437e-9e7c-dff511f40efa",
+  "completed_at": "2026-09-11T05:16:03.340329+00:00",
+  "spark_version": "4.1.0",
+  "period": [
+    "2026-08-01",
+    "2026-08-30"
+  ],
+  "bronze_rows": 4316,
+  "exact_duplicates_removed": 1,
+  "quarantined_rows": 22,
+  "unassigned_rejects": 3,
+  "individual_reject_rows": 4,
+  "held_rows": 18,
+  "individual_reject_reason_counts": {
+    "invalid_odometer": 1,
+    "missing_vehicle": 1,
+    "invalid_timestamp": 1,
+    "malformed_json": 1
+  },
+  "untrusted_day_reason_counts": {
+    "rejected_reading_in_day": 1,
+    "odometer_decreased": 1,
+    "conflicting_timestamp": 1
+  },
+  "gold_rows": 721,
+  "status_counts": {
+    "missing_telemetry": 1,
+    "insufficient_readings": 1,
+    "trusted": 716,
+    "untrusted": 3
+  },
+  "unregistered_vehicle_days": 1,
+  "weather_rows": 60,
+  "weather_snapshots": [
+    {
+      "file": "CHI_2026-08-01_2026-08-30.json",
+      "request": {
+        "latitude": 41.88,
+        "longitude": -87.63,
+        "start_date": "2026-08-01",
+        "end_date": "2026-08-30",
+        "daily": "temperature_2m_mean,precipitation_sum",
+        "timezone": "GMT",
+        "temperature_unit": "celsius",
+        "precipitation_unit": "mm"
+      },
+      "fetched_at": "2026-09-10T14:37:39.964530+00:00"
+    },
+    {
+      "file": "DAL_2026-08-01_2026-08-30.json",
+      "request": {
+        "latitude": 32.78,
+        "longitude": -96.8,
+        "start_date": "2026-08-01",
+        "end_date": "2026-08-30",
+        "daily": "temperature_2m_mean,precipitation_sum",
+        "timezone": "GMT",
+        "temperature_unit": "celsius",
+        "precipitation_unit": "mm"
+      },
+      "fetched_at": "2026-09-10T14:37:40.842086+00:00"
+    }
+  ],
+  "inputs": {
+    "data/sources/telemetry/2026-08-01.jsonl": "11cd60c66cf43482e5c9a539ebef27f51c776862b5c388e8bba978f93538f22f",
+    "data/sources/telemetry/2026-08-02.jsonl": "acfde8b2d6b36de8aad138ca725fa03c82082ad807fe9b00c0df35b732235b94",
+    "data/sources/telemetry/2026-08-03.jsonl": "de4118bd52f5118f352251c33ac313ed84af4effe3bb597d66096eafd8d837ea",
+    "data/sources/telemetry/2026-08-04.jsonl": "491e3646668897bbdadfa29e2a2c5a739bba3a0bd2a1f19605715e5abee06a3a",
+    "data/sources/telemetry/2026-08-05.jsonl": "25349d25d4a05668215355546db2ffe368874c34bda119bcad708f678ab9330a",
+    "data/sources/telemetry/2026-08-06.jsonl": "7b96a34672f9c094c85a0d8a228fa0d19f465050d62f7d226b09b8bd961f2ee9",
+    "data/sources/telemetry/2026-08-07.jsonl": "1044733055ea6ad0f66723e3ef7e52d02c6b676e566ee70dde184b6277392e69",
+    "data/sources/telemetry/2026-08-08.jsonl": "05e667079cf6ec5c8786337ac808af2d993f68faf9154f34d686fcef2d749f39",
+    "data/sources/telemetry/2026-08-09.jsonl": "83dd99ffdef6674c6c7db1e7aaa59f4dba684a7b2a4b9d8969936a724fdcc005",
+    "data/sources/telemetry/2026-08-10.jsonl": "022f1a5bd39dee595300622edae4448c77c4e6ddc0961ab4c91523fbac5a6bf5",
+    "data/sources/telemetry/2026-08-11.jsonl": "56cac06357c6a7159b9e3504466a7aae6b46b5434c190d5ae50fce64a83811b8",
+    "data/sources/telemetry/2026-08-12.jsonl": "08f316326b021b1b6f8efeac00eafdf842badb5f2ccd2fedf31ee4324feb8991",
+    "data/sources/telemetry/2026-08-13.jsonl": "75ef5e6b8957f8611c4a998a178dc62686e494ab02d2dcfb427e51d225e49842",
+    "data/sources/telemetry/2026-08-14.jsonl": "db16dc64e64c08001a39c2b0816d3624eed9f1c7c6b7709683ab285a0c9521de",
+    "data/sources/telemetry/2026-08-15.jsonl": "80d5e2bb24fb6ca1de7cf3195c39a98443783a3c94a00a78533afce98221e918",
+    "data/sources/telemetry/2026-08-16.jsonl": "92d9609207b43f8617f91ba315a4d03501a86d656d6d5a2ed9ed2a75d68fdceb",
+    "data/sources/telemetry/2026-08-17.jsonl": "9815b7193e1ddad13ea0b6ee0f4ca3d9811d5447bff2910bc67b3119c19aeb13",
+    "data/sources/telemetry/2026-08-18.jsonl": "117be245630e4d1478e9c3f682d940cd5fe2b408306be87e8eb62f8c0d3419ac",
+    "data/sources/telemetry/2026-08-19.jsonl": "b0d47804bd7512242cbcf1fb5578ceb29522cf30928d63fa92e1c770833e0710",
+    "data/sources/telemetry/2026-08-20.jsonl": "aaeff9f46945ab9ed4b95396d3bcd855cb3bc48303aeeda8baa36e53c5738169",
+    "data/sources/telemetry/2026-08-21.jsonl": "24cfdfdcc48e17215e8e5d0931d9c8396749c7826938229f6c7df4962c96b821",
+    "data/sources/telemetry/2026-08-22.jsonl": "3d8c64ccef20ee23e28c24ddba3230ca8d37c5be43059d5c7176e3e87922711b",
+    "data/sources/telemetry/2026-08-23.jsonl": "51d249769f1d5cdb4200b2ece673df007fa337ef37f7b5c721e2798165ad258c",
+    "data/sources/telemetry/2026-08-24.jsonl": "55a8b6d7aebc48d478cb8de518faa5dff1bb833f3fc5ba629092f2cd531bf98f",
+    "data/sources/telemetry/2026-08-25.jsonl": "f1c2469b12957776bff06760e5ea588498221281853b82513c20a17cfdafe16e",
+    "data/sources/telemetry/2026-08-26.jsonl": "cc08d991594982fba07d403061bde0378d1bdcc5b927a8179f34fdaae2c85224",
+    "data/sources/telemetry/2026-08-27.jsonl": "6bee76a820262eca9819309f65bc1b922f59a6514d3494cbc7139916c280aede",
+    "data/sources/telemetry/2026-08-28.jsonl": "5bdf1f662b0acbaa2d30f45b72c7f4d845dc7c3331aec8d4f00d6af1a1d27ec3",
+    "data/sources/telemetry/2026-08-29.jsonl": "f511ad2e00301249a930da3ecc682dad728cde2a51d1d52e45c4417b655788ee",
+    "data/sources/telemetry/2026-08-30.jsonl": "86c1eecfd34f7b597b3651ef08c13f445811dd8b1850f77adb5dab0671bd102a",
+    "data/sources/fleet.sqlite": "d20e7dfefa2b6f42f7c7113d140e6c9a3b31942b1333918fa576feaf1b66b154",
+    "examples/weather/CHI_2026-08-01_2026-08-30.json": "7fec01e5e609a85b8f6bea728e6bf03b0e95b43539108d2777e92ef916905c6e",
+    "examples/weather/DAL_2026-08-01_2026-08-30.json": "a750e28176e834293dd239c19cc621e189bac23d1906256e636120f8607002fd"
+  },
+  "business_output_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c"
+}

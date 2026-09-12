@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-09-12",
+  "scope": "Curated repository source and local offline replay; cloud scheduling remains separately documented",
+  "tests": {
+    "passed": 35,
+    "duration_seconds": 28.13
+  },
+  "offline_replay": {
+    "stages": [
+      "Bronze",
+      "Silver",
+      "Gold"
+    ],
+    "separate_kernels": true,
+    "all_completed": true,
+    "weather_api_calls": false,
+    "gold_rows": 721,
+    "quarantined_rows": 22,
+    "status_counts": {
+      "missing_telemetry": 1,
+      "insufficient_readings": 1,
+      "trusted": 716,
+      "untrusted": 3
+    },
+    "business_output_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c",
+    "baseline_hash_matches": true
+  },
+  "preservation": "Source notebooks, weather fixtures, required historical archive and baseline CSV bytes unchanged from the development snapshot.",
+  "ci": "GitHub Actions executes tests and a fresh offline replay. Consult the Actions run for the result associated with a commit.",
+  "limitations": [
+    "This is a fixed-period full-refresh demo, not incremental ingestion.",
+    "Historical screenshots and private coordination logs are omitted.",
+    "See ../power_bi/REFRESH_SETUP.md for the unverified first automatic Service refresh and hosted-report follow-ups."
+  ],
+  "independent_candidate_review": {
+    "reviewer": "Claude",
+    "date": "2026-09-12",
+    "verdict": "Ready for private publication; no blockers",
+    "scope": "Read-only review of staged candidate, privacy patterns, hashes, links, parameters and documentation. Independently ran tests and offline replay in a separate copy. Did not independently inspect live Databricks, Power BI or Service.",
+    "tests_passed": 35,
+    "test_duration_seconds": 26.32,
+    "offline_replay_matches_baseline": true
+  }
+}

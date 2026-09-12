@@ -1,0 +1,22 @@
+expression DatabricksHost = "YOUR_DATABRICKS_HOST" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+expression DatabricksHttpPath = "YOUR_SQL_WAREHOUSE_HTTP_PATH" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+expression GoldSource =
+		let
+		    Source = DatabricksMultiCloud.Catalogs(
+		        DatabricksHost,
+		        DatabricksHttpPath,
+		        [Catalog=null, Database=null, Implementation="2.0"]
+		    ),
+		    Catalog = Source{[Name="ev_telematics", Kind="Database"]}[Data],
+		    Schema = Catalog{[Name="fleet_activity_demo_20260910", Kind="Schema"]}[Data],
+		    Gold = Schema{[Name="gold_daily_vehicle_activity", Kind="Table"]}[Data]
+		in
+		    Gold
+	lineageTag: 207390e7-2a7d-49c2-bb11-11febae8a4b2
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

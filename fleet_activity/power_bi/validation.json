@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-11",
+  "desktop_checks": {
+    "interaction_passed": 42,
+    "interaction_failed": 0,
+    "targeted_final_passed": 9,
+    "targeted_final_failed": 0
+  },
+  "row_parity": {
+    "result": "PASS",
+    "rows": 721,
+    "columns_compared": 14,
+    "values_compared": 10094,
+    "unique_vehicle_date_keys": 721,
+    "gold_csv_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c",
+    "notes": "Reconstructed Gold from live Fleet plus related dimension labels. Every field matches; numeric tolerance 1e-8 and UTC timestamp display normalization."
+  },
+  "model": {
+    "fact_rows": 721,
+    "unique_vehicle_date_keys": 721,
+    "date_rows": 365,
+    "vehicle_rows": 25,
+    "depot_rows": 3,
+    "orphan_keys": 0,
+    "active_one_to_many_single_direction_relationships": 3,
+    "measures": 15
+  },
+  "report_schema": {
+    "errors": 0,
+    "warnings": 1,
+    "limitation": "Microsoft visualContainer/2.11.0 schema URL unavailable; exact-version validation incomplete."
+  },
+  "source": "Gold CSV import at this historical pre-migration baseline. Current source and validation are in REFRESH_SETUP.md and migration_validation.json.",
+  "claude_review": "Documentation and figure alignment review completed, as reported by Claude. Claude did not open or visually review the report in that pass; no independent post-migration model or refresh verification is claimed.",
+  "git_commit": "None",
+  "scope": "Historical 2026-09-11 pre-migration repository-copy CSV baseline. These results do not validate the subsequent Databricks source migration; see REFRESH_SETUP.md."
+}

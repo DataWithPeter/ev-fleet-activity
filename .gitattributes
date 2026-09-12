@@ -1,0 +1,2 @@
+# Keep exported evidence portable and hashes consistent after checkout.
+fleet_activity/evidence/*.csv text eol=lf

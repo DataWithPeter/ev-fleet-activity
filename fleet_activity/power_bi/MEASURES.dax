@@ -1,0 +1,55 @@
+-- Reference copy of the Desktop-saved TMDL model. All measures live in Measures table.
+
+Average distance km =
+CALCULATE(AVERAGE(Fleet[observed_distance_km]), KEEPFILTERS(Fleet[distance_status] = "trusted"))
+
+Days needing attention =
+[Vehicle-days] - [Trusted vehicle-days]
+
+Driving-day average km =
+CALCULATE([Average distance km], KEEPFILTERS(Fleet[observed_distance_km] > 0))
+
+Idle share =
+DIVIDE([Idle vehicle-days], [Trusted vehicle-days])
+
+Idle vehicle-days =
+CALCULATE([Trusted vehicle-days], KEEPFILTERS(Fleet[observed_distance_km] == 0))
+
+Observed distance km =
+CALCULATE(
+    SUM(Fleet[observed_distance_km]),
+    KEEPFILTERS(Fleet[distance_status] = "trusted")
+)
+
+Registered vehicles =
+CALCULATE(DISTINCTCOUNT(Fleet[vehicle_id]), KEEPFILTERS(Fleet[registered_vehicle] = TRUE()))
+
+Reporting period =
+FORMAT(MIN(Fleet[event_date]), "MMM dd") & " – " & FORMAT(MAX(Fleet[event_date]), "MMM dd, yyyy") & " · UTC"
+
+Trusted % =
+DIVIDE([Trusted vehicle-days], [Vehicle-days])
+
+Trusted coverage =
+FORMAT([Trusted vehicle-days], "#,0") & " / " & FORMAT([Vehicle-days], "#,0")
+
+Trusted vehicle-days =
+COALESCE(CALCULATE(COUNTROWS(Fleet), KEEPFILTERS(Fleet[distance_status] = "trusted")), 0)
+
+Unregistered vehicle-days =
+COALESCE(CALCULATE(COUNTROWS(Fleet), KEEPFILTERS(Fleet[registered_vehicle] = FALSE())), 0)
+
+Vehicle-days =
+COALESCE(COUNTROWS(Fleet), 0)
+
+Vehicles with problem days =
+COALESCE(CALCULATE(DISTINCTCOUNT(Fleet[vehicle_id]), KEEPFILTERS(Fleet[distance_status] <> "trusted")), 0)
+
+Vehicles driving =
+CALCULATE([Trusted vehicle-days], KEEPFILTERS(Fleet[observed_distance_km] > 0))
+
+Status =
+SWITCH(Fleet[distance_status], "trusted", "Trusted", "untrusted", "Untrusted", "missing_telemetry", "Missing telemetry", "insufficient_readings", "Insufficient readings", Fleet[distance_status])
+
+Review reason =
+IF(Fleet[distance_status] <> "trusted", Fleet[Status], IF(Fleet[registered_vehicle] = FALSE(), "Not in fleet roster", BLANK()))

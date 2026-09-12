@@ -1,0 +1,841 @@
+{
+  "datasets": [
+    {
+      "name": "activity",
+      "displayName": "Gold vehicle-day activity",
+      "query": "-- One row per vehicle per UTC day. This query does not change Gold.\n-- The dashboard filters these rows before calculating its totals.\nSELECT\n    event_date,\n    vehicle_id,\n    depot_name,\n    model,\n    weather_condition,\n    registered_vehicle,\n    distance_status,\n    observed_distance_km,\n    reading_count,\n    CASE\n        WHEN distance_status = 'trusted' THEN observed_distance_km\n    END AS trusted_distance_km,\n    CASE\n        WHEN distance_status = 'trusted' AND observed_distance_km > 0\n        THEN observed_distance_km\n    END AS driving_distance_km,\n    CASE WHEN distance_status = 'trusted' THEN 1 ELSE 0 END AS trusted_day,\n    CASE\n        WHEN distance_status <> 'trusted' THEN NULL\n        WHEN observed_distance_km = 0 THEN 1\n        ELSE 0\n    END AS idle_day,\n    CASE WHEN distance_status <> 'trusted' THEN 1 ELSE 0 END AS attention_day,\n    CASE\n        WHEN distance_status <> 'trusted' THEN distance_status\n        WHEN registered_vehicle = false THEN 'not_in_fleet_roster'\n    END AS review_reason\nFROM ev_telematics.fleet_activity_demo_20260910.gold_daily_vehicle_activity\n"
+    },
+    {
+      "name": "review",
+      "displayName": "Vehicle-days needing review",
+      "query": "-- One row per vehicle per UTC day. This query does not change Gold.\n-- The dashboard filters these rows before calculating its totals.\nSELECT\n    event_date,\n    vehicle_id,\n    depot_name,\n    model,\n    weather_condition,\n    registered_vehicle,\n    distance_status,\n    observed_distance_km,\n    reading_count,\n    CASE\n        WHEN distance_status = 'trusted' THEN observed_distance_km\n    END AS trusted_distance_km,\n    CASE\n        WHEN distance_status = 'trusted' AND observed_distance_km > 0\n        THEN observed_distance_km\n    END AS driving_distance_km,\n    CASE WHEN distance_status = 'trusted' THEN 1 ELSE 0 END AS trusted_day,\n    CASE\n        WHEN distance_status <> 'trusted' THEN NULL\n        WHEN observed_distance_km = 0 THEN 1\n        ELSE 0\n    END AS idle_day,\n    CASE WHEN distance_status <> 'trusted' THEN 1 ELSE 0 END AS attention_day,\n    CASE\n        WHEN distance_status <> 'trusted' THEN distance_status\n        WHEN registered_vehicle = false THEN 'not_in_fleet_roster'\n    END AS review_reason\nFROM ev_telematics.fleet_activity_demo_20260910.gold_daily_vehicle_activity\n\nWHERE distance_status <> 'trusted' OR registered_vehicle = false\n"
+    }
+  ],
+  "pages": [
+    {
+      "name": "overview",
+      "displayName": "Fleet overview",
+      "layout": [
+        {
+          "widget": {
+            "name": "intro",
+            "textbox_spec": "# EV Fleet Activity\nSQL reporting from the Databricks Gold layer \u00b7 August 2026 \u00b7 UTC\n\nSynthetic fleet and telemetry \u00b7 Real weather from [Open-Meteo](https://open-meteo.com/) \u00b7 Descriptive analysis."
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_event_date",
+            "queries": [
+              {
+                "name": "activity",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "event_date",
+                      "expression": "`event_date`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "review",
+                "query": {
+                  "datasetName": "review",
+                  "fields": [
+                    {
+                      "name": "event_date",
+                      "expression": "`event_date`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-date-range-picker",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "event_date",
+                    "queryName": "activity"
+                  },
+                  {
+                    "fieldName": "event_date",
+                    "queryName": "review"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Date (UTC)",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 2,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_depot_name",
+            "queries": [
+              {
+                "name": "activity",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "depot_name",
+                      "expression": "`depot_name`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "review",
+                "query": {
+                  "datasetName": "review",
+                  "fields": [
+                    {
+                      "name": "depot_name",
+                      "expression": "`depot_name`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "depot_name",
+                    "queryName": "activity"
+                  },
+                  {
+                    "fieldName": "depot_name",
+                    "queryName": "review"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Depot",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 2,
+            "width": 2,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_model",
+            "queries": [
+              {
+                "name": "activity",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "model",
+                      "expression": "`model`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "review",
+                "query": {
+                  "datasetName": "review",
+                  "fields": [
+                    {
+                      "name": "model",
+                      "expression": "`model`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "model",
+                    "queryName": "activity"
+                  },
+                  {
+                    "fieldName": "model",
+                    "queryName": "review"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Model",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 2,
+            "width": 1,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "filter_weather_condition",
+            "queries": [
+              {
+                "name": "activity",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "weather_condition",
+                      "expression": "`weather_condition`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "review",
+                "query": {
+                  "datasetName": "review",
+                  "fields": [
+                    {
+                      "name": "weather_condition",
+                      "expression": "`weather_condition`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "weather_condition",
+                    "queryName": "activity"
+                  },
+                  {
+                    "fieldName": "weather_condition",
+                    "queryName": "review"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Weather",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 2,
+            "width": 1,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "distance",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "value",
+                      "expression": "SUM(trusted_distance_km)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "value"
+                }
+              },
+              "format": {
+                "numberFormat": {
+                  "formatType": "numeral",
+                  "format": "0,0"
+                }
+              },
+              "frame": {
+                "title": "Observed distance (km)",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "driving_mean",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "value",
+                      "expression": "AVG(driving_distance_km)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "value"
+                }
+              },
+              "format": {
+                "numberFormat": {
+                  "formatType": "numeral",
+                  "format": "0,0.00"
+                }
+              },
+              "frame": {
+                "title": "Km per driving day",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 3,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "idle",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "value",
+                      "expression": "AVG(idle_day)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "value"
+                }
+              },
+              "format": {
+                "numberFormat": {
+                  "formatType": "numeral",
+                  "format": "0.0%"
+                }
+              },
+              "frame": {
+                "title": "Idle days %",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 3,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "trusted",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "value",
+                      "expression": "AVG(trusted_day)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "value"
+                }
+              },
+              "format": {
+                "numberFormat": {
+                  "formatType": "numeral",
+                  "format": "0.0%"
+                }
+              },
+              "frame": {
+                "title": "Trusted vehicle-days %",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 5,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "attention",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "value",
+                      "expression": "SUM(attention_day)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "value"
+                }
+              },
+              "format": {
+                "numberFormat": {
+                  "formatType": "numeral",
+                  "format": "0,0"
+                }
+              },
+              "frame": {
+                "title": "Days needing attention",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 5,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "days",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "value",
+                      "expression": "COUNT(*)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "value"
+                }
+              },
+              "format": {
+                "numberFormat": {
+                  "formatType": "numeral",
+                  "format": "0,0"
+                }
+              },
+              "frame": {
+                "title": "Vehicle-days",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 5,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "daily",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "event_date",
+                      "expression": "`event_date`"
+                    },
+                    {
+                      "name": "value",
+                      "expression": "SUM(trusted_distance_km)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "event_date",
+                  "scale": {
+                    "type": "temporal"
+                  },
+                  "axis": {
+                    "hideTitle": true
+                  }
+                },
+                "y": {
+                  "fieldName": "value",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "axis": {
+                    "title": "km"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Daily observed distance",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 7,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "depot",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "depot_name",
+                      "expression": "`depot_name`"
+                    },
+                    {
+                      "name": "value",
+                      "expression": "SUM(trusted_distance_km)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "depot_name",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "axis": {
+                    "hideTitle": true
+                  }
+                },
+                "y": {
+                  "fieldName": "value",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "axis": {
+                    "title": "km"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "frame": {
+                "title": "Observed distance by depot",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 12,
+            "width": 3,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "quality",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "activity",
+                  "fields": [
+                    {
+                      "name": "event_date",
+                      "expression": "`event_date`"
+                    },
+                    {
+                      "name": "value",
+                      "expression": "COUNT(*)"
+                    },
+                    {
+                      "name": "distance_status",
+                      "expression": "`distance_status`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "event_date",
+                  "scale": {
+                    "type": "temporal"
+                  },
+                  "axis": {
+                    "hideTitle": true
+                  }
+                },
+                "y": {
+                  "fieldName": "value",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "axis": {
+                    "title": "Vehicle-days"
+                  }
+                },
+                "color": {
+                  "fieldName": "distance_status",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "frame": {
+                "title": "Daily data quality",
+                "showTitle": true,
+                "showDescription": false
+              },
+              "mark": {
+                "layout": "stack"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 12,
+            "width": 3,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "review_rows",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "review",
+                  "fields": [
+                    {
+                      "name": "event_date",
+                      "expression": "`event_date`"
+                    },
+                    {
+                      "name": "vehicle_id",
+                      "expression": "`vehicle_id`"
+                    },
+                    {
+                      "name": "depot_name",
+                      "expression": "`depot_name`"
+                    },
+                    {
+                      "name": "review_reason",
+                      "expression": "`review_reason`"
+                    },
+                    {
+                      "name": "reading_count",
+                      "expression": "`reading_count`"
+                    },
+                    {
+                      "name": "observed_distance_km",
+                      "expression": "`observed_distance_km`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "table",
+              "frame": {
+                "title": "Needs review \u00b7 unreliable distance or missing fleet registration",
+                "showTitle": true,
+                "showDescription": false
+              },
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "event_date",
+                    "displayName": "Date (UTC)"
+                  },
+                  {
+                    "fieldName": "vehicle_id",
+                    "displayName": "Vehicle"
+                  },
+                  {
+                    "fieldName": "depot_name",
+                    "displayName": "Depot"
+                  },
+                  {
+                    "fieldName": "review_reason",
+                    "displayName": "Review reason"
+                  },
+                  {
+                    "fieldName": "reading_count",
+                    "displayName": "Readings"
+                  },
+                  {
+                    "fieldName": "observed_distance_km",
+                    "displayName": "Distance (km)"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 17,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "definitions",
+            "textbox_spec": "**How to read this dashboard**\n\nDistance is the within-day observed odometer range after quality checks. Idle days are trusted zero-distance vehicle-days; missing and unreliable distance stays blank. Idle share uses trusted vehicle-days as its denominator, and is not fleet utilization. The review table includes unregistered vehicles as well as unreliable distance."
+          },
+          "position": {
+            "x": 0,
+            "y": 22,
+            "width": 6,
+            "height": 2
+          }
+        }
+      ]
+    }
+  ]
+}

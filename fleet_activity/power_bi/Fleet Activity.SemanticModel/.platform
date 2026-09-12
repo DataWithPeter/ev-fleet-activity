@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Fleet Activity"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "447983ef-9d82-42f0-b8ca-5f52e606f364"
+  }
+}

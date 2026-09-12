@@ -1,0 +1,606 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "fleet.depot_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimDepot",
+			          "ConceptualProperty": "depot_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Depot": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.event_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fleet",
+			          "ConceptualProperty": "event_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.model": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimVehicle",
+			          "ConceptualProperty": "model"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Model": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.weather_condition": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fleet",
+			          "ConceptualProperty": "weather_condition"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Weather": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.distance_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fleet",
+			          "ConceptualProperty": "distance_status"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fleet.vehicle_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fleet",
+			          "ConceptualProperty": "vehicle_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Vehicle": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.reading_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fleet",
+			          "ConceptualProperty": "reading_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Readings": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.observed_distance_km": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fleet",
+			          "ConceptualProperty": "observed_distance_km"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Distance km (blank = not trusted)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.registered_vehicle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fleet",
+			          "ConceptualProperty": "registered_vehicle"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fleet.observed_distance_km1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Observed distance km"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Distance (km)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Distance": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Unregistered km": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.average_distance_km": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Average distance km"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fleet.trusted_coverage": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Trusted coverage"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fleet.days_needing_attention": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Days needing attention"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Days needing attention": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Needs attention": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.reporting_period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Reporting period"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Reporting period": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.unregistered_vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Unregistered vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Unregistered vehicle-days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.idle_vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Idle vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Idle vehicles": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Idle vehicle-days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Idle days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.drivingday_average_km": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Driving-day average km"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Km per driving day": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Km / driving day": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.idle_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Idle share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Idle days %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.trusted_vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Trusted vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Trusted": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.vehicles_driving": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Vehicles driving"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Vehicles on the road": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Driving vehicle-days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.trusted_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Trusted %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Data trusted": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Problem days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fleet",
+			          "ConceptualProperty": "Status"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fleet.registered_vehicles": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Registered vehicles"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Registered vehicles": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.idle_days_per_vehicle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Idle days per vehicle"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fleet.most_idle_vehicle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Most idle vehicle"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "fleet.vehicles_with_problem_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures table",
+			          "ConceptualProperty": "Vehicles with problem days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Vehicles with problem days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fleet.review_reason": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fleet",
+			          "ConceptualProperty": "Review reason"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Why it needs review": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dimdate.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimDate",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

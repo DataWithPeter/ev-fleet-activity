@@ -1,0 +1,77 @@
+table 'Measures table'
+	lineageTag: f92ecfa6-7b7e-49e9-b31b-59fa9feb6012
+
+	measure 'Average distance km' = CALCULATE(AVERAGE(Fleet[observed_distance_km]), KEEPFILTERS(Fleet[distance_status] = "trusted"))
+		formatString: 0.00" km"
+		lineageTag: 7a366e02-bd6e-4ca4-8875-afa090dd7fe6
+
+	measure 'Days needing attention' = [Vehicle-days] - [Trusted vehicle-days]
+		formatString: #,0
+		lineageTag: 3e965b7a-8997-4b7b-96cd-3e655fbca8e0
+
+	measure 'Driving-day average km' = CALCULATE([Average distance km], KEEPFILTERS(Fleet[observed_distance_km] > 0))
+		formatString: 0.00" km"
+		lineageTag: afbbc12a-8ff7-449d-b00c-b4718e9b2db6
+
+	measure 'Idle share' = DIVIDE([Idle vehicle-days], [Trusted vehicle-days])
+		formatString: 0.0%
+		lineageTag: 8737f614-d84c-48c5-8447-fc006abfb1b1
+
+	measure 'Idle vehicle-days' = CALCULATE([Trusted vehicle-days], KEEPFILTERS(Fleet[observed_distance_km] == 0))
+		formatString: #,0
+		lineageTag: ba16ae7e-9f20-4614-8390-4a2ed6e53d96
+
+	measure 'Observed distance km' =
+			CALCULATE(
+			    SUM(Fleet[observed_distance_km]),
+			    KEEPFILTERS(Fleet[distance_status] = "trusted")
+			)
+		formatString: #,0" km"
+		lineageTag: 1ba3e58b-6f9c-46e6-8843-c13483301bfa
+
+	measure 'Registered vehicles' = CALCULATE(DISTINCTCOUNT(Fleet[vehicle_id]), KEEPFILTERS(Fleet[registered_vehicle] = TRUE()))
+		formatString: #,0
+		lineageTag: b1671b7a-b275-42cf-a89d-524499ddf424
+
+	measure 'Reporting period' = FORMAT(MIN(Fleet[event_date]), "MMM dd") & " – " & FORMAT(MAX(Fleet[event_date]), "MMM dd, yyyy") & " · UTC"
+		lineageTag: 2533dfcf-513e-4e5d-bf10-9fc95df7e0c7
+
+	measure 'Trusted %' = DIVIDE([Trusted vehicle-days], [Vehicle-days])
+		formatString: 0.0%
+		lineageTag: 4dafd3e5-46ae-4385-b4ba-4de04bffef81
+
+	measure 'Trusted coverage' = FORMAT([Trusted vehicle-days], "#,0") & " / " & FORMAT([Vehicle-days], "#,0")
+		lineageTag: 9c854c2e-084f-4a79-8503-366d2030f0a5
+
+	measure 'Trusted vehicle-days' = COALESCE(CALCULATE(COUNTROWS(Fleet), KEEPFILTERS(Fleet[distance_status] = "trusted")), 0)
+		formatString: #,0
+		lineageTag: 19b5c687-7c0a-482b-a330-785b1f8ad0ed
+
+	measure 'Unregistered vehicle-days' = COALESCE(CALCULATE(COUNTROWS(Fleet), KEEPFILTERS(Fleet[registered_vehicle] = FALSE())), 0)
+		formatString: #,0
+		lineageTag: 720e67a5-c3cf-43f8-8125-ba575a7c3884
+
+	measure Vehicle-days = COALESCE(COUNTROWS(Fleet), 0)
+		formatString: #,0
+		lineageTag: 556d02c8-44de-405f-bbb4-1245f1ee3a83
+
+	measure 'Vehicles with problem days' = COALESCE(CALCULATE(DISTINCTCOUNT(Fleet[vehicle_id]), KEEPFILTERS(Fleet[distance_status] <> "trusted")), 0)
+		formatString: #,0
+		lineageTag: 76107521-c605-40dd-a495-a1d54b7595b2
+
+	measure 'Vehicles driving' = CALCULATE([Trusted vehicle-days], KEEPFILTERS(Fleet[observed_distance_km] > 0))
+		formatString: #,0
+		lineageTag: 24fb9b34-a1ac-4244-9d84-e492f236132a
+
+	partition 'Measures table' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

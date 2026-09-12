@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-09-11",
+  "source": "Live Databricks Gold via native dashboard",
+  "url": null,
+  "url_policy": "The published dashboard URL is workspace-specific and is intentionally omitted from committed evidence. Open the dashboard from Databricks.",
+  "published": true,
+  "permissions": "individual viewer data permissions",
+  "cases": {
+    "all": {
+      "distance_km_display": "32,554",
+      "driving_day_mean": "54.90",
+      "idle_share": "17.2%",
+      "trusted_share": "99.3%",
+      "attention_days": 5,
+      "vehicle_days": 721,
+      "review_rows": 6
+    },
+    "Chicago": {
+      "distance_km_display": "15,900",
+      "driving_day_mean": "54.64",
+      "idle_share": "18%",
+      "trusted_share": "98.6%",
+      "attention_days": 5,
+      "vehicle_days": 360,
+      "review_rows": 5
+    },
+    "Chicago + Wet": {
+      "distance_km_display": "10,179",
+      "driving_day_mean": "54.43",
+      "idle_share": "17.3%",
+      "trusted_share": "99.1%",
+      "attention_days": 2,
+      "vehicle_days": 228
+    },
+    "Dallas": {
+      "distance_km_display": "16,644",
+      "driving_day_mean": "55.30",
+      "idle_share": "16.4%",
+      "trusted_share": "100%",
+      "attention_days": 0,
+      "vehicle_days": 360,
+      "review_table": "No data"
+    },
+    "Model A": {
+      "distance_km_display": "16,511",
+      "driving_day_mean": "55.04",
+      "idle_share": "16.2%",
+      "trusted_share": "99.4%",
+      "attention_days": 2,
+      "vehicle_days": 360
+    },
+    "Today": "All visualizations show No data; demo dates are in August",
+    "Reset": "Baseline restored",
+    "Published viewer": "Baseline values and six review rows verified"
+  },
+  "limitations": [
+    "Manual date typing through automation did not persist; native date preset filtering passed.",
+    "Initial import JSON does not include the final UI number formats.",
+    "At the original dashboard validation Power BI used CSV. The 2026-09-12 update in ../../power_bi/REFRESH_SETUP.md records direct Databricks Import and a completed Service on-demand refresh; the first automatic refresh remains pending. The repository source is now synchronized with warehouse placeholders.",
+    "Final number formatting was applied in the Databricks UI and is not represented in the initial import JSON."
+  ]
+}

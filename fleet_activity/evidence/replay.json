@@ -1,0 +1,18 @@
+{
+  "before": {
+    "run_id": "d610dce9-46ac-4403-8b3e-13a8a4205b69",
+    "business_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c",
+    "report_sha256": "089d8aee746b2ec7387a6bdc9c0c2a076181ee0051d4e719056ee5996ecb2b94",
+    "gold_rows": 721,
+    "gold_delta_version": 7,
+    "host_timezone": "UTC"
+  },
+  "after": {
+    "run_id": "c92f18b3-35ba-4349-a491-b5552b444794",
+    "gold_rows": 721,
+    "business_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c",
+    "gold_delta_version": 8,
+    "host_timezone": "America/Chicago"
+  },
+  "result": "PASS: both business CSVs unchanged across host timezones; Gold overwritten once; row count unchanged"
+}

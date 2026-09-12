@@ -1,0 +1,12 @@
+relationship 98092f05-aa06-431e-b8bf-1d0cbc497e6f
+	fromColumn: Fleet.event_date
+	toColumn: DimDate.Date
+
+relationship 5842115d-0138-44f0-8397-9deb7c49269d
+	fromColumn: Fleet.vehicle_id
+	toColumn: DimVehicle.vehicle_id
+
+relationship e5aef875-670f-42b4-acc6-cc28effd2bb8
+	fromColumn: Fleet.depot_id
+	toColumn: DimDepot.depot_id
+

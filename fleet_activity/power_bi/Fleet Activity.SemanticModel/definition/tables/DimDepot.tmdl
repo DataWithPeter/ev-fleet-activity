@@ -1,0 +1,28 @@
+table DimDepot
+	lineageTag: 9bb89912-e69b-423a-a1e8-2401dde729c8
+
+	column depot_id
+		dataType: string
+		isKey
+		lineageTag: dda6a80d-a7eb-43d8-97a5-0b4bcae3e91a
+		summarizeBy: none
+		sourceColumn: depot_id
+
+	column depot_name
+		dataType: string
+		lineageTag: 3eb3b47f-ad95-4b19-83b1-f9b52e01f72e
+		summarizeBy: none
+		sourceColumn: depot_name
+
+	partition DimDepot = m
+		mode: import
+		source =
+				let
+				    Source = GoldSource,
+				    Columns = Table.SelectColumns(Source, {"depot_id", "depot_name"}),
+				    Depots = Table.Distinct(Columns)
+				in
+				    Depots
+
+	annotation PBI_ResultType = Table
+

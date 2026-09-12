@@ -1,0 +1,38 @@
+{
+  "change": "Separate Bronze, Silver and Gold notebooks; reporting in Power BI",
+  "local_execution": {
+    "state": "succeeded",
+    "started_at": "2026-09-11T05:14:38.866773+00:00",
+    "completed": [
+      "01_bronze_ingestion",
+      "02_silver_cleaning",
+      "03_gold_activity"
+    ],
+    "current_notebook": "03_gold_activity",
+    "finished_at": "2026-09-11T05:16:06.797933+00:00"
+  },
+  "tests": "35 passed in 25.40s",
+  "business_csv_identical_to_previous": true,
+  "cloud_status": "All three stages passed in Databricks; observed in notebook UI on 2026-09-11. Bronze 6, Silver 14, Gold 9 code cells succeeded.",
+  "claude_review": "Checkpoint 8 and focused recheck passed for code, independent kernels, unchanged results, evidence redaction and exact archived sources. Claude ran 34 behavioral/parity tests then 2 evidence/parity tests in isolated copies. Final metadata refreshed by Codex after the recheck; cloud execution was observed by Codex, not Claude.",
+  "git": "Uncommitted; no push",
+  "source_sha256": {
+    "notebooks/01_bronze_ingestion.ipynb": "0783f6a30b118c0db48f93c8d503001ce8f3bc8590b619298a07d3e9e19217c1",
+    "notebooks/02_silver_cleaning.ipynb": "5d08ccd62c236989afbde9317f485103f1fd3f04f66fc3b95637135d1a784b60",
+    "notebooks/03_gold_activity.ipynb": "ce20ab31c6751eb1724c545e7490a99a9cd3e4a47f9196462de5f16f360be602",
+    "databricks/00_prepare_demo.ipynb": "cad691eece35050ad5473b3276d25d34c7587bd8a65ba06c8cd9d88866e04951",
+    "databricks/01_bronze_ingestion.ipynb": "933612bcbd5c07e9ab06d0c2cc8dee3bd8faa52e4f3f819a57fd95a59faacd3d",
+    "databricks/02_silver_cleaning.ipynb": "1824c7c081e8a606eb3fc95ea9efc85b17a99161103d64d1a72b33a81f9869c8",
+    "databricks/03_gold_activity.ipynb": "f9d20d139ad454c7cceeb07295eecbccb11e9c8c3d38831d4ad740d9b66e5d8c"
+  },
+  "cloud_proof": {
+    "marker": "PLATFORM_REPLAY_VALIDATION_PASSED",
+    "gold_rows": 721,
+    "quarantined_rows": 22,
+    "gold_delta_version": 3,
+    "gold_write_timestamp_utc": "2026-09-11 05:16:41",
+    "business_output_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c",
+    "weather_mode": "Saved real API snapshots; no cloud live fetch claimed",
+    "evidence_type": "UI-observed cell success and printed proof output; no executed cloud notebook export claimed"
+  }
+}

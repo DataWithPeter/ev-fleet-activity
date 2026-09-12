@@ -1,0 +1,68 @@
+{
+  "evidence_kind": "Observed Databricks UI output, recorded by Codex; not an exported executed notebook",
+  "platform": "Databricks Free Edition, serverless",
+  "source_notebook_sha256": "8b72e94959c83083517136a7038b24ee997e5cbd9ca20110f4339231594f8ff3",
+  "code_cells_succeeded": 24,
+  "result": "PLATFORM_REPLAY_VALIDATION_PASSED",
+  "weather_mode": "Offline replay of bundled real Open-Meteo responses; no cloud API success claimed",
+  "gold_table": "ev_telematics.fleet_activity_demo_20260910.gold_daily_vehicle_activity",
+  "gold_delta_version": 2,
+  "gold_delta_timestamp_utc": "2026-09-10T17:47:45Z",
+  "summary_output": {
+    "run_id": "bdb341c2-2180-44e1-9834-a511fee060b3",
+    "completed_at": "2026-09-10T17:47:55.750154+00:00",
+    "spark_version": "4.2.0",
+    "period": [
+      "2026-08-01",
+      "2026-08-30"
+    ],
+    "bronze_rows": 4316,
+    "exact_duplicates_removed": 1,
+    "quarantined_rows": 22,
+    "unassigned_rejects": 3,
+    "individual_reject_rows": 4,
+    "held_rows": 18,
+    "individual_reject_reason_counts": {
+      "missing_vehicle": 1,
+      "invalid_timestamp": 1,
+      "invalid_odometer": 1,
+      "malformed_json": 1
+    },
+    "untrusted_day_reason_counts": {
+      "odometer_decreased": 1,
+      "conflicting_timestamp": 1,
+      "rejected_reading_in_day": 1
+    },
+    "gold_rows": 721,
+    "status_counts": {
+      "insufficient_readings": 1,
+      "missing_telemetry": 1,
+      "untrusted": 3,
+      "trusted": 716
+    },
+    "unregistered_vehicle_days": 1,
+    "weather_rows": 60,
+    "business_output_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c"
+  },
+  "prior_live_attempt": {
+    "notebook_id": "1478574646994428",
+    "result": "HTTPError: 429 Client Error: Too Many Requests",
+    "failed_step": "weather ingestion",
+    "gold_and_report_cells": "Skipped"
+  },
+  "limitations": [
+    "Final simplified cloud replay observed once; earlier cloud and local runs are recorded separately.",
+    "Native notebook export did not yield a downloadable artifact; screenshot and UI results are preserved instead.",
+    "HTML browser rendering remains unverified."
+  ],
+  "notebook_id": "2739814720809544",
+  "previous_run": {
+    "notebook_id": "1478574646994429",
+    "source_notebook_sha256": "a3b477cfce88531613c914dac61ced2060bfa8588b53a11f9e020b0035fd529c",
+    "code_cells_succeeded": 17,
+    "gold_delta_version": 0,
+    "gold_delta_timestamp_utc": "2026-09-10T15:22:09Z"
+  },
+  "setup_notebook_sha256": "cad691eece35050ad5473b3276d25d34c7587bd8a65ba06c8cd9d88866e04951",
+  "setup_notebook_id": "2739814720809542"
+}

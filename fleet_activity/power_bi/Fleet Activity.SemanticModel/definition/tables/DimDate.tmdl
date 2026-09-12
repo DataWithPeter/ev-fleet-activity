@@ -1,0 +1,75 @@
+table DimDate
+	lineageTag: 98bee0b0-879e-48e4-8330-50bbba4bd162
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: yyyy-MM-dd
+		lineageTag: 37e5bffd-6cf3-4324-b885-7934e1ba9d35
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: d35be5b4-4cca-4262-a7d8-2b7936225f97
+		summarizeBy: none
+		sourceColumn: Year
+
+	column Month
+		dataType: string
+		lineageTag: 5014acc7-961f-46c6-835a-0bb7fd0e7837
+		summarizeBy: none
+		sourceColumn: Month
+		sortByColumn: 'Month number'
+
+	column Weekday
+		dataType: string
+		lineageTag: 658b63f4-fdf1-44e4-ac7d-34dd6f14af43
+		summarizeBy: none
+		sourceColumn: Weekday
+		sortByColumn: 'Weekday number'
+
+	column 'Month number'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 56069c52-8b65-4e9d-b629-ed4125f24590
+		summarizeBy: none
+		sourceColumn: Month number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weekday number'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2ec0515b-e8e6-4f70-a766-5e6822cc67b0
+		summarizeBy: none
+		sourceColumn: Weekday number
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    StartDate = Date.StartOfYear(List.Min(GoldSource[event_date])),
+				    EndDate = Date.EndOfYear(List.Max(GoldSource[event_date])),
+				    Dates = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
+				    DateTable = Table.FromColumns({Dates}, type table [Date = date]),
+				    Year = Table.AddColumn(DateTable, "Year", each Date.Year([Date]), Int64.Type),
+				    Month = Table.AddColumn(Year, "Month", each Date.ToText([Date], "MMM", "en-US"), type text),
+				    MonthNumber = Table.AddColumn(Month, "Month number", each Date.Month([Date]), Int64.Type),
+				    Weekday = Table.AddColumn(MonthNumber, "Weekday", each Date.ToText([Date], "ddd", "en-US"), type text),
+				    WeekdayNumber = Table.AddColumn(Weekday, "Weekday number", each Date.DayOfWeek([Date], Day.Monday) + 1, Int64.Type)
+				in
+				    WeekdayNumber
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

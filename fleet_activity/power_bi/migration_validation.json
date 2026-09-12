@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-09-12",
+  "scope": "Read-only ADOMD queries against the running Windows Desktop Databricks Import model, plus saved source synchronization; not a new Service audit or complete UI test",
+  "row_comparison": {
+    "date": "2026-09-12",
+    "rows": 721,
+    "fields": 14,
+    "values_compared": 10094,
+    "mismatches": [],
+    "source": "Read-only ADOMD query of running Desktop model after Databricks migration; compared with baseline CSV; UTC timestamp string normalization; numeric tolerance 1e-8"
+  },
+  "integrity": {
+    "duplicate_vehicle_date_keys": 0,
+    "orphan_date_keys": 0,
+    "orphan_vehicle_keys": 0,
+    "orphan_depot_keys": 0,
+    "active_relationships": 3,
+    "relationships": "many-to-one, single direction from dimensions to Fleet"
+  },
+  "totals": {
+    "observed_distance_km": 32554.24,
+    "trusted_vehicle_days": 716,
+    "idle_vehicle_days": 123,
+    "driving_vehicle_days": 593,
+    "untrusted_rows": 3,
+    "untrusted_distance": "null"
+  },
+  "source_sync": {
+    "source": "Saved Windows PBIP/TMDL after Databricks migration",
+    "repository_connection": "Required DatabricksHost and DatabricksHttpPath placeholders; set own warehouse and authenticate",
+    "dax_changes": false,
+    "relationship_changes": false,
+    "report_changes": "Three footer source strings corrected in repository only"
+  },
+  "limitations": [
+    "Row parity validates this imported snapshot, not a future Gold update.",
+    "Repository template parameters have not been authenticated in a new Desktop session.",
+    "Full post-migration UI interactions and public embed propagation remain unverified.",
+    "Apply footer correction to working Desktop report and republish separately."
+  ],
+  "report_definition_validation": {
+    "pbir_files": 79,
+    "compatibility_errors": 0,
+    "visuals_using_older_schema_in_memory": 39,
+    "schema_limitation": "Exact visualContainer 2.11.0 schema unavailable; those visual files checked against public 2.9.0 in memory only.",
+    "direct_binding_occurrences_checked": 120,
+    "unresolved_bindings": 0
+  },
+  "template_parse_validation": {
+    "tool": "Power BI Desktop bundled Microsoft TOM TmdlSerializer.DeserializeDatabaseFromFolder",
+    "passed": true,
+    "tables": 5,
+    "relationships": 3,
+    "measures": 15,
+    "expressions": [
+      "DatabricksHost",
+      "DatabricksHttpPath",
+      "GoldSource"
+    ],
+    "scope": "Deserialize candidate definition in memory only; no model deployment, credentials or refresh."
+  }
+}

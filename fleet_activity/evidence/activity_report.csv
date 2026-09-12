@@ -1,0 +1,10 @@
+depot_name,model,weather_condition,vehicle_days,trusted_vehicle_days,missing_days,untrusted_days,insufficient_days,mean_observed_distance_km,total_observed_distance_km
+Chicago,Model A,Dry,66,64,0,1,1,47.03,3009.61
+Chicago,Model A,Wet,114,114,0,0,0,46.34,5282.88
+Chicago,Model B,Dry,66,65,0,1,0,41.71,2711.45
+Chicago,Model B,Wet,114,112,1,1,0,43.71,4896.06
+Dallas,Model A,Dry,156,156,0,0,0,45.34,7073.41
+Dallas,Model A,Wet,24,24,0,0,0,47.72,1145.18
+Dallas,Model B,Dry,156,156,0,0,0,46.8,7300.52
+Dallas,Model B,Wet,24,24,0,0,0,46.88,1125.13
+Unknown depot,Unknown model,Unknown,1,1,0,0,0,10.0,10.0

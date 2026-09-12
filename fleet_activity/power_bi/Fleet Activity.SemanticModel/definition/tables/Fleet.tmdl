@@ -1,0 +1,112 @@
+table Fleet
+	lineageTag: c3aeba22-831b-4af7-8eeb-952abea4b4c1
+
+	column event_date
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 129317ac-7272-449d-8966-2e081492d098
+		summarizeBy: none
+		sourceColumn: event_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column vehicle_id
+		dataType: string
+		isHidden
+		lineageTag: 9247a412-dea3-4c25-8ba8-3054a98e2075
+		summarizeBy: none
+		sourceColumn: vehicle_id
+
+	column depot_id
+		dataType: string
+		isHidden
+		lineageTag: a9827168-210e-4e0f-974a-40d415e2864a
+		summarizeBy: none
+		sourceColumn: depot_id
+
+	column registered_vehicle
+		dataType: boolean
+		lineageTag: 067ee567-d67d-4bf2-a152-675e6fb4720e
+		summarizeBy: none
+		sourceColumn: registered_vehicle
+
+	column reading_count
+		dataType: int64
+		lineageTag: 975a8765-8eea-476d-8fbb-7f70070dfbe4
+		summarizeBy: sum
+		sourceColumn: reading_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_reading
+		dataType: dateTime
+		lineageTag: 9ed572bb-1017-4373-9065-34314979d3cb
+		summarizeBy: none
+		sourceColumn: first_reading
+
+	column last_reading
+		dataType: dateTime
+		lineageTag: e6347b4f-495f-469c-a73a-75ea3eeb2ad2
+		summarizeBy: none
+		sourceColumn: last_reading
+
+	column distance_status
+		dataType: string
+		lineageTag: 6da9447a-2137-4c14-b569-ec7c0f8b9f0d
+		summarizeBy: none
+		sourceColumn: distance_status
+
+	column observed_distance_km
+		dataType: double
+		lineageTag: bbd6ff9c-022d-47df-8c23-99bd1533022f
+		summarizeBy: sum
+		sourceColumn: observed_distance_km
+
+		annotation SummarizationSetBy = Automatic
+
+	column temperature_c
+		dataType: double
+		lineageTag: 53fdc0f0-bc57-4635-ae3d-65b03ffeadfc
+		summarizeBy: none
+		sourceColumn: temperature_c
+
+		annotation SummarizationSetBy = Automatic
+
+	column precipitation_mm
+		dataType: double
+		lineageTag: 6a0c77f8-a376-4dc5-8f6e-e7fad0589803
+		summarizeBy: none
+		sourceColumn: precipitation_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column weather_condition
+		dataType: string
+		lineageTag: 72bd8bcd-4f62-445a-88ea-ed632adc545e
+		summarizeBy: none
+		sourceColumn: weather_condition
+
+	column Status = SWITCH(Fleet[distance_status], "trusted", "Trusted", "untrusted", "Untrusted", "missing_telemetry", "Missing telemetry", "insufficient_readings", "Insufficient readings", Fleet[distance_status])
+		dataType: string
+		lineageTag: 3fdbabfb-7201-43fc-8310-2432f03f7bbc
+		summarizeBy: none
+
+	column 'Review reason' = IF(Fleet[distance_status] <> "trusted", Fleet[Status], IF(Fleet[registered_vehicle] = FALSE(), "Not in fleet roster", BLANK()))
+		dataType: string
+		lineageTag: a31d0a00-fad0-423e-8c55-a296820d1299
+		summarizeBy: none
+
+	partition Fleet = m
+		mode: import
+		source =
+				let
+				    Source = GoldSource,
+				    FactColumns = Table.RemoveColumns(Source, {"depot_name", "model"})
+				in
+				    FactColumns
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
