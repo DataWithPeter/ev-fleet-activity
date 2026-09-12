@@ -32,7 +32,7 @@ Offline mode never calls the API and fails if a snapshot is missing. Do not comb
 
 After the runner reports success, inspect the Gold Delta table under `output/delta/gold_daily_vehicle_activity/`. The output also includes three executed notebooks, two small validation CSVs, and a summary with input hashes. Build the report separately in Power BI; see [the handoff](POWER_BI.md). `execution_status.json` records whether the most recent runner invocation succeeded. After a failure, older output files may still exist; do not treat them as a successful new run.
 
-## How to read the notebook
+## Pipeline stages
 
 1. Read/save telemetry with three business fields and audit metadata.
 2. Parse and check records, deduplicate, identify inconsistent days.
@@ -62,7 +62,3 @@ The API makes at most three attempts for transient failures (two retries) with a
 ## Platform boundary
 
 The local pipeline is validated with Spark/Delta. The [Databricks companion](databricks/README.md) uses Unity Catalog managed tables and a volume, with the same business transformations. It explicitly replays saved real weather responses: the cloud live API attempt received HTTP 429 and stopped before Gold. See the evidence page for the completed platform checks. No remote database credentials or cloud account are required for the local run. SQLite is not a claimed remote JDBC source.
-
-Study one stage notebook at a time. Each step has a visible check; the appendix contains export and evidence code. Start with `parse_daily` when studying the weather helper; its retry/cache code can wait.
-
-The generator is source infrastructure; `run_notebook.py` is execution infrastructure. You can study the notebook first and recreate those helpers later. See [REBUILD.md](REBUILD.md).

@@ -1,10 +1,10 @@
 # Gold to Power BI
 
-The data pipeline prepares reliable tables. The published Power BI report now imports directly from the Databricks Gold table; the repository includes the synchronized Databricks model with configurable warehouse placeholders. No HTML, CSS or Matplotlib is required.
+The data pipeline prepares reliable tables. The published Power BI report now imports directly from the Databricks Gold table; the repository includes the synchronized Databricks model with configurable warehouse placeholders.
 
 Telemetry files + fleet SQLite database + weather API → Bronze/Silver processing → Gold → Power BI.
 
-## Start with one Gold table
+## Gold source and grain
 
 Databricks table: `ev_telematics.fleet_activity_demo_20260910.gold_daily_vehicle_activity`.
 Local equivalent: `output/delta/gold_daily_vehicle_activity/`.
@@ -25,18 +25,18 @@ Small offline extract: `output/daily_vehicle_activity.csv`.
 
 Distance is the range between within-day odometer observations after quality checks. Missing or unreliable distance stays blank; do not replace it with zero. A trusted stationary day can have zero distance. Count all rows for coverage, and only nonblank distance rows for the mean denominator. Do not average pre-aggregated averages from `activity_report.csv`; use the vehicle-day Gold table. Weather is repeated across vehicles at a depot on a day, so do not sum precipitation over vehicle rows.
 
-## Connection and first exercise
+## Connection and validation
 
-Use Power BI's Databricks connector with the SQL warehouse's Server Hostname and HTTP Path, authenticate with an authorized account, and select the Gold table. Start with Import mode for this small learning dataset. Desktop access and an on-demand Power BI Service refresh were demonstrated on 12 September. See the [refresh checkpoint](power_bi/REFRESH_SETUP.md) for evidence and remaining checks.
+Use Power BI's Databricks connector with the SQL warehouse's Server Hostname and HTTP Path, authenticate with an authorized account, and select the Gold table. The report uses Import mode for this small demo dataset. Desktop access and an on-demand Power BI Service refresh were demonstrated on 12 September. See the [refresh checkpoint](power_bi/REFRESH_SETUP.md) for evidence and remaining checks.
 
 Official instructions: [Connect Power BI Desktop to Databricks](https://docs.databricks.com/aws/en/partners/bi/power-bi/desktop).
-Power BI Desktop requires Windows: [Microsoft installation requirements](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-get-the-desktop). Confirm your Windows environment when beginning the Power BI phase.
+Power BI Desktop requires Windows: [Microsoft installation requirements](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-get-the-desktop).
 
-First build a table visual and check 721 vehicle-days: 716 trusted, 3 untrusted, 1 insufficient and 1 missing. Compare depot/model/weather totals and means with the notebook's SQL validation query. Then add a distance trend, depot/model comparison and quality counts. Keep this as a separate report; the pipeline should not depend on it.
+The baseline has 721 vehicle-days: 716 trusted, 3 untrusted, 1 insufficient and 1 missing. Validate depot/model/weather totals and means against the notebook's SQL validation query. The report is a separate presentation layer; the pipeline does not depend on it.
 
 The CSV remains an offline validation baseline, not the current Power BI source. The published model now imports Gold through the Databricks connector. Power BI Service refresh is configured daily at 09:00 Central, after the 08:00 Databricks job. This is an independent schedule, not a pipeline-success trigger; the first scheduled Power BI execution remains unverified.
 
-Fleet and telemetry are synthetic; weather is real Open-Meteo data. These visuals demonstrate integration, not real fleet behavior or weather effects. Preserve Open-Meteo attribution in the eventual report.
+Fleet and telemetry are synthetic; weather is real Open-Meteo data. These visuals demonstrate integration, not real fleet behavior or weather effects. The report includes Open-Meteo attribution.
 
 ## Current status
 

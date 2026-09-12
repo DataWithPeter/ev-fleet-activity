@@ -1,4 +1,4 @@
-# Understanding the Power BI model
+# Power BI model and DAX reference
 
 The Gold table has one row per vehicle per UTC day. Power BI keeps that grain in `Fleet` and separates the reusable labels into three dimensions. This is a **star schema** for reporting. It is different from fully normalizing an operational database.
 
@@ -38,11 +38,9 @@ All source definitions were synchronized from the saved Windows model on 12 Sept
 
 This demo assumes one model per vehicle and one name per depot. If future data violates that assumption, resolve the source history deliberately; do not change a relationship to many-to-many just to make the error disappear. The unregistered vehicle and Unknown depot/model remain in the model so quality problems are visible.
 
-## DAX to learn
+## DAX patterns
 
-These are study notes, not a claim of unaided proficiency with every function.
-
-Start with these patterns:
+The report uses the following patterns:
 
 | Pattern | What it does | Example in the report |
 | --- | --- | --- |
@@ -81,13 +79,4 @@ Read it as: **trusted zero-distance days divided by all trusted days**.
 
 The approved simplification removes `Idle days per vehicle` and `Most idle vehicle`. Their cards now show **Driving vehicle-days** and **Idle days %** using existing measures. The native vehicle leaderboard still shows each vehicle's idle days; no virtual-table, iterator, TOPN or text-concatenation ranking measure is needed.
 
-## Rebuild in small steps
-
-1. Reference GoldSource, keep depot ID/name, remove duplicates. Check one row per depot.
-2. Repeat for vehicle ID/model. Check one row per vehicle.
-3. Create the Date table and its date/weekday fields.
-4. Create the three one-to-many relationships. Test a Chicago filter.
-5. Put the measures in your Measures table and rebuild one distance card.
-6. Explain why an untrusted distance is blank and why an idle day is zero.
-
-The saved model uses **TMDL** in `Fleet Activity.SemanticModel/definition/`. Desktop writes these files for you; learning TMDL syntax is not required to rebuild this in the interface. `MEASURES.dax` is a readable reference copy, not a second executable model.
+The saved model uses **TMDL** in `Fleet Activity.SemanticModel/definition/`. `MEASURES.dax` is a readable reference copy, not a second executable model.

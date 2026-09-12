@@ -12,7 +12,7 @@ Synthetic fleet SQLite DB ──→ SQL extraction ──→ vehicle and depot �
 Open-Meteo historical API ──→ saved JSON ──→ daily weather ─────────────┘
 ```
 
-[Start and run the project](fleet_activity/README.md) · [Bronze](fleet_activity/notebooks/01_bronze_ingestion.ipynb) · [Silver](fleet_activity/notebooks/02_silver_cleaning.ipynb) · [Gold](fleet_activity/notebooks/03_gold_activity.ipynb) · [Practice rebuilding](fleet_activity/REBUILD.md) · [Validation and reviews](fleet_activity/evidence/README.md)
+[Start and run the project](fleet_activity/README.md) · [Bronze](fleet_activity/notebooks/01_bronze_ingestion.ipynb) · [Silver](fleet_activity/notebooks/02_silver_cleaning.ipynb) · [Gold](fleet_activity/notebooks/03_gold_activity.ipynb) · [Validation and reviews](fleet_activity/evidence/README.md)
 
 ## Report preview
 
@@ -59,7 +59,7 @@ A three-page Power BI report is published with a public recruiter link and now i
 
 The current showcase is entirely in `fleet_activity/`. It is implemented with direct notebook transformations and a small API helper. Local execution, Databricks replay and independent review results are recorded in the linked evidence page. The cloud replay uses saved real API responses; the cloud live request was rate-limited.
 
-This project includes a companion rebuild guide. It demonstrates correctness and integration; it is not a scale benchmark or production deployment.
+This project demonstrates correctness and integration; it is not a scale benchmark or production deployment.
 
 This is a curated repository with a fresh Git history. It contains the runnable fleet project and its required evidence, without the earlier development repository's unrelated prototypes or private review conversations.
 

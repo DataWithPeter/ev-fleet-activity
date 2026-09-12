@@ -48,11 +48,11 @@ The dark layout follows the SaaS Metrics dashboard pattern.
 
 **Reading the analysis:** daily distance and vehicles on the road move together. That is partly arithmetic, so don't treat it as proof of cause. Fleet and telemetry are synthetic, and weather comparisons are descriptive.
 
-## Code to study
+## Model and measures
 
-The model is a small star schema: Fleet (daily activity), DimDate, DimVehicle and DimDepot, plus your disconnected Measures table. All relationships are one-to-many, filtering from dimensions into Fleet.
+The model is a small star schema: Fleet (daily activity), DimDate, DimVehicle and DimDepot, plus a disconnected Measures table. All relationships are one-to-many, filtering from dimensions into Fleet.
 
-See [Model and DAX learning guide](MODEL_AND_DAX.md) for the flow, relationships and formulas. `MEASURES.dax` contains the 15 measures and two calculated label columns. The two advanced ranking/range measures were removed with Niko's approval; the leaderboard remains.
+See [Model and DAX reference](MODEL_AND_DAX.md) for the flow, relationships and formulas. `MEASURES.dax` contains the 15 measures and two calculated label columns. The vehicle leaderboard uses native table sorting; no custom ranking measure is required.
 
 `Idle vehicle-days` compares with `==` so a blank distance never matches 0. `KEEPFILTERS` preserves the user's selections. These correctness choices remain in the simplified measures.
 
