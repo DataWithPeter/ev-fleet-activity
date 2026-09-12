@@ -2,6 +2,8 @@
 
 A readable PySpark and Delta Lake project that combines **telemetry files, a fleet SQL database, and a real weather API** into Gold data for a separate Power BI report.
 
+**[Open the interactive Power BI report](https://app.powerbi.com/view?r=eyJrIjoiMzUzYmU0YWEtYzU4NC00NmE1LTk2NmYtZjI4YTViMDhjMjY1IiwidCI6IjhiYmMwZjRiLTVkNWItNGNiMy05ZWM5LTc1MTc0MjRmMzY0ZiJ9&pageName=overview)** — public access, no sign-in required.
+
 **Business question:** how does observed vehicle movement vary by depot, vehicle model, and weather condition—and where is the data too incomplete or inconsistent to report a distance?
 
 ```text
@@ -11,6 +13,28 @@ Open-Meteo historical API ──→ saved JSON ──→ daily weather ───
 ```
 
 [Start and run the project](fleet_activity/README.md) · [Bronze](fleet_activity/notebooks/01_bronze_ingestion.ipynb) · [Silver](fleet_activity/notebooks/02_silver_cleaning.ipynb) · [Gold](fleet_activity/notebooks/03_gold_activity.ipynb) · [Practice rebuilding](fleet_activity/REBUILD.md) · [Validation and reviews](fleet_activity/evidence/README.md)
+
+## Report preview
+
+**Overview:** observed distance, driving activity, idle days, and data coverage across the reporting period.
+
+![Fleet Overview with distance and activity trends, depot comparisons, and data coverage](docs/screenshots/overview.jpg)
+
+<details>
+<summary>Vehicles &amp; Depots — compare usage and inspect individual vehicles</summary>
+
+![Vehicles and Depots with idle-day comparisons, distance scatter plot, and vehicle table](docs/screenshots/vehicles.jpg)
+
+</details>
+
+<details>
+<summary>Data Health — inspect missing, inconsistent, and unregistered records</summary>
+
+![Data Health with trusted coverage, problem categories, and six records needing review](docs/screenshots/data-health.jpg)
+
+</details>
+
+Captured from the public report on 12 September 2026 with all filters set to All. These are static previews; use the report link above to explore. [Screenshot provenance and known footer discrepancy](docs/screenshots/README.md).
 
 ## What it demonstrates
 
