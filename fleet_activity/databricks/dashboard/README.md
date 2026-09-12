@@ -12,6 +12,12 @@ that Gold table directly; the repository Power BI model contains the synchronize
 Power BI provides the three-page report with its star schema and DAX. Neither
 report changes the pipeline.
 
+## Screenshots
+
+[Dashboard overview](../../../docs/screenshots/databricks-overview.png) · [Data quality and review table](../../../docs/screenshots/databricks-data-quality.png)
+
+These full-resolution screenshots were supplied on 12 September 2026. The overview's date control shows September 12 while the visuals show August; this discrepancy needs a live check. See [capture notes](../../../docs/screenshots/README.md#databricks-date-control). It does not change the historical publication checks below.
+
 ## Dashboard page
 
 - Filters: UTC date, depot, model and weather.

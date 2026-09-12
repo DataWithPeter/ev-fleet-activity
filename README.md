@@ -21,11 +21,26 @@ Open-Meteo historical API ──→ saved JSON ──→ daily weather ───
 | **Native Databricks SQL dashboard** | Fleet KPIs, daily distance, depot comparisons, quality coverage, filters, and a review table. Built, published, and checked against live Gold. | Requires Databricks sign-in and data permissions. [Dashboard documentation](fleet_activity/databricks/dashboard/README.md) · [SQL dataset](fleet_activity/databricks/dashboard/activity.sql) |
 | **Power BI report** | Three interactive pages: Overview, Vehicles & Depots, and Data Health, with a star schema and DAX measures. Imports Databricks Gold. | Public report link above; no sign-in required. [Model and setup](fleet_activity/power_bi/README.md) |
 
+## Native Databricks dashboard preview
+
+Fleet KPIs and daily distance, built in Databricks over the Gold table. The interactive dashboard requires authorized workspace access; these screenshots let visitors preview it directly.
+
+![Native Databricks SQL dashboard with fleet KPIs and daily observed distance](docs/screenshots/databricks-overview.png)
+
+<details>
+<summary>Depot comparisons, daily data quality, and records needing review</summary>
+
+![Databricks dashboard with depot comparisons, daily quality coverage, and review records](docs/screenshots/databricks-data-quality.png)
+
+</details>
+
+User-supplied screenshots from 12 September 2026. The visible date control differs from the August data shown; see [capture notes](docs/screenshots/README.md#databricks-date-control).
+
 ## Power BI preview
 
 **Overview:** observed distance, driving activity, idle days, and data coverage across the reporting period.
 
-![Fleet Overview with distance and activity trends, depot comparisons, and data coverage](docs/screenshots/overview.jpg)
+![Fleet Overview with distance and activity trends, depot comparisons, and data coverage](docs/screenshots/overview.png)
 
 <details>
 <summary>Vehicles &amp; Depots — compare usage and inspect individual vehicles</summary>
@@ -41,7 +56,7 @@ Open-Meteo historical API ──→ saved JSON ──→ daily weather ───
 
 </details>
 
-Captured from the public report on 12 September 2026 with all filters set to All. These are static previews; use the report link above to explore. [Screenshot provenance and known footer discrepancy](docs/screenshots/README.md).
+Power BI screenshots from 12 September 2026 with all filters set to All; the Overview uses the supplied full-resolution original. These are static previews; use the report link above to explore. [Screenshot provenance and known footer discrepancy](docs/screenshots/README.md).
 
 ## What it demonstrates
 
