@@ -83,7 +83,7 @@ See [Model and DAX reference](MODEL_AND_DAX.md) for the flow, relationships and 
 
 Codex queried the running Desktop model read-only after the Databricks source change. All 721 rows and 14 original fields match the CSV baseline; no duplicate vehicle/date keys or orphan dimension keys were found, and all three relationships remain active and single-direction. See [migration results](migration_validation.json) and the [model/DAX guide](MODEL_AND_DAX.md).
 
-The working report was corrected and Niko republished it on 12 September. Codex verified `Source: Databricks Gold table` on all three public pages, navigation, the Overview Dallas filter and Reset, and baseline headline values. See [publication checks](publication_cleanup_validation.json). Existing portfolio screenshots predate the footer correction and preserve their original pixels.
+The working report was corrected and Niko republished it on 12 September. Codex verified `Source: Databricks Gold table` on all three public pages, navigation, the Overview Dallas filter and Reset, and baseline headline values. See [publication checks](publication_cleanup_validation.json). The portfolio previews now use Niko's replacement PNG screenshots of the corrected report; see [screenshot provenance](../../docs/screenshots/README.md).
 
 **Still pending:** first automatic Service refresh, notification delivery, broader post-migration UI interactions beyond the focused publication checks, and propagation of a future Gold data change. [Refresh checkpoint](REFRESH_SETUP.md).
 

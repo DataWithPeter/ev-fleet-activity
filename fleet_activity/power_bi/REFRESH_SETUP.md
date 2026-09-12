@@ -38,7 +38,7 @@ If a refresh fails with a credential error, re-sign in through the semantic mode
 
 Codex changed only the three source-footer strings in the saved Windows report, with backups and JSON validation. Niko reopened the project and supplied a Desktop publication-success screenshot. Codex then opened the public report without signing in and verified the corrected footer on Overview, Vehicles, and Data Health. Navigation between all three pages worked. The Overview Dallas filter produced 16,644 km, 55.30 km per driving day, 16.4% idle, 100.0% trusted, and zero attention days; Reset restored All filters and the baseline. Vehicles showed 24 registered vehicles, 123 idle and 593 driving vehicle-days. Data Health showed the expected six review rows.
 
-These are focused public UI checks, not a complete rerun of the earlier interaction suite or proof of a future scheduled/data refresh. Existing portfolio screenshots retain their historical CSV footer. [Detailed record](publication_cleanup_validation.json).
+These are focused public UI checks, not a complete rerun of the earlier interaction suite or proof of a future scheduled/data refresh. The portfolio previews now use Niko's replacement PNG screenshots of the corrected report; see [screenshot provenance](../../docs/screenshots/README.md). [Detailed record](publication_cleanup_validation.json).
 
 ## Reproduction and remaining work
 

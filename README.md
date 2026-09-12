@@ -45,18 +45,18 @@ User-supplied screenshots from 12 September 2026. The visible date control diffe
 <details>
 <summary>Vehicles &amp; Depots — compare usage and inspect individual vehicles</summary>
 
-![Vehicles and Depots with idle-day comparisons, distance scatter plot, and vehicle table](docs/screenshots/vehicles.jpg)
+![Vehicles and Depots with idle-day comparisons, distance scatter plot, and vehicle table](docs/screenshots/vehicles.png)
 
 </details>
 
 <details>
 <summary>Data Health — inspect missing, inconsistent, and unregistered records</summary>
 
-![Data Health with trusted coverage, problem categories, and six records needing review](docs/screenshots/data-health.jpg)
+![Data Health with trusted coverage, problem categories, and six records needing review](docs/screenshots/data-health.png)
 
 </details>
 
-Power BI screenshots from 12 September 2026 with all filters set to All; the Overview uses the supplied full-resolution original. These are static previews; use the report link above to explore. [Screenshot provenance and historical footer note](docs/screenshots/README.md).
+Power BI screenshots from 12 September 2026 with all filters set to All; all three pages use the supplied full-resolution PNG originals. These are static previews; use the report link above to explore. [Screenshot provenance](docs/screenshots/README.md).
 
 ## What it demonstrates
 

@@ -54,7 +54,7 @@
     "First automatic 09:00 Central refresh on 13 September remains unverified.",
     "Notification delivery is untested.",
     "This verifies footer publication propagation, not propagation of a future Gold data change.",
-    "Model/Weather slicer combinations, cross-highlighting, tooltips and the full earlier interaction suite were not rerun.",
-    "Portfolio screenshots predate the corrected footer and are preserved without retouching."
-  ]
+    "Model/Weather slicer combinations, cross-highlighting, tooltips and the full earlier interaction suite were not rerun."
+  ],
+  "screenshot_follow_up": "On 2026-09-12, all three Power BI previews were replaced with owner-supplied PNG originals showing the corrected source caption. Data Health clips the footer bottom edge; images are not retouched. See ../../docs/screenshots/README.md."
 }
