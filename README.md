@@ -1,6 +1,6 @@
-# EV Fleet Activity Lakehouse
+# EV Fleet Activity — Databricks Lakehouse
 
-A readable PySpark and Delta Lake project that combines **telemetry files, a fleet SQL database, and a real weather API** into Gold data for a separate Power BI report.
+A **Databricks lakehouse pipeline built with PySpark, SQL, and Delta Lake**, combining telemetry files, a fleet SQL database, and a real weather API through Bronze → Silver → Gold. A daily Databricks job runs the pipeline, and Gold feeds two reporting experiences: a **native Databricks SQL dashboard** and a **public Power BI report**.
 
 **[Open the interactive Power BI report](https://app.powerbi.com/view?r=eyJrIjoiMzUzYmU0YWEtYzU4NC00NmE1LTk2NmYtZjI4YTViMDhjMjY1IiwidCI6IjhiYmMwZjRiLTVkNWItNGNiMy05ZWM5LTc1MTc0MjRmMzY0ZiJ9&pageName=overview)** — public access, no sign-in required.
 
@@ -12,9 +12,16 @@ Synthetic fleet SQLite DB ──→ SQL extraction ──→ vehicle and depot �
 Open-Meteo historical API ──→ saved JSON ──→ daily weather ─────────────┘
 ```
 
-[Start and run the project](fleet_activity/README.md) · [Bronze](fleet_activity/notebooks/01_bronze_ingestion.ipynb) · [Silver](fleet_activity/notebooks/02_silver_cleaning.ipynb) · [Gold](fleet_activity/notebooks/03_gold_activity.ipynb) · [Validation and reviews](fleet_activity/evidence/README.md)
+[Databricks setup and notebooks](fleet_activity/databricks/README.md) · [Run locally](fleet_activity/README.md) · [Bronze](fleet_activity/notebooks/01_bronze_ingestion.ipynb) · [Silver](fleet_activity/notebooks/02_silver_cleaning.ipynb) · [Gold](fleet_activity/notebooks/03_gold_activity.ipynb) · [Validation and reviews](fleet_activity/evidence/README.md)
 
-## Report preview
+## Two reports from the same Gold table
+
+| Reporting experience | What it provides | Access and source |
+| --- | --- | --- |
+| **Native Databricks SQL dashboard** | Fleet KPIs, daily distance, depot comparisons, quality coverage, filters, and a review table. Built, published, and checked against live Gold. | Requires Databricks sign-in and data permissions. [Dashboard documentation](fleet_activity/databricks/dashboard/README.md) · [SQL dataset](fleet_activity/databricks/dashboard/activity.sql) |
+| **Power BI report** | Three interactive pages: Overview, Vehicles & Depots, and Data Health, with a star schema and DAX measures. Imports Databricks Gold. | Public report link above; no sign-in required. [Model and setup](fleet_activity/power_bi/README.md) |
+
+## Power BI preview
 
 **Overview:** observed distance, driving activity, idle days, and data coverage across the reporting period.
 
@@ -38,6 +45,7 @@ Captured from the public report on 12 September 2026 with all filters set to All
 
 ## What it demonstrates
 
+- Databricks notebooks, Unity Catalog managed tables, and a native SQL dashboard over Gold.
 - Explicit-schema JSON ingestion and real Delta table writes.
 - SQL extraction from a local SQLite database, with a declared static roster.
 - A real REST API request, bounded retries, response checks and saved inputs for reproducible reruns.

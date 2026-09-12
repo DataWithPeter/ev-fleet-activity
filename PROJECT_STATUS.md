@@ -9,6 +9,7 @@ This is the curated EV Fleet Activity portfolio. The initial Git history capture
 - Local Bronze → Silver → Gold notebooks and their Databricks companions preserve the same transformations and vehicle/day grain.
 - Baseline: 721 Gold rows, 716 trusted days, 22 quarantined/held readings, 32,554.24 observed km. Exact evidence hashes and historical runs are in [execution evidence](fleet_activity/evidence/README.md).
 - Daily Databricks job: 08:00 America/Chicago, Bronze → Silver → Gold with successful upstream dependencies, one concurrent run. The 12 September scheduled run succeeded. [Job review](fleet_activity/databricks/JOB_REVIEW.md).
+- Native Databricks SQL dashboard: published and checked against live Gold, with fleet KPIs, charts, filters, and a review table. Access requires Databricks sign-in and data permissions. [Dashboard documentation and validation](fleet_activity/databricks/dashboard/README.md).
 - Power BI: three report pages, three dimension-to-Fleet relationships, 15 measures. The working and published models import Databricks Gold. Service on-demand refresh completed in 9 seconds on 12 September.
 - The saved Windows PBIP/TMDL was synchronized into this repository. Public source uses warehouse connection placeholders; report footer source text is corrected in the repository artifact.
 - Codex queried the running post-migration Desktop model read-only: all 721 rows × 14 original fields reconcile to baseline; zero duplicate vehicle/date keys or orphan dimension keys. [Migration validation](fleet_activity/power_bi/migration_validation.json).
