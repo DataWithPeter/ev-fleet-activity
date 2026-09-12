@@ -56,7 +56,7 @@ User-supplied screenshots from 12 September 2026. The visible date control diffe
 
 </details>
 
-Power BI screenshots from 12 September 2026 with all filters set to All; the Overview uses the supplied full-resolution original. These are static previews; use the report link above to explore. [Screenshot provenance and known footer discrepancy](docs/screenshots/README.md).
+Power BI screenshots from 12 September 2026 with all filters set to All; the Overview uses the supplied full-resolution original. These are static previews; use the report link above to explore. [Screenshot provenance and historical footer note](docs/screenshots/README.md).
 
 ## What it demonstrates
 

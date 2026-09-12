@@ -12,9 +12,9 @@ The Power BI Overview and two Databricks screenshots are full-resolution PNG ori
 
 The report covers 1–30 August 2026. Fleet and telemetry records are synthetic; weather comes from Open-Meteo. These screenshots document visible report output, not real fleet performance or a completed audit of every interaction. The Databricks dashboard requires sign-in and data permissions; its screenshots do not provide public workspace access.
 
-## Known footer discrepancy
+## Historical Power BI footer
 
-The hosted report still displays `Source: Gold CSV extract`. That caption is stale: the published semantic model was migrated to Databricks Gold Import. The repository's report definitions have the corrected footer, but the hosted footer update remains pending. The screenshots preserve the hosted report exactly as seen. See the [refresh checkpoint](../../fleet_activity/power_bi/REFRESH_SETUP.md) for migration evidence and outstanding checks.
+These Power BI screenshots predate the footer correction and retain `Source: Gold CSV extract`. On 12 September, Niko republished the corrected report; Codex then verified `Source: Databricks Gold table` on all three public pages without signing in. The original screenshot pixels are preserved, so their older caption is historical. See the [publication checks](../../fleet_activity/power_bi/publication_cleanup_validation.json) and [refresh checkpoint](../../fleet_activity/power_bi/REFRESH_SETUP.md).
 
 Capturing the report does not verify propagation of a later Gold update or the first automatic scheduled refresh.
 

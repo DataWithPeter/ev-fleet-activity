@@ -83,9 +83,9 @@ See [Model and DAX reference](MODEL_AND_DAX.md) for the flow, relationships and 
 
 Codex queried the running Desktop model read-only after the Databricks source change. All 721 rows and 14 original fields match the CSV baseline; no duplicate vehicle/date keys or orphan dimension keys were found, and all three relationships remain active and single-direction. See [migration results](migration_validation.json) and the [model/DAX guide](MODEL_AND_DAX.md).
 
-The repository footer now says `Source: Databricks Gold table`. The working and hosted report still need that footer update and republication. Historical full-desktop screenshots are excluded from this curated repository; they are not evidence of the updated footer.
+The working report was corrected and Niko republished it on 12 September. Codex verified `Source: Databricks Gold table` on all three public pages, navigation, the Overview Dallas filter and Reset, and baseline headline values. See [publication checks](publication_cleanup_validation.json). Existing portfolio screenshots predate the footer correction and preserve their original pixels.
 
-**Still pending:** first automatic Service refresh, notification delivery, full post-migration UI interactions, public embed propagation, and the hosted footer update. [Refresh checkpoint](REFRESH_SETUP.md).
+**Still pending:** first automatic Service refresh, notification delivery, broader post-migration UI interactions beyond the focused publication checks, and propagation of a future Gold data change. [Refresh checkpoint](REFRESH_SETUP.md).
 
 The Date filter was removed because the data covers one month; the line under each title shows the period.
 

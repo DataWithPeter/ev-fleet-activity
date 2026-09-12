@@ -34,17 +34,22 @@ The one-hour gap is a scheduling buffer, not a dependency. Power BI can refresh 
 
 If a refresh fails with a credential error, re-sign in through the semantic model's data source credentials (or its mapped cloud connection), then run Refresh now and verify Completed in Refresh history. Re-enable the schedule if it was disabled.
 
+## Footer publication check — 12 September
+
+Codex changed only the three source-footer strings in the saved Windows report, with backups and JSON validation. Niko reopened the project and supplied a Desktop publication-success screenshot. Codex then opened the public report without signing in and verified the corrected footer on Overview, Vehicles, and Data Health. Navigation between all three pages worked. The Overview Dallas filter produced 16,644 km, 55.30 km per driving day, 16.4% idle, 100.0% trusted, and zero attention days; Reset restored All filters and the baseline. Vehicles showed 24 registered vehicles, 123 idle and 593 driving vehicle-days. Data Health showed the expected six review rows.
+
+These are focused public UI checks, not a complete rerun of the earlier interaction suite or proof of a future scheduled/data refresh. Existing portfolio screenshots retain their historical CSV footer. [Detailed record](publication_cleanup_validation.json).
+
 ## Reproduction and remaining work
 
 1. The saved Windows PBIP/TMDL has been synchronized. This repository uses required host/path parameters instead of the original warehouse identifiers. Set them and authenticate before refreshing a clone.
 2. Confirm the first scheduled Service refresh after 13 September at 09:00 Central. A successful manual refresh proves Service connectivity, not that the future trigger has fired.
-3. Recheck the public report after refresh, including page navigation and filters. The current public URL is in [POWER_BI.md](../POWER_BI.md); public embed propagation and full post-migration interaction checks remain unverified.
-4. The repository footer has been corrected to `Databricks Gold table`. Apply the same footer correction in the working Desktop project and republish; no change to the currently hosted footer is claimed.
+3. After the first automatic refresh, inspect its history and the public report. The current public URL is in [POWER_BI.md](../POWER_BI.md). Footer publication and focused interaction checks passed above; broader interaction coverage and propagation of a future Gold data change remain unverified.
 
 Obtain connection details from SQL Warehouses → the warehouse → Connection details. Authenticate with an authorized Databricks account in Desktop and Service, configure the semantic model's cloud connection, run Refresh now, and inspect Refresh history for Completed before relying on the schedule. This documentation omits private workspace identifiers and notification addresses.
 
 Private account screenshots and connection identifiers are excluded from the curated repository. The refresh-history row above is a transcription of the supplied screenshot; it is not an exported Service audit record.
 
-The source migration preserves DAX, relationships and pipeline transformations. Only the warehouse parameterization and three source-footer strings differ deliberately from the saved Windows source. The earlier 42 + 9 interaction checks predate the migration. Claude's earlier review covered documentation alignment, not independent live migration or refresh verification.
+The source migration preserves DAX, relationships and pipeline transformations. The warehouse parameterization is deliberate; the working Windows report now has the same corrected source-footer wording as the repository. The earlier 42 + 9 interaction checks predate the migration. Claude's earlier review covered documentation alignment, not independent live migration or refresh verification.
 
 References: [Databricks connector](https://learn.microsoft.com/en-us/power-query/connectors/databricks), [Power BI scheduled refresh and refresh history](https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh).

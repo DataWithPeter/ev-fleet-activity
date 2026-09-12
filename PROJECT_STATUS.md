@@ -13,11 +13,12 @@ This is the curated EV Fleet Activity portfolio. The initial Git history capture
 - Power BI: three report pages, three dimension-to-Fleet relationships, 15 measures. The working and published models import Databricks Gold. Service on-demand refresh completed in 9 seconds on 12 September.
 - The saved Windows PBIP/TMDL was synchronized into this repository. Public source uses warehouse connection placeholders; report footer source text is corrected in the repository artifact.
 - Codex queried the running post-migration Desktop model read-only: all 721 rows × 14 original fields reconcile to baseline; zero duplicate vehicle/date keys or orphan dimension keys. [Migration validation](fleet_activity/power_bi/migration_validation.json).
+- Footer cleanup: Niko republished on 12 September; Codex opened the public report without sign-in and verified `Source: Databricks Gold table` on all three pages, page navigation, the Overview Dallas filter and Reset, and baseline headline values. [Publication checks](fleet_activity/power_bi/publication_cleanup_validation.json).
 
 ## Remaining external checks
 
 - First automatic Power BI refresh at 09:00 Central on 13 September; failure-email delivery is untested.
-- Full post-migration UI interaction checks and public embed propagation. Repository footer correction still needs to be applied and republished in the working report.
+- Broader post-migration interaction coverage beyond the focused publication checks above; propagation of a future Gold data change remains unverified.
 - The cloud-only `04_reports` notebook and final Databricks dashboard number formatting are not exported here; the SQL dashboard import file is an initial definition.
 
 These limits do not prevent local reproduction. Schedules replay the fixed August demo; they do not ingest a new day or implement incremental MERGE. SQLite is local, weather is saved real Open-Meteo data, and multi-table refreshes are not one transaction. See [refresh setup](fleet_activity/power_bi/REFRESH_SETUP.md).

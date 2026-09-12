@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-09-12",
+  "scope": "Focused public Power BI UI verification after footer republication; not a full interaction suite or scheduled-refresh audit",
+  "publication_evidence": "Niko supplied a Power BI Desktop Publishing to Power BI Success screenshot after reopening the corrected working project",
+  "verification_method": "Codex opened the existing public report without sign-in and inspected rendered page content and interactions",
+  "public_link_record": "../POWER_BI.md",
+  "footer": {
+    "text": "Source: Databricks Gold table",
+    "verified_pages": [
+      "Overview",
+      "Vehicles & Depots",
+      "Data Health"
+    ]
+  },
+  "navigation": "Overview to Vehicles to Data Health; return to Overview",
+  "overview_all": {
+    "distance_display": "32,554 km",
+    "km_per_driving_day": 54.9,
+    "idle_percent": 17.2,
+    "trusted_percent": 99.3,
+    "attention_days": 5
+  },
+  "overview_dallas": {
+    "distance_display": "16,644 km",
+    "km_per_driving_day": 55.3,
+    "idle_percent": 16.4,
+    "trusted_percent": 100.0,
+    "attention_days": 0
+  },
+  "overview_reset": "All three slicers restored to All; baseline headline values restored",
+  "vehicles_all": {
+    "registered_vehicles": 24,
+    "idle_vehicle_days": 123,
+    "driving_vehicle_days": 593,
+    "idle_percent": 17.2
+  },
+  "data_health_all": {
+    "trusted_percent": 99.3,
+    "vehicles_with_problem_days": 5,
+    "unregistered_vehicle_days": 1,
+    "unregistered_km": 10,
+    "review_rows": 6,
+    "review_vehicle_ids": [
+      "UNKNOWN",
+      "EV002",
+      "EV003",
+      "EV004",
+      "EV006",
+      "EV007"
+    ]
+  },
+  "change_scope": "Working report: three footer strings only; backups and JSON validation. No DAX, relationships, model source, Gold or pipeline edits in this cleanup.",
+  "limitations": [
+    "First automatic 09:00 Central refresh on 13 September remains unverified.",
+    "Notification delivery is untested.",
+    "This verifies footer publication propagation, not propagation of a future Gold data change.",
+    "Model/Weather slicer combinations, cross-highlighting, tooltips and the full earlier interaction suite were not rerun.",
+    "Portfolio screenshots predate the corrected footer and are preserved without retouching."
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-09-12",
-  "scope": "Read-only ADOMD queries against the running Windows Desktop Databricks Import model, plus saved source synchronization; not a new Service audit or complete UI test",
+  "scope": "Historical migration checkpoint before footer republication: Read-only ADOMD queries against the running Windows Desktop Databricks Import model, plus saved source synchronization; not a new Service audit or complete UI test",
   "row_comparison": {
     "date": "2026-09-12",
     "rows": 721,
@@ -58,5 +58,6 @@
       "GoldSource"
     ],
     "scope": "Deserialize candidate definition in memory only; no model deployment, credentials or refresh."
-  }
+  },
+  "follow_up": "Footer publication and focused public UI checks subsequently completed on 2026-09-12; see publication_cleanup_validation.json. Limitations above describe the original checkpoint."
 }
