@@ -70,7 +70,7 @@ Databricks is the source of truth for those formatting changes. The attempted
 UI export did not yield a local file. Do not replace the published dashboard
 with the initial import file without reapplying those formats.
 
-Power BI is published separately under the new account and has a public recruiter
+Power BI is published separately under the new account and has a public report
 link recorded in `fleet_activity/POWER_BI.md`. It now imports Databricks Gold directly, with a completed Service on-demand refresh.
 See [refresh evidence and remaining checks](../../power_bi/REFRESH_SETUP.md).
 

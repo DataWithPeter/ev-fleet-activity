@@ -1,23 +1,23 @@
 # Project status
 
-Last updated: 12 September 2026.
+Last updated: 13 September 2026.
 
-This is the curated EV Fleet Activity portfolio. The initial Git history captures an existing project; it does not imply the project was built in one day.
+EV Fleet Activity combines a Databricks lakehouse pipeline, data-quality checks, and two reporting interfaces.
 
 ## Verified
 
 - Local Bronze → Silver → Gold notebooks and their Databricks companions preserve the same transformations and vehicle/day grain.
 - Baseline: 721 Gold rows, 716 trusted days, 22 quarantined/held readings, 32,554.24 observed km. Exact evidence hashes and historical runs are in [execution evidence](fleet_activity/evidence/README.md).
-- Daily Databricks job: 08:00 America/Chicago, Bronze → Silver → Gold with successful upstream dependencies, one concurrent run. The 12 September scheduled run succeeded. [Job review](fleet_activity/databricks/JOB_REVIEW.md).
+- Daily Databricks job: 08:00 America/Chicago, Bronze → Silver → Gold with successful upstream dependencies, one concurrent run. The 12 and 13 September scheduled runs succeeded; success-email delivery was confirmed on 13 September. [Job review](fleet_activity/databricks/JOB_REVIEW.md).
 - Native Databricks SQL dashboard: published and checked against live Gold, with fleet KPIs, charts, filters, and a review table. Access requires Databricks sign-in and data permissions. [Dashboard documentation and validation](fleet_activity/databricks/dashboard/README.md).
-- Power BI: three report pages, three dimension-to-Fleet relationships, 15 measures. The working and published models import Databricks Gold. Service on-demand refresh completed in 9 seconds on 12 September.
+- Power BI: three report pages, three dimension-to-Fleet relationships, 15 measures. The working and published models import Databricks Gold. Service on-demand refresh completed on 12 September; the scheduled refresh on 13 September completed in 14m 52s.
 - The saved Windows PBIP/TMDL was synchronized into this repository. Public source uses warehouse connection placeholders; report footer source text is corrected in the repository artifact.
-- Codex queried the running post-migration Desktop model read-only: all 721 rows × 14 original fields reconcile to baseline; zero duplicate vehicle/date keys or orphan dimension keys. [Migration validation](fleet_activity/power_bi/migration_validation.json).
-- Footer cleanup: Niko republished on 12 September; Codex opened the public report without sign-in and verified `Source: Databricks Gold table` on all three pages, page navigation, the Overview Dallas filter and Reset, and baseline headline values. [Publication checks](fleet_activity/power_bi/publication_cleanup_validation.json).
+- Read-only queries against the post-migration Desktop model confirmed: all 721 rows × 14 original fields reconcile to baseline; zero duplicate vehicle/date keys or orphan dimension keys. [Migration validation](fleet_activity/power_bi/migration_validation.json).
+- The report was republished on 12 September. Public browser checks without sign-in verified `Source: Databricks Gold table` on all three pages, page navigation, the Overview Dallas filter and Reset, and baseline headline values. [Publication checks](fleet_activity/power_bi/publication_cleanup_validation.json).
 
 ## Remaining external checks
 
-- First automatic Power BI refresh at 09:00 Central on 13 September; failure-email delivery is untested.
+- Failure-email delivery is untested; success-email delivery and the first scheduled Power BI refresh are confirmed from supplied screenshots.
 - Broader post-migration interaction coverage beyond the focused publication checks above; propagation of a future Gold data change remains unverified.
 - The cloud-only `04_reports` notebook and final Databricks dashboard number formatting are not exported here; the SQL dashboard import file is an initial definition.
 

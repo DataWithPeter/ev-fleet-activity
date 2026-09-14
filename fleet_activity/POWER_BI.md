@@ -44,4 +44,4 @@ The editable three-page project is in `power_bi/`. It was synchronized from the 
 
 The running post-migration Desktop model reconciled to all 721 baseline rows and 14 original fields. This proves the imported snapshot matches; it does not prove a future refresh or every report interaction. See [setup](power_bi/README.md), [migration validation](power_bi/migration_validation.json), and [refresh evidence](power_bi/REFRESH_SETUP.md).
 
-Public recruiter report: [Fleet Activity](https://app.powerbi.com/view?r=eyJrIjoiMzUzYmU0YWEtYzU4NC00NmE1LTk2NmYtZjI4YTViMDhjMjY1IiwidCI6IjhiYmMwZjRiLTVkNWItNGNiMy05ZWM5LTc1MTc0MjRmMzY0ZiJ9&pageName=overview). It is intentionally public and may be indexed by search engines; it contains synthetic fleet/telemetry data and real Open-Meteo weather context.
+Public interactive report: [Fleet Activity](https://app.powerbi.com/view?r=eyJrIjoiMzUzYmU0YWEtYzU4NC00NmE1LTk2NmYtZjI4YTViMDhjMjY1IiwidCI6IjhiYmMwZjRiLTVkNWItNGNiMy05ZWM5LTc1MTc0MjRmMzY0ZiJ9&pageName=overview). It is intentionally public and may be indexed by search engines; it contains synthetic fleet/telemetry data and real Open-Meteo weather context.

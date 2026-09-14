@@ -1,12 +1,11 @@
 # Daily pipeline job review
 
-Reviewed in the signed-in Databricks UI: 12 September 2026.
+Configuration reviewed in the signed-in Databricks UI: 12 September 2026. Scheduled-run and success-email evidence updated from supplied screenshots: 13 September 2026.
 
-Niko created `Fleet_activity_demo`. Its core configuration is correct for the
-current full-refresh demo. Codex inspected the three task configurations,
+`Fleet_activity_demo` orchestrates the full-refresh pipeline. The configuration review covered the three task configurations,
 schedule, concurrency, run history and the scheduled Gold task's proof output.
 The daily trigger has fired successfully. A later user screenshot showed
-job-level Success and Failure email enabled; delivery has not been tested.
+job-level Success and Failure email enabled. Success-email delivery was confirmed on 13 September; failure-email delivery remains untested.
 
 ## What the current notebooks support
 
@@ -32,7 +31,7 @@ not export and compare every cloud source cell against the repository.
 
 ## Verified configuration
 
-Notebook paths below are relative to Niko's Databricks user workspace folder.
+Notebook paths below are relative to the job owner's Databricks user workspace folder.
 All tasks use Workspace sources, not a Git checkout.
 
 | Task | Notebook | Depends on | Run if |
@@ -47,12 +46,12 @@ All tasks use Workspace sources, not a Git checkout.
 - Maximum concurrent runs: 1; queue enabled.
 - Compute: Serverless; performance optimized enabled. The successful run used
   Notebook Environment version 5 and reported Spark 4.2.0.
-- Run as: Niko's workspace user, also the job owner. The successful run
+- Run as: The workspace user, also the job owner. The successful run
   demonstrates the access needed for this execution; permissions were not changed.
 - Retries: each task shows immediate retry, at most 3 retries (4 total attempts).
 - Job parameters and task parameter lists: empty.
-- Notifications at initial inspection: Gold-only task alerts. A later Niko screenshot
-  showed Success and Failure email checked in Job notifications. Delivery is untested.
+- Notifications at initial inspection: Gold-only task alerts. A later supplied screenshot
+  showed Success and Failure email checked in Job notifications. Success delivery was confirmed on 13 September; failure delivery remains untested.
 - No job duration/streaming thresholds are configured. A hard timeout value
   was not independently inspected; no timeout guarantee is claimed.
 - Git settings and job description: not configured. Workspace edits can affect
@@ -87,11 +86,15 @@ and the 1–30 August reporting period. Delta history showed Gold version 7 at
 2026-09-12 13:02:59 UTC. This is new scheduled-run evidence; earlier local
 execution snapshots and historical validation files have not been rewritten.
 
-## Recommended follow-up
+## Scheduled execution — 13 September
+
+The Runs list shows an 08:00 scheduled execution with status Succeeded and duration 3m 9s. The received success email identifies the same execution, start 13:00:17 UTC, and duration 3m 8s. This confirms scheduled job execution and success-email delivery. Failure-email delivery remains untested.
+
+## Operational follow-up
 
 The original recommendation to add job-level failure email was addressed in
-Niko's later Job notifications screenshot, with Success and Failure checked.
-Codex did not change the setting, and failure delivery was not tested by
+the supplied Job notifications screenshot, with Success and Failure checked.
+Failure delivery was not tested by
 intentionally breaking the pipeline.
 
 A short job description would help explain its purpose: "Daily full-refresh
@@ -110,7 +113,7 @@ describes schedule timezones. Failure alerts can be configured through
 
 Power BI now imports directly from Gold and has a separate 09:00 Central
 refresh schedule. A Service on-demand refresh completed on 12 September;
-its first automatic execution remains unverified. The Power BI schedule is
+the scheduled refresh on 13 September completed from 09:03:03 to 09:17:55 as displayed in Refresh history. The Power BI schedule is
 not conditional on job success. See [refresh checkpoint](../power_bi/REFRESH_SETUP.md). The native
 Databricks dashboard reads Gold when its queries refresh; dashboard refresh
 must be distinguished from completion of the pipeline job.
@@ -129,5 +132,4 @@ local test-suite run. A temporary Databricks List-view error was recovered by
 returning to and reloading the graph; it did not change the recorded run result.
 No job changes, new runs, pipeline/model edits, commit or push were made.
 Workspace URLs, organization IDs and private notification addresses are
-omitted from this record. Claude can review this document for alignment;
-independent Claude inspection of the live job is not claimed.
+omitted from this record. The September 13 follow-up is based on supplied screenshots, not a new live configuration inspection.

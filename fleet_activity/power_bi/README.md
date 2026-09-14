@@ -81,14 +81,16 @@ See [Model and DAX reference](MODEL_AND_DAX.md) for the flow, relationships and 
 
 ## Migration checkpoint — September 12, 2026
 
-Codex queried the running Desktop model read-only after the Databricks source change. All 721 rows and 14 original fields match the CSV baseline; no duplicate vehicle/date keys or orphan dimension keys were found, and all three relationships remain active and single-direction. See [migration results](migration_validation.json) and the [model/DAX guide](MODEL_AND_DAX.md).
+The running Desktop model was queried read-only after the Databricks source change. All 721 rows and 14 original fields match the CSV baseline; no duplicate vehicle/date keys or orphan dimension keys were found, and all three relationships remain active and single-direction. See [migration results](migration_validation.json) and the [model/DAX guide](MODEL_AND_DAX.md).
 
-The working report was corrected and Niko republished it on 12 September. Codex verified `Source: Databricks Gold table` on all three public pages, navigation, the Overview Dallas filter and Reset, and baseline headline values. See [publication checks](publication_cleanup_validation.json). The portfolio previews now use Niko's replacement PNG screenshots of the corrected report; see [screenshot provenance](../../docs/screenshots/README.md).
+The working report was corrected and republished on 12 September. Public browser checks verified `Source: Databricks Gold table` on all three public pages, navigation, the Overview Dallas filter and Reset, and baseline headline values. See [publication checks](publication_cleanup_validation.json). The portfolio previews now use owner-supplied PNG screenshots of the corrected report; see [screenshot provenance](../../docs/screenshots/README.md).
 
-**Still pending:** first automatic Service refresh, notification delivery, broader post-migration UI interactions beyond the focused publication checks, and propagation of a future Gold data change. [Refresh checkpoint](REFRESH_SETUP.md).
+**Confirmed on 13 September:** the scheduled Service refresh completed and the Databricks success email was received.
+
+**Still pending:** failure-notification delivery, broader post-migration UI interactions beyond the focused publication checks, and propagation of a future Gold data change. [Refresh checkpoint](REFRESH_SETUP.md).
 
 The Date filter was removed because the data covers one month; the line under each title shows the period.
 
-The editable artifact is PBIP/TMDL; no PBIX is maintained. The report is published in Power BI Service and a public recruiter link is recorded in `fleet_activity/POWER_BI.md`.
+The editable artifact is PBIP/TMDL; no PBIX is maintained. The report is published in Power BI Service and a public report link is recorded in `fleet_activity/POWER_BI.md`.
 
 Fleet and telemetry are synthetic. Weather is from Open-Meteo.

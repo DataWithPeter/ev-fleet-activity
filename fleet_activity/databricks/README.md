@@ -13,7 +13,7 @@ Start with **01 → 02 → 03**, using Run all in each and waiting for success b
 
 All tables use `ev_telematics.fleet_activity_demo_20260910`. The `files` volume holds input files and supporting outputs. The two new handoff tables (`bronze_weather` and `silver_fleet`) make layer boundaries explicit; the Gold columns and distance calculation stay the same. The schema now has ten pipeline tables.
 
-Each notebook explains its input, work and output. Read one layer at a time. The Gold SQL summary is a validation reference, not a dashboard. Build the separate report in Power BI from Gold; see [POWER_BI.md](../POWER_BI.md). HTML/CSS/Matplotlib are outside this scope.
+The Gold SQL summary validates aggregate results. Gold also feeds the [Power BI report](../POWER_BI.md) and the [native Databricks SQL dashboard](dashboard/README.md).
 
 ## Reruns and failures
 
@@ -21,15 +21,14 @@ The demo is a full refresh with a fixed 1–30 August 2026 UTC period. Reruns ov
 
 Stop if a notebook fails. Fix it and rerun that layer, then all following layers in order. Never run Gold after a failed upstream run: old tables may still exist. Individual Delta overwrites are atomic; multiple table writes are not one transaction. No automatic cross-stage freshness gate is implemented in the notebooks.
 
-Niko's `Fleet_activity_demo` job runs daily at 08:00 America/Chicago. It uses
+The `Fleet_activity_demo` job runs daily at 08:00 America/Chicago. It uses
 Bronze → Silver → Gold with All succeeded dependencies, Serverless compute,
 one concurrent run and queueing. The 12 September scheduled run succeeded
 and passed the Gold reference check. See [job settings and run evidence](JOB_REVIEW.md).
 Avoid overlapping manual notebook runs against the same tables. A later user
-screenshot showed job-level Success and Failure email enabled; delivery is untested.
+screenshot showed job-level Success and Failure email enabled. The 13 September scheduled run succeeded, and its success email was received. Failure-email delivery remains untested.
 The job repeats the fixed demo period. Power BI now imports Gold directly on a
-separate 09:00 Central schedule; a Service on-demand refresh passed, while the
-first automatic refresh remains unverified. See [refresh checkpoint](../power_bi/REFRESH_SETUP.md).
+separate 09:00 Central schedule. The first verified scheduled Service refresh completed on 13 September, from 09:03:03 to 09:17:55 as displayed in Refresh history. See [refresh checkpoint](../power_bi/REFRESH_SETUP.md).
 
 Weather in Databricks is an explicit offline replay of saved real Open-Meteo responses. The local Bronze notebook also supports normal and refresh API modes. A prior cloud live request was rate-limited; no new cloud live API success is claimed.
 

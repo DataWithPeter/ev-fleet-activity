@@ -51,10 +51,29 @@
   },
   "change_scope": "Working report: three footer strings only; backups and JSON validation. No DAX, relationships, model source, Gold or pipeline edits in this cleanup.",
   "limitations": [
-    "First automatic 09:00 Central refresh on 13 September remains unverified.",
-    "Notification delivery is untested.",
+    "Failure-notification delivery is untested; scheduled refresh and Databricks success-email evidence are recorded in the follow-up.",
     "This verifies footer publication propagation, not propagation of a future Gold data change.",
     "Model/Weather slicer combinations, cross-highlighting, tooltips and the full earlier interaction suite were not rerun."
   ],
-  "screenshot_follow_up": "On 2026-09-12, all three Power BI previews were replaced with owner-supplied PNG originals showing the corrected source caption. Data Health clips the footer bottom edge; images are not retouched. See ../../docs/screenshots/README.md."
+  "screenshot_follow_up": "On 2026-09-12, all three Power BI previews were replaced with owner-supplied PNG originals showing the corrected source caption. Data Health clips the footer bottom edge; images are not retouched. See ../../docs/screenshots/README.md.",
+  "subsequent_scheduled_run_evidence": {
+    "date": "2026-09-13",
+    "source": "User-supplied Refresh history, Databricks Runs and received success-email screenshots",
+    "power_bi": {
+      "type": "Scheduled",
+      "status": "Completed",
+      "start_as_displayed": "09:03:03 AM",
+      "end_as_displayed": "09:17:55 AM",
+      "elapsed_seconds": 892
+    },
+    "databricks": {
+      "trigger": "By scheduler",
+      "status": "Succeeded",
+      "schedule": "08:00 America/Chicago",
+      "runs_list_duration": "3m 9s",
+      "email_duration": "3m 8s",
+      "success_email_received": true
+    },
+    "failure_email_delivery": "untested"
+  }
 }
