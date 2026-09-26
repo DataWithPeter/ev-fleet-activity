@@ -1,6 +1,6 @@
 {
-  "run_id": "9626b2eb-b549-437e-9e7c-dff511f40efa",
-  "completed_at": "2026-09-11T05:16:03.340329+00:00",
+  "run_id": "48abd8d1-39db-4223-ac6d-fce98da24a90",
+  "completed_at": "2026-09-26T22:52:23.828590+00:00",
   "spark_version": "4.1.0",
   "period": [
     "2026-08-01",
@@ -93,7 +93,7 @@
     "data/sources/telemetry/2026-08-28.jsonl": "5bdf1f662b0acbaa2d30f45b72c7f4d845dc7c3331aec8d4f00d6af1a1d27ec3",
     "data/sources/telemetry/2026-08-29.jsonl": "f511ad2e00301249a930da3ecc682dad728cde2a51d1d52e45c4417b655788ee",
     "data/sources/telemetry/2026-08-30.jsonl": "86c1eecfd34f7b597b3651ef08c13f445811dd8b1850f77adb5dab0671bd102a",
-    "data/sources/fleet.sqlite": "d20e7dfefa2b6f42f7c7113d140e6c9a3b31942b1333918fa576feaf1b66b154",
+    "data/sources/fleet.sqlite": "b906e234a7146857e2e70e6debe508964283945d6aa6e5ba075bb141d2795a53",
     "examples/weather/CHI_2026-08-01_2026-08-30.json": "7fec01e5e609a85b8f6bea728e6bf03b0e95b43539108d2777e92ef916905c6e",
     "examples/weather/DAL_2026-08-01_2026-08-30.json": "a750e28176e834293dd239c19cc621e189bac23d1906256e636120f8607002fd"
   },
