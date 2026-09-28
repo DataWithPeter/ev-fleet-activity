@@ -1,5 +1,5 @@
 {
-  "evidence_kind": "Observed Databricks UI output, recorded by Codex; not an exported executed notebook",
+  "evidence_kind": "Observed Databricks UI output; not an exported executed notebook",
   "platform": "Databricks Free Edition, serverless",
   "source_notebook_sha256": "8b72e94959c83083517136a7038b24ee997e5cbd9ca20110f4339231594f8ff3",
   "code_cells_succeeded": 24,

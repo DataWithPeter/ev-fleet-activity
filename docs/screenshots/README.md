@@ -14,7 +14,7 @@ The report covers 1–30 August 2026. Fleet and telemetry records are synthetic;
 
 ## Power BI source caption
 
-The updated screenshots show `Source: Databricks Gold table`, matching the republished report. The Data Health capture clips the bottom edge of its footer; the original image is preserved. Codex independently verified the complete caption on all three public pages on 12 September. See the [publication checks](../../fleet_activity/power_bi/publication_cleanup_validation.json) and [refresh checkpoint](../../fleet_activity/power_bi/REFRESH_SETUP.md).
+The updated screenshots show `Source: Databricks Gold table`, matching the republished report. The Data Health capture clips the bottom edge of its footer; the original image is preserved. A separate browser check verified the complete caption on all three public pages on 12 September. See the [publication checks](../../fleet_activity/power_bi/publication_cleanup_validation.json) and [refresh checkpoint](../../fleet_activity/power_bi/REFRESH_SETUP.md).
 
 Capturing the report does not verify propagation of a later Gold update or the first automatic scheduled refresh.
 

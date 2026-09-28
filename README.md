@@ -70,7 +70,7 @@ Power BI screenshots from 12 September 2026 with all filters set to All; all thr
 - Daily Databricks orchestration with successful upstream dependencies and a verified scheduled full-refresh run; see [job review](fleet_activity/databricks/JOB_REVIEW.md).
 - Gold data with coverage status and documented measurement limits, ready for a separate reporting layer.
 
-The source systems are intentionally different. Telemetry and fleet records are generated; weather is real historical reanalysis from [Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api). SQLite is a local database, **not a remote JDBC integration**. No claim is made about real fleet behavior or weather causation.
+The source systems are intentionally different. AI assisted with writing the generator that produces the synthetic telemetry files and SQLite fleet database; weather is real historical reanalysis from [Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api). SQLite is a local database, **not a remote JDBC integration**. No claim is made about real fleet behavior or weather causation.
 
 ## Measurement
 

@@ -72,11 +72,11 @@ See [Model and DAX reference](MODEL_AND_DAX.md) for the flow, relationships and 
   - ⓘ panels opening and closing;
   - the 6-row Needs review table, including the unregistered vehicle (0 rows for Dallas);
   - tab navigation.
-- **Earlier Claude recheck:** after the last layout tweak before the model change, KPIs and the ⓘ panel were rechecked on every page (9 checks).
+- **Earlier layout recheck:** after the last layout tweak before the model change, KPIs and the ⓘ panel were rechecked on every page (9 checks).
 - **Validation:** `powerbi-report-author validate` reports 0 errors and one schema warning. Microsoft's `visualContainer/2.11.0` URL returns 404, so exact-version coverage is incomplete. The separate compatibility check passed all 79 PBIR files with 0 errors; 39 visual files were checked against public 2.9.0 in memory.
 - **Final targeted checks:** 9 checks passed after the chart/table grouping filters. All 721 rows and 14 original fields match Gold when reconstructed through the dimensions; 120 direct visual bindings resolve. See [validation results](validation.json).
 - **Saved state:** Overview active; 79 report definition files and 10 model definition files match the saved Windows copy.
-- **Review scope:** Claude reviewed documentation and recomputed figures. That alignment pass did not open or visually review the report; it does not certify the later migration.
+- **Review scope:** The documentation review included recomputing figures. That alignment pass did not open or visually review the report; it does not certify the later migration.
 - **Model format:** TMDL in both the saved Windows project and this folder. The duplicate `model.bim` format is retired.
 
 ## Migration checkpoint — September 12, 2026

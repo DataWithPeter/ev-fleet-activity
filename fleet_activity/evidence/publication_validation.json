@@ -33,7 +33,6 @@
     "See ../power_bi/REFRESH_SETUP.md for the unverified first automatic Service refresh and hosted-report follow-ups."
   ],
   "independent_candidate_review": {
-    "reviewer": "Claude",
     "date": "2026-09-12",
     "verdict": "Ready for private publication; no blockers",
     "scope": "Read-only review of staged candidate, privacy patterns, hashes, links, parameters and documentation. Independently ran tests and offline replay in a separate copy. Did not independently inspect live Databricks, Power BI or Service.",

@@ -2,7 +2,7 @@
   "checked_at": "2026-09-12",
   "scope": "Focused public Power BI UI verification after footer republication; not a full interaction suite or scheduled-refresh audit",
   "publication_evidence": "Niko supplied a Power BI Desktop Publishing to Power BI Success screenshot after reopening the corrected working project",
-  "verification_method": "Codex opened the existing public report without sign-in and inspected rendered page content and interactions",
+  "verification_method": "Opened the existing public report without sign-in and inspected rendered page content and interactions",
   "public_link_record": "../POWER_BI.md",
   "footer": {
     "text": "Source: Databricks Gold table",

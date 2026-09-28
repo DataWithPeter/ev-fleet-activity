@@ -31,7 +31,7 @@
     "limitation": "Microsoft visualContainer/2.11.0 schema URL unavailable; exact-version validation incomplete."
   },
   "source": "Gold CSV import at this historical pre-migration baseline. Current source and validation are in REFRESH_SETUP.md and migration_validation.json.",
-  "claude_review": "Documentation and figure alignment review completed, as reported by Claude. Claude did not open or visually review the report in that pass; no independent post-migration model or refresh verification is claimed.",
   "git_commit": "None",
-  "scope": "Historical 2026-09-11 pre-migration repository-copy CSV baseline. These results do not validate the subsequent Databricks source migration; see REFRESH_SETUP.md."
+  "scope": "Historical 2026-09-11 pre-migration repository-copy CSV baseline. These results do not validate the subsequent Databricks source migration; see REFRESH_SETUP.md.",
+  "documentation_review": "Documentation and figure alignment review completed. That pass did not open or visually review the report; no independent post-migration model or refresh verification is claimed."
 }
