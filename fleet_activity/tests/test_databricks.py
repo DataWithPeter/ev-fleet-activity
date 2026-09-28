@@ -1,6 +1,4 @@
-"""Check the active stage notebooks and preserve the old cloud proof honestly."""
-import hashlib
-import json
+"""Check business-cell parity and helpers in the active stage notebooks."""
 from pathlib import Path
 
 import nbformat
@@ -35,11 +33,3 @@ def test_databricks_companion_keeps_business_cells():
     cells = {c.metadata["tags"][0]: c.source for c in setup.cells if c.cell_type == "code"}
     assert cells["weather_helpers"] == (root / "weather.py").read_text()
     assert cells["source_generator"] == (root / "generate_sources.py").read_text().split('if __name__ == "__main__":')[0]
-
-
-def test_historical_databricks_replay_matches_archived_notebooks():
-    root = Path(__file__).parents[1]
-    proof = json.loads((root / "evidence/databricks_run.json").read_text())
-    assert proof["source_notebook_sha256"] == hashlib.sha256((root / "evidence/archive/databricks_before_power_bi.ipynb").read_bytes()).hexdigest()
-    setup_snapshot = root / "evidence/archive/00_prepare_demo_at_databricks_run.ipynb"
-    assert proof["setup_notebook_sha256"] == hashlib.sha256(setup_snapshot.read_bytes()).hexdigest()

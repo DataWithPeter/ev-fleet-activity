@@ -32,6 +32,6 @@ separate 09:00 Central schedule. The first verified scheduled Service refresh co
 
 Weather in Databricks is an explicit offline replay of saved real Open-Meteo responses. The local Bronze notebook also supports normal and refresh API modes. A prior cloud live request was rate-limited; no new cloud live API success is claimed.
 
-## History
+## Validation
 
-The old `fleet_activity_databricks_replay` is superseded. Historical source and execution records live under `evidence/archive/`; they do not certify these new notebooks. Current validation is recorded in `evidence/notebook_split_validation.json` after testing.
+The three stage notebooks are validated by the [split-pipeline evidence](../evidence/notebook_split_validation.json) and [scheduled job evidence](JOB_REVIEW.md).

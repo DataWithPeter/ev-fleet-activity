@@ -34,7 +34,7 @@ The repository and published report use Databricks Gold in Import mode. This rep
 
 The daily charts, vehicle leaderboard and scatter filter to **Vehicle-days > 0**, so a full-year Date table does not imply observations outside the actual reporting period. That also retains days whose records have missing or untrusted distance. In the leaderboard, this excludes label combinations with no matching activity records; zero-fallback count measures can otherwise make those combinations visible.
 
-All source definitions were synchronized from the saved Windows model on 12 September, then warehouse details were parameterized. See [REFRESH_SETUP.md](REFRESH_SETUP.md) for refresh evidence and remaining external checks. Gold and the pipeline do not need to change to create these reporting dimensions.
+All source definitions were synchronized from the saved Windows model on 12 September, then warehouse details were parameterized. See [REFRESH_SETUP.md](REFRESH_SETUP.md) for refresh evidence and known limitations. Gold and the pipeline do not need to change to create these reporting dimensions.
 
 This demo assumes one model per vehicle and one name per depot. If future data violates that assumption, resolve the source history deliberately; do not change a relationship to many-to-many just to make the error disappear. The unregistered vehicle and Unknown depot/model remain in the model so quality problems are visible.
 

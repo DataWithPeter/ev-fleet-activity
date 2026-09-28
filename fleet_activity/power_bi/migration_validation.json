@@ -35,8 +35,7 @@
   "limitations": [
     "Row parity validates this imported snapshot, not a future Gold update.",
     "Repository template parameters have not been authenticated in a new Desktop session.",
-    "Full post-migration UI interactions and public embed propagation remain unverified.",
-    "Apply footer correction to working Desktop report and republish separately."
+    "Full post-migration UI coverage and propagation of a future Gold data change remain unverified; footer publication and focused public interactions passed on 2026-09-12."
   ],
   "report_definition_validation": {
     "pbir_files": 79,
@@ -59,5 +58,5 @@
     ],
     "scope": "Deserialize candidate definition in memory only; no model deployment, credentials or refresh."
   },
-  "follow_up": "Footer publication and focused public UI checks subsequently completed on 2026-09-12; see publication_cleanup_validation.json. Limitations above describe the original checkpoint."
+  "follow_up": "Footer publication and focused public UI checks subsequently completed on 2026-09-12. The first scheduled Service refresh completed on 2026-09-13 in 14m 52s. See publication_cleanup_validation.json and REFRESH_SETUP.md. Original migration measurements remain dated 2026-09-12; follow-up status was reconciled on 2026-09-28."
 }

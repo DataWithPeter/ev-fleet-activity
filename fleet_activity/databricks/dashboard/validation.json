@@ -56,7 +56,7 @@
   "limitations": [
     "Manual date typing through automation did not persist; native date preset filtering passed.",
     "Initial import JSON does not include the final UI number formats.",
-    "At the original dashboard validation Power BI used CSV. The 2026-09-12 update in ../../power_bi/REFRESH_SETUP.md records direct Databricks Import and a completed Service on-demand refresh; the first automatic refresh remains pending. The repository source is now synchronized with warehouse placeholders.",
+    "At the original dashboard validation Power BI used CSV. The updates in ../../power_bi/REFRESH_SETUP.md record direct Databricks Import, a completed Service on-demand refresh on 2026-09-12, and the first scheduled refresh completed on 2026-09-13 in 14m 52s. The repository source is now synchronized with warehouse placeholders.",
     "Final number formatting was applied in the Databricks UI and is not represented in the initial import JSON."
   ]
 }

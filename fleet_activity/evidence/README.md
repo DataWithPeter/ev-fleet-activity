@@ -1,6 +1,6 @@
 # Execution evidence
 
-Local validation on 11 September 2026 used Python 3.14 and Spark/Delta 4.1.0. The pipeline now has three stage notebooks. Each ran in a separate local kernel; the executed snapshots are [Bronze](01_bronze_ingestion_executed.ipynb), [Silver](02_silver_cleaning_executed.ipynb), and [Gold](03_gold_activity_executed.ipynb). Their sources match the active notebooks. Machine-specific paths in saved startup logs are normalized to `/workspace/ev-fleet-activity`; cell sources and result values are preserved. The prior monolith is retained only in `archive/`.
+Local validation on 11 September 2026 used Python 3.14 and Spark/Delta 4.1.0. The pipeline now has three stage notebooks. Each ran in a separate local kernel; the executed snapshots are [Bronze](01_bronze_ingestion_executed.ipynb), [Silver](02_silver_cleaning_executed.ipynb), and [Gold](03_gold_activity_executed.ipynb). Their sources match the active notebooks. Machine-specific paths in saved startup logs are normalized to `/workspace/ev-fleet-activity`; cell sources and result values are preserved.
 
 ## Results
 
@@ -30,7 +30,7 @@ The [run summary](run_summary.json) records input hashes, weather request parame
 - `FLEET_OFFLINE=1 python fleet_activity/run_notebook.py`: all three stage notebooks passed in separate kernels with real Delta writes and saved real weather inputs.
 - Before the readability changes, a full rerun with the host timezone changed from UTC to America/Chicago produced identical daily and aggregate CSVs, the same 721 Gold rows, and one new Delta version: [replay proof](replay.json).
 - An independent Python calculation from the exported daily CSV reconciled all nine report groups, totals, trusted denominators and means.
-- The former HTML/chart report is archived and is no longer generated. The Power BI report is built and published; a later direct Databricks connection and Service on-demand refresh are recorded in [the refresh checkpoint](../power_bi/REFRESH_SETUP.md). Earlier CSV validation remains historical; the first automatic Service refresh is pending; synchronized source and post-migration row checks are recorded in the linked checkpoint.
+- The Power BI report is published and imports Databricks Gold. The Service on-demand refresh completed on 12 September; the first scheduled refresh completed on 13 September in 14m 52s. [The refresh checkpoint](../power_bi/REFRESH_SETUP.md) records these results, source synchronization, post-migration row checks, and known limitations. Earlier CSV validation remains historical.
 - The malformed JSON parser is exercised by the end-to-end notebook; small transformation tests inject already-parsed fixture rows.
 
 The [daily CSV](daily_vehicle_activity.csv) and [SQL validation CSV](activity_report.csv) come from the current successful local run. Local execution status in `output/execution_status.json` identifies the most recent runner attempt; these tracked files are a historical snapshot.
@@ -47,16 +47,6 @@ CSV hash, 721 Gold rows and 22 quarantined/held rows. Gold history showed versio
 This was a UI-observed scheduler-triggered run; the earlier notebook snapshots
 and validation JSON files remain historical records of their respective runs.
 
-## Historical Databricks replay
-
-The following result predates the Power BI split. Its original source is preserved byte-for-byte in `archive/databricks_before_power_bi.ipynb`. The active cloud pipeline is now split into three notebooks. Their current execution status is recorded in `notebook_split_validation.json`. This earlier replay history does not certify the split revision.
-
-All **24 code cells were observed passing in the UI**, including the `%run` setup call, on Databricks Free Edition serverless (Spark 4.2.0). The final proof compared the cloud business CSV with the local CSV: the full SHA-256 matched, as did 721 Gold rows and 22 quarantine/held rows. The final run overwrote the managed Unity Catalog Gold table at version 2. The previous versions remain in Delta history. The nine-group report was displayed in the notebook.
-
-See [recorded UI results](databricks_run.json). The private proof screenshot is not bundled in this curated repository. The original companion snapshot is in `archive/`; its setup snapshot is [00_prepare_demo_at_databricks_run.ipynb](archive/00_prepare_demo_at_databricks_run.ipynb). Their original source hashes are recorded in the UI evidence. The setup snapshot was recovered byte-for-byte from commit `6314ae8` and verified against the recorded hash. The active setup notebook in `../databricks/` has since received documentation edits, with its code cells unchanged. Tests check the historical hashes against the archived notebooks and check the active notebook helpers against the current source files. A native executed notebook export was attempted but did not produce a downloadable artifact; no exported cloud notebook is claimed.
-
-The first cloud live-weather call returned HTTP 429 and stopped before Gold/report publication. The successful cloud run is an **explicit replay of saved real weather responses**. Local live API ingestion and cloud replay are separate verified results.
-
 ## Independent review
 
 Checkpoint 8 and its focused recheck verified the current split code, independent kernels, unchanged business results and requested cleanup. Final validation metadata was refreshed after that recheck. This review did not include a separate Databricks run.
@@ -67,12 +57,11 @@ For the fresh repository checks and post-migration Power BI row comparison, see 
 
 ## Boundaries
 
-- Databricks replay is tracked separately in [platform evidence](databricks_run.json). The cloud live API request received HTTP 429; successful cloud API ingestion is not claimed.
+- Databricks execution is recorded in the [split-pipeline evidence](notebook_split_validation.json) and [scheduled job evidence](../databricks/JOB_REVIEW.md). These runs replay saved real weather responses. A prior cloud live API request received HTTP 429; successful cloud API ingestion is not claimed.
 - SQLite is a local SQL database, not a remote JDBC source.
 - UTC days are shared across telemetry and weather. Depot weather is contextual, not vehicle-route weather.
 - Distance covers the observed within-day span, not overnight or unobserved travel.
 - Static fleet membership is assumed for the demo period; no SCD2 or historical roster logic.
 - Each Delta overwrite is atomic. Multiple table writes and CSV output are not a single transaction.
-- Rebuilding proficiency and real business impact are not claimed by these execution results.
 
 Current source hashes, execution results and review status are recorded in `notebook_split_validation.json`. Historical reviews above do not certify later revisions.

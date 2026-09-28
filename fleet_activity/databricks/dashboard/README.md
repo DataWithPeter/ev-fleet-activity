@@ -72,7 +72,7 @@ with the initial import file without reapplying those formats.
 
 Power BI is published separately under the new account and has a public report
 link recorded in `fleet_activity/POWER_BI.md`. It now imports Databricks Gold directly, with a completed Service on-demand refresh.
-See [refresh evidence and remaining checks](../../power_bi/REFRESH_SETUP.md).
+See [refresh evidence and known limitations](../../power_bi/REFRESH_SETUP.md).
 
 Both reports can be edited later. Republish their changes and refresh Power BI's
 imported data after a successful Gold update.

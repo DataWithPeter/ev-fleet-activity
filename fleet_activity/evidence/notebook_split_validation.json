@@ -34,5 +34,5 @@
     "weather_mode": "Saved real API snapshots; no cloud live fetch claimed",
     "evidence_type": "UI-observed cell success and printed proof output; no executed cloud notebook export claimed"
   },
-  "validation_review": "Checkpoint 8 and focused recheck passed for code, independent kernels, unchanged results, evidence redaction and exact archived sources. The recheck ran 34 behavioral/parity tests then 2 evidence/parity tests in isolated copies. Final metadata was refreshed after the recheck. Cloud execution was observed separately and was not part of this review."
+  "validation_review": "Checkpoint 8 and focused recheck passed for code, independent kernels, unchanged results and evidence redaction. The recheck ran 34 behavioral/parity tests then 2 evidence/parity tests in isolated copies. Final metadata was refreshed after the recheck. Cloud execution was observed separately and was not part of this review."
 }

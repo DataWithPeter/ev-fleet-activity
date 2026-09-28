@@ -25,12 +25,12 @@
     "business_output_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c",
     "baseline_hash_matches": true
   },
-  "preservation": "Source notebooks, weather fixtures, required historical archive and baseline CSV bytes unchanged from the development snapshot.",
+  "preservation": "Source notebooks, weather fixtures and baseline CSV bytes unchanged from the development snapshot at this checkpoint.",
   "ci": "GitHub Actions executes tests and a fresh offline replay. Consult the Actions run for the result associated with a commit.",
   "limitations": [
     "This is a fixed-period full-refresh demo, not incremental ingestion.",
     "Historical screenshots and private coordination logs are omitted.",
-    "See ../power_bi/REFRESH_SETUP.md for the unverified first automatic Service refresh and hosted-report follow-ups."
+    "The first scheduled Service refresh subsequently completed on 2026-09-13 in 14m 52s. See ../power_bi/REFRESH_SETUP.md for that evidence and known limits on failure notifications, broader UI coverage and future Gold data propagation."
   ],
   "independent_candidate_review": {
     "date": "2026-09-12",

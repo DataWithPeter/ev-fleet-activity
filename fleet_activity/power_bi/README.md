@@ -87,7 +87,7 @@ The working report was corrected and republished on 12 September. Public browser
 
 **Confirmed on 13 September:** the scheduled Service refresh completed and the Databricks success email was received.
 
-**Still pending:** failure-notification delivery, broader post-migration UI interactions beyond the focused publication checks, and propagation of a future Gold data change. [Refresh checkpoint](REFRESH_SETUP.md).
+**Future improvements:** failure-notification delivery, broader post-migration UI interactions beyond the focused publication checks, and propagation of a future Gold data change. [Refresh checkpoint](REFRESH_SETUP.md).
 
 The Date filter was removed because the data covers one month; the line under each title shows the period.
 

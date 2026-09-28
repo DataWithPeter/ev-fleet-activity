@@ -44,7 +44,7 @@ The three source-footer strings were corrected in the saved Windows report, with
 
 These are focused public UI checks, not a complete rerun of the earlier interaction suite or proof of a future scheduled/data refresh. The portfolio previews now use owner-supplied PNG screenshots of the corrected report; see [screenshot provenance](../../docs/screenshots/README.md). [Detailed record](publication_cleanup_validation.json).
 
-## Reproduction and remaining work
+## Reproduction
 
 1. The saved Windows PBIP/TMDL has been synchronized. This repository uses required host/path parameters instead of the original warehouse identifiers. Set them and authenticate before refreshing a clone.
 2. The first scheduled Service refresh is confirmed for 13 September. Continue to inspect Refresh history when investigating stale results.

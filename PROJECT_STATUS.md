@@ -20,7 +20,7 @@ The [repository](https://github.com/DataWithPeter/ev-fleet-activity) became publ
 - Read-only queries against the post-migration Desktop model confirmed: all 721 rows × 14 original fields reconcile to baseline; zero duplicate vehicle/date keys or orphan dimension keys. [Migration validation](fleet_activity/power_bi/migration_validation.json).
 - The report was republished on 12 September. Public browser checks without sign-in verified `Source: Databricks Gold table` on all three pages, page navigation, the Overview Dallas filter and Reset, and baseline headline values. [Publication checks](fleet_activity/power_bi/publication_cleanup_validation.json).
 
-## Verification limits and optional follow-up
+## Known limitations
 
 - Failure-email delivery is untested; success-email delivery and the first scheduled Power BI refresh are confirmed from supplied screenshots.
 - Broader post-migration interaction coverage beyond the focused publication checks above; propagation of a future Gold data change remains unverified.
