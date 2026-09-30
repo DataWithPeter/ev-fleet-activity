@@ -1,6 +1,6 @@
 # Run the Databricks pipeline
 
-Keep these four notebooks together in `fleet-activity-demo`:
+Clone this repository into a Databricks Git folder. Use `fleet_activity/databricks` for Databricks runs; `fleet_activity/notebooks` contains the local versions. Keep these four notebooks together:
 
 | Notebook | Reads | Writes |
 | --- | --- | --- |
@@ -21,7 +21,7 @@ The demo is a full refresh with a fixed 1–30 August 2026 UTC period. Reruns ov
 
 Stop if a notebook fails. Fix it and rerun that layer, then all following layers in order. Never run Gold after a failed upstream run: old tables may still exist. Individual Delta overwrites are atomic; multiple table writes are not one transaction. No automatic cross-stage freshness gate is implemented in the notebooks.
 
-The `Fleet_activity_demo` job runs daily at 08:00 America/Chicago. It uses
+The `Fleet_activity` job runs daily at 08:00 America/Chicago. It uses
 Bronze → Silver → Gold with All succeeded dependencies, Serverless compute,
 one concurrent run and queueing. The 12 September scheduled run succeeded
 and passed the Gold reference check. See [job settings and run evidence](JOB_REVIEW.md).
