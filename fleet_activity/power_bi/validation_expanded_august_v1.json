@@ -1,0 +1,114 @@
+{
+  "checked_at_utc": "2026-10-11T06:00:49Z",
+  "status": "DISPLAYED_EXPANDED_VALUES_AND_LAYOUT_VERIFIED_LIMITED_SCOPE",
+  "source": "Power BI Service browser observations for Fleet Activity; owner-supplied Exceptions and Record audit screenshots inspected in the parent review.",
+  "fleet_activity_observed": {
+    "service_refresh": "Completed; history displayed October 11, 12:35:02 AM (display timezone not independently established)",
+    "data_health_trusted_display": "97.6%",
+    "untrusted_days": 18,
+    "insufficient_days": 9,
+    "missing_days": 16,
+    "model_c_present": true
+  },
+  "telemetry_exceptions_observed": {
+    "selection": "All slicers All",
+    "cards": {
+      "excluded": 43,
+      "held": 18,
+      "insufficient": 9,
+      "missing": 16,
+      "reportable_share": "97.6%"
+    },
+    "primary_cause_bars": {
+      "conflicting_timestamp": 6,
+      "missing_telemetry": 16,
+      "odometer_decreased": 6,
+      "rejected_reading_in_day": 6,
+      "insufficient_readings": 9
+    },
+    "registry_table": "Visible trusted rows have two readings; full four-row count is independently calculated, not all claimed visible in screenshots.",
+    "record_audit": {
+      "source": 10652,
+      "accepted": 10517,
+      "held": 106,
+      "rejected": 19,
+      "residual": 10,
+      "quarantine": 125,
+      "linked_rejects": 8,
+      "unlinked_rejects": 11
+    },
+    "layout": "Clean headers and expanded issue rows; table scrolling is expected."
+  },
+  "expected_values_reference": "../evidence/expanded_august_v1/report_expectations.json",
+  "unverified": [
+    "Slicer interactions",
+    "Reset behavior",
+    "Complete row-by-row web table inspection",
+    "Telemetry Exceptions detailed refresh-history completion timestamp",
+    "Native Databricks dashboard expanded query/UI refresh"
+  ],
+  "boundaries": [
+    "No Desktop refresh, synchronization or republish.",
+    "No newly refreshed Desktop model cache is included.",
+    "Historical September evidence and screenshots remain unchanged."
+  ],
+  "fleet_activity_anonymous_verification": {
+    "public_url": "https://app.powerbi.com/view?r=eyJrIjoiMzUzYmU0YWEtYzU4NC00NmE1LTk2NmYtZjI4YTViMDhjMjY1IiwidCI6IjhiYmMwZjRiLTVkNWItNGNiMy05ZWM5LTc1MTc0MjRmMzY0ZiJ9&pageName=overview",
+    "anonymous_access": "PASS",
+    "method": "Created fresh Chrome Incognito window, opened exact existing public URL, observed rendered Fleet Overview without any sign-in",
+    "observed_cards": {
+      "distance_km_display": "74,442",
+      "km_per_driving_day": 63.52,
+      "idle_days_percent": 33.5,
+      "data_trusted_percent": 97.6,
+      "days_needing_attention": 43
+    },
+    "filters": "Depot, Model and Weather: All",
+    "reporting_period": "Aug 01 \u2013 Aug 30, 2026 \u00b7 UTC",
+    "screenshot_file": "Not produced by the browser screenshot API; no new capture file claimed."
+  },
+  "telemetry_exceptions_public_url": "https://app.powerbi.com/view?r=eyJrIjoiMWUzN2I0YjktYjBlZS00Y2E0LWI3OGYtOGNlYmIyYmRmYzkyIiwidCI6IjhiYmMwZjRiLTVkNWItNGNiMy05ZWM5LTc1MTc0MjRmMzY0ZiJ9",
+  "telemetry_exceptions_anonymous_verification": {
+    "status": "PASS",
+    "date": "2026-10-11",
+    "report": "Telemetry Exceptions",
+    "public_url": "https://app.powerbi.com/view?r=eyJrIjoiMWUzN2I0YjktYjBlZS00Y2E0LWI3OGYtOGNlYmIyYmRmYzkyIiwidCI6IjhiYmMwZjRiLTVkNWItNGNiMy05ZWM5LTc1MTc0MjRmMzY0ZiJ9",
+    "existing_publish_to_web_status": "User supplied and Service success dialog confirmed exact URL; iframe title Telemetry Exceptions",
+    "anonymous_access": "PASS",
+    "record_audit_observed": {
+      "source": 10652,
+      "accepted": 10517,
+      "held": 106,
+      "rejected": 19,
+      "residual": 10,
+      "quarantined": 125,
+      "linked_rejects": 8,
+      "unlinked_rejects": 11
+    },
+    "method": "Fresh Chrome Incognito window opened exact supplied URL. No sign-in performed. Both pages rendered and inspected.",
+    "pages_verified": [
+      "Exceptions (Distance reporting)",
+      "Record audit"
+    ],
+    "exceptions_observed": {
+      "vehicle_days_excluded": 43,
+      "held_for_review": 18,
+      "too_few_readings": 9,
+      "no_telemetry": 16,
+      "reportable_share_percent": 97.6,
+      "primary_causes": {
+        "conflicting_readings": 6,
+        "no_telemetry": 16,
+        "odometer_decreased": 6,
+        "rejected_reading": 6,
+        "too_few_readings": 9
+      },
+      "all_filters": "All",
+      "reportable_registry_rows": 4
+    },
+    "layout": "Both pages rendered with readable cards, charts and tables; no error or sign-in prompt observed.",
+    "access_blockers": [],
+    "agent_changes": "None; read-only navigation and screenshot capture",
+    "local_screenshot_file": "Not produced by the browser capture API; README uses supplied owner screenshots."
+  }
+}

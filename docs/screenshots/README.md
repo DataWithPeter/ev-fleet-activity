@@ -1,6 +1,6 @@
 # Report screenshots
 
-All five screenshots are full-resolution PNG originals supplied by the project owner on 12 September 2026, copied byte-for-byte without resizing or recompression. The three Power BI images were replaced after footer republication and show Depot, Model, and Weather set to All. None of the screenshots have been retouched.
+The five historical baseline screenshots listed below are full-resolution PNG originals supplied by the project owner on 12 September 2026, copied byte-for-byte without resizing or recompression. The three Power BI images were replaced after footer republication and show Depot, Model, and Weather set to All. None of the screenshots have been retouched.
 
 | File | Report page |
 | --- | --- |
@@ -21,3 +21,14 @@ Capturing the report does not verify propagation of a later Gold update or the f
 ## Databricks date control
 
 The supplied overview screenshot displays `09/12/2026` in both Date (UTC) fields while the chart covers August and the KPIs show the full August baseline. This mismatch is preserved in the image. The screenshot alone does not establish whether the control was applied or correctly bound to each visual; its behavior needs a live check before treating this as evidence of date filtering. Earlier dashboard validation remains a separate historical record.
+
+## Expanded Telemetry Exceptions — 11 October 2026
+
+The owner supplied the following Power BI Service PNG screenshots after refreshing the expanded data. These files are copied byte-for-byte from the supplied originals; no chart data, labels or pixels were retouched. Browser/Service controls remain visible and table content below the visible rows requires scrolling.
+
+| File | Page and observed expanded values |
+| --- | --- |
+| [telemetry-exceptions-expanded.png](telemetry-exceptions-expanded.png) | Exceptions: 43 excluded, 18 held, 9 insufficient, 16 missing, 97.6% reportable; all slicers All |
+| [telemetry-record-audit-expanded.png](telemetry-record-audit-expanded.png) | Record audit: 10,652 source, 10,517 accepted, 106 held, 19 rejected, residual 10; quarantine 125, linked rejects 8, unlinked rejects 11 |
+
+The screenshots support the displayed values and header layout. They do not prove all table rows were inspected or that Reset and slicer interactions were tested. Existing September screenshots and their original captions remain historical baseline evidence. See [expanded web verification](../../fleet_activity/power_bi/validation_expanded_august_v1.json).

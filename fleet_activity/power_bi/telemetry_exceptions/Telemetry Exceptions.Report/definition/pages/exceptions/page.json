@@ -1,0 +1,150 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "exceptions",
+  "displayName": "Exceptions",
+  "displayOption": "FitToPage",
+  "width": 1280,
+  "height": 664,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#1C1C1C'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspace": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F3F3F3'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "registry_check",
+      "target": "heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "subtitle",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "nav_exceptions",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "nav_reconciliation",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "footer",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "filter_event_date",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "filter_depot_name",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "filter_model",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "filter_distance_status",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "filter_primary_issue",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "reset",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "impact_0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "primary_issues",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "coverage",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "day_exceptions",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "held_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "insufficient_days",
+      "type": "NoFilter"
+    },
+    {
+      "source": "registry_check",
+      "target": "missing_days",
+      "type": "NoFilter"
+    }
+  ]
+}

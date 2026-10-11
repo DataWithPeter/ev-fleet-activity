@@ -1,0 +1,42 @@
+{
+  "status": "RUNTIME_VERIFICATION_PASSED",
+  "verified_at_utc": "2026-10-11T05:43:01.062203+00:00",
+  "manual_run_id": "250966450620707",
+  "duration": "4m 22s",
+  "spark_version": "4.2.0",
+  "tasks": {
+    "Bronze": "Succeeded, 1m 15s",
+    "Silver": "Succeeded, 1m 15s",
+    "Gold activity": "Succeeded, 45s",
+    "Gold quality": "Succeeded, 1m 3s"
+  },
+  "business_output_sha256": "748ecf0d000032ea963e16567d3d63b187014be881780d815283cba0fb30dfea",
+  "table_rows": {
+    "gold_daily_vehicle_activity": 1805,
+    "gold_vehicle_day_quality": 1805,
+    "gold_vehicle_day_issue": 52,
+    "gold_record_reconciliation": 1
+  },
+  "reconciliation": {
+    "bronze_record_count": 10652,
+    "accepted_record_count": 10517,
+    "rejected_record_count": 19,
+    "held_record_count": 106,
+    "quarantine_record_count": 125,
+    "linked_reject_count": 8,
+    "unlinked_reject_count": 11,
+    "removed_duplicate_remainder": 10
+  },
+  "status_counts": {
+    "insufficient_readings": 9,
+    "missing_telemetry": 16,
+    "trusted": 1762,
+    "untrusted": 18
+  },
+  "source": "Saved live runtime receipt and Gold/quality stdout reviewed on 11 October 2026.",
+  "limitations": [
+    "This manual run does not re-certify September schedule or email settings.",
+    "Pipeline success is distinct from a report refresh.",
+    "Private workspace URLs and notification details omitted."
+  ]
+}

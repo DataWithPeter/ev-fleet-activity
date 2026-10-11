@@ -1,0 +1,69 @@
+table gold_vehicle_day_issue
+	lineageTag: 669a5892-b85a-42d2-a390-26e964991dbd
+
+	measure 'Issue occurrences' = COUNTROWS(gold_vehicle_day_issue)
+		formatString: #,0
+		lineageTag: 2accc6c2-9294-4ae1-a494-7c359cb23227
+
+	column vehicle_day_key
+		dataType: string
+		lineageTag: 6ba10cb4-be97-4022-9db1-df81ade4f636
+		summarizeBy: none
+		sourceColumn: vehicle_day_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_id
+		dataType: string
+		lineageTag: b2abdd56-c39d-4a01-8fd0-e41614607e2f
+		summarizeBy: none
+		sourceColumn: vehicle_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_date
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 7bc04cb4-abb6-46ab-8950-083b63b19054
+		summarizeBy: none
+		sourceColumn: event_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column issue_code
+		dataType: string
+		lineageTag: d9b13b10-b187-4d19-9d94-4cb16a7334cc
+		summarizeBy: none
+		sourceColumn: issue_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue_label
+		dataType: string
+		lineageTag: 4ef5b15f-ae73-4f49-9f35-d0ef4b90fb9a
+		summarizeBy: none
+		sourceColumn: issue_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_priority
+		dataType: int64
+		formatString: 0
+		lineageTag: 6358a133-6f79-45aa-8b1c-4e2aecda1f3a
+		summarizeBy: sum
+		sourceColumn: primary_priority
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_vehicle_day_issue = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs(DatabricksHost, DatabricksHttpPath, [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", Protocol=null]),
+				    ev_telematics_Database = Source{[Name="ev_telematics",Kind="Database"]}[Data],
+				    fleet_activity_demo_20260910_Schema = ev_telematics_Database{[Name="fleet_activity_demo_20260910",Kind="Schema"]}[Data],
+				    gold_vehicle_day_issue_Table = fleet_activity_demo_20260910_Schema{[Name="gold_vehicle_day_issue",Kind="Table"]}[Data]
+				in
+				    gold_vehicle_day_issue_Table

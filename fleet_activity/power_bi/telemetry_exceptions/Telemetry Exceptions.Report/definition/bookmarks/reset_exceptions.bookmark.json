@@ -1,0 +1,705 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Reset Exceptions",
+  "name": "reset_exceptions",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "heading",
+      "subtitle",
+      "nav_exceptions",
+      "nav_reconciliation",
+      "footer",
+      "filter_event_date",
+      "filter_depot_name",
+      "filter_model",
+      "filter_distance_status",
+      "filter_primary_issue",
+      "reset",
+      "impact_0",
+      "primary_issues",
+      "coverage",
+      "day_exceptions",
+      "held_days",
+      "insufficient_days",
+      "missing_days",
+      "registry_check"
+    ],
+    "suppressDisplay": true
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "exceptions",
+    "sections": {
+      "exceptions": {
+        "visualContainers": {
+          "insufficient_days": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "scope_distance_status",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "q",
+                        "Entity": "gold_vehicle_day_quality",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "q"
+                                  }
+                                },
+                                "Property": "distance_status"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'insufficient_readings'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "distance_status"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            }
+          },
+          "filter_model": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "filter_model",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "model"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "model"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "footer": {},
+          "nav_reconciliation": {},
+          "heading": {},
+          "reset": {},
+          "filter_depot_name": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "filter_depot_name",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "depot_name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "depot_name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "filter_event_date": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "filter_event_date",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "event_date"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "event_date"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "day_exceptions": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "scope_issue_count",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "q",
+                        "Entity": "gold_vehicle_day_quality",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "q"
+                                      }
+                                    },
+                                    "Property": "issue_count"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "0L"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "issue_count"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "scope_distance_status",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "q",
+                        "Entity": "gold_vehicle_day_quality",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "q"
+                                      }
+                                    },
+                                    "Property": "distance_status"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'trusted'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "distance_status"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            }
+          },
+          "registry_check": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "scope_registered_vehicle",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "q",
+                        "Entity": "gold_vehicle_day_quality",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "q"
+                                  }
+                                },
+                                "Property": "registered_vehicle"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "false"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "registered_vehicle"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "scope_distance_status",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "q",
+                        "Entity": "gold_vehicle_day_quality",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "q"
+                                  }
+                                },
+                                "Property": "distance_status"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'trusted'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "distance_status"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            }
+          },
+          "subtitle": {},
+          "nav_exceptions": {},
+          "impact_0": {},
+          "held_days": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "scope_distance_status",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "q",
+                        "Entity": "gold_vehicle_day_quality",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "q"
+                                  }
+                                },
+                                "Property": "distance_status"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'untrusted'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "distance_status"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            }
+          },
+          "missing_days": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "scope_distance_status",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "q",
+                        "Entity": "gold_vehicle_day_quality",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "q"
+                                  }
+                                },
+                                "Property": "distance_status"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'missing_telemetry'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "distance_status"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            }
+          },
+          "filter_distance_status": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "filter_distance_status",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "distance_status_display"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "distance_status_display"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "filter_primary_issue": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "filter_primary_issue",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "primary_issue_display"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_vehicle_day_quality"
+                        }
+                      },
+                      "Property": "primary_issue_display"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "coverage": {},
+          "primary_issues": {}
+        }
+      }
+    }
+  }
+}

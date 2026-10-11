@@ -1,6 +1,6 @@
 # Native Databricks dashboard
 
-Status: built, tested against live Gold and published on 2026-09-11.
+Historical baseline status: built, tested against live Gold and published on 2026-09-11.
 
 Open **EV Fleet Activity — SQL Dashboard** from the Databricks workspace's Dashboards area. The workspace-specific URL is intentionally omitted from committed project documentation.
 
@@ -39,11 +39,11 @@ Idle means a trusted zero-distance vehicle-day, not proof of fleet utilization.
 Missing or unreliable distance stays blank. Fleet and telemetry are synthetic;
 weather is real Open-Meteo data. Weather comparisons are descriptive.
 
-## Publication checks
+## Historical baseline publication checks
 
 Run `checks.sql` against live Gold, then compare the dashboard and Power BI:
 
-| Check | Expected from the current CSV baseline |
+| Check | Original baseline expectation |
 | --- | ---: |
 | Vehicle-days | 721 |
 | Trusted days | 716 |
@@ -76,3 +76,21 @@ See [refresh evidence and known limitations](../../power_bi/REFRESH_SETUP.md).
 
 Both reports can be edited later. Republish their changes and refresh Power BI's
 imported data after a successful Gold update.
+
+## Expanded Gold expectations — 11 October 2026
+
+The expanded pipeline replay succeeded, but that does not certify the native dashboard query results. With filters cleared, its saved SQL aggregation definitions yield:
+
+| Check | Expanded expectation |
+| --- | ---: |
+| Vehicle-days | 1,805 |
+| Trusted days | 1,762 |
+| Days needing attention | 43 |
+| Observed distance | 74,441.96 km (74,442 displayed) |
+| Km per driving day | 63.52 km |
+| Idle days | 590 |
+| Idle share | 33.5% |
+| Trusted coverage | 97.6% |
+| Review rows | 47 |
+
+The separate `validation_expanded_august_v1.json` contains expected cases for depot, model, weather and an out-of-period date. It is marked as calculated expectations until a native dashboard check records observed results. `validation.json` remains the September baseline publication evidence. The current initial import definition and old screenshots are not an export or capture of the refreshed expanded dashboard.

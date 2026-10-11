@@ -1,0 +1,3 @@
+relationship QualityDayToIssue
+	fromColumn: gold_vehicle_day_issue.vehicle_day_key
+	toColumn: gold_vehicle_day_quality.vehicle_day_key

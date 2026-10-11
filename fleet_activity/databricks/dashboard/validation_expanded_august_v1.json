@@ -1,0 +1,203 @@
+{
+  "status": "EXPANDED_EXPECTED_VALUES_ONLY_DASHBOARD_UI_CHECK_PENDING",
+  "calculated_at_utc": "2026-10-11T05:55:44.678689+00:00",
+  "scenario": "expanded_august_v1",
+  "source": "Existing isolated expanded local Gold, checked against saved activity.sql and checks.sql aggregation definitions",
+  "business_output_sha256": "748ecf0d000032ea963e16567d3d63b187014be881780d815283cba0fb30dfea",
+  "live_pipeline_verification": {
+    "status": "RUNTIME_VERIFICATION_PASSED",
+    "verified_at_utc": "2026-10-11T05:43:01.062203+00:00",
+    "run_id": "250966450620707",
+    "evidence": "RUNTIME_VERIFICATION.json supplied by live staging task; four tasks succeeded and business hash matches this local Gold.",
+    "dashboard_or_power_bi_validation": false
+  },
+  "baseline_preservation": "validation.json remains the historical September baseline UI evidence. This separate expanded file contains calculated expectations; native dashboard expanded UI verification is pending.",
+  "cases": {
+    "All": {
+      "filters": {},
+      "distance_km_exact": "74441.96",
+      "distance_km_display": "74,442",
+      "driving_day_mean_display": "63.52",
+      "idle_share_display": "33.5%",
+      "trusted_share_display": "97.6%",
+      "attention_days": 43,
+      "vehicle_days": 1805,
+      "trusted_days": 1762,
+      "idle_days": 590,
+      "review_rows": 47
+    },
+    "Chicago": {
+      "filters": {
+        "depot_name": "Chicago"
+      },
+      "distance_km_exact": "35821.00",
+      "distance_km_display": "35,821",
+      "driving_day_mean_display": "64.20",
+      "idle_share_display": "36.4%",
+      "trusted_share_display": "97.4%",
+      "attention_days": 23,
+      "vehicle_days": 900,
+      "trusted_days": 877,
+      "idle_days": 319,
+      "review_rows": 23
+    },
+    "Chicago + Wet": {
+      "filters": {
+        "depot_name": "Chicago",
+        "weather_condition": "Wet"
+      },
+      "distance_km_exact": "21151.24",
+      "distance_km_display": "21,151",
+      "driving_day_mean_display": "63.14",
+      "idle_share_display": "39.3%",
+      "trusted_share_display": "96.8%",
+      "attention_days": 18,
+      "vehicle_days": 570,
+      "trusted_days": 552,
+      "idle_days": 217,
+      "review_rows": 18
+    },
+    "Dallas": {
+      "filters": {
+        "depot_name": "Dallas"
+      },
+      "distance_km_exact": "38580.96",
+      "distance_km_display": "38,581",
+      "driving_day_mean_display": "63.25",
+      "idle_share_display": "30.8%",
+      "trusted_share_display": "97.9%",
+      "attention_days": 19,
+      "vehicle_days": 900,
+      "trusted_days": 881,
+      "idle_days": 271,
+      "review_rows": 19
+    },
+    "Model A": {
+      "filters": {
+        "model": "Model A"
+      },
+      "distance_km_exact": "43111.24",
+      "distance_km_display": "43,111",
+      "driving_day_mean_display": "74.85",
+      "idle_share_display": "34.6%",
+      "trusted_share_display": "97.9%",
+      "attention_days": 19,
+      "vehicle_days": 900,
+      "trusted_days": 881,
+      "idle_days": 305,
+      "review_rows": 19
+    },
+    "Model B": {
+      "filters": {
+        "model": "Model B"
+      },
+      "distance_km_exact": "29916.32",
+      "distance_km_display": "29,916",
+      "driving_day_mean_display": "55.09",
+      "idle_share_display": "15.8%",
+      "trusted_share_display": "97.7%",
+      "attention_days": 15,
+      "vehicle_days": 660,
+      "trusted_days": 645,
+      "idle_days": 102,
+      "review_rows": 15
+    },
+    "Model C": {
+      "filters": {
+        "model": "Model C"
+      },
+      "distance_km_exact": "1374.40",
+      "distance_km_display": "1,374",
+      "driving_day_mean_display": "28.05",
+      "idle_share_display": "78.9%",
+      "trusted_share_display": "96.7%",
+      "attention_days": 8,
+      "vehicle_days": 240,
+      "trusted_days": 232,
+      "idle_days": 183,
+      "review_rows": 8
+    },
+    "Unknown depot": {
+      "filters": {
+        "depot_name": "Unknown depot"
+      },
+      "distance_km_exact": "40.0",
+      "distance_km_display": "40",
+      "driving_day_mean_display": "10.00",
+      "idle_share_display": "0.0%",
+      "trusted_share_display": "80.0%",
+      "attention_days": 1,
+      "vehicle_days": 5,
+      "trusted_days": 4,
+      "idle_days": 0,
+      "review_rows": 5
+    },
+    "Unknown model": {
+      "filters": {
+        "model": "Unknown model"
+      },
+      "distance_km_exact": "40.0",
+      "distance_km_display": "40",
+      "driving_day_mean_display": "10.00",
+      "idle_share_display": "0.0%",
+      "trusted_share_display": "80.0%",
+      "attention_days": 1,
+      "vehicle_days": 5,
+      "trusted_days": 4,
+      "idle_days": 0,
+      "review_rows": 5
+    },
+    "Wet": {
+      "filters": {
+        "weather_condition": "Wet"
+      },
+      "distance_km_exact": "25473.78",
+      "distance_km_display": "25,474",
+      "driving_day_mean_display": "62.44",
+      "idle_share_display": "39.1%",
+      "trusted_share_display": "97.1%",
+      "attention_days": 20,
+      "vehicle_days": 690,
+      "trusted_days": 670,
+      "idle_days": 262,
+      "review_rows": 20
+    },
+    "Dry": {
+      "filters": {
+        "weather_condition": "Dry"
+      },
+      "distance_km_exact": "48928.18",
+      "distance_km_display": "48,928",
+      "driving_day_mean_display": "64.38",
+      "idle_share_display": "30.1%",
+      "trusted_share_display": "98.0%",
+      "attention_days": 22,
+      "vehicle_days": 1110,
+      "trusted_days": 1088,
+      "idle_days": 328,
+      "review_rows": 22
+    },
+    "No data 2026-10-11": {
+      "filters": {
+        "event_date": "2026-10-11"
+      },
+      "distance_km_exact": null,
+      "distance_km_display": "BLANK",
+      "driving_day_mean_display": "BLANK",
+      "idle_share_display": "BLANK",
+      "trusted_share_display": "BLANK",
+      "attention_days": null,
+      "vehicle_days": 0,
+      "trusted_days": 0,
+      "idle_days": 0,
+      "review_rows": 0
+    }
+  },
+  "limitations": [
+    "No Power BI DAX engine, UI, service refresh, publication or native Databricks dashboard was operated by this calculation.",
+    "These expected values use cleared page/report filters and no chart selection except the explicitly named case filters.",
+    "Exact decimal sums are based on saved business CSV; model doubles can have insignificant binary rounding differences.",
+    "Initial import JSON does not include final UI formatting; the existing native dashboard is the source of truth.",
+    "Today is outside the fixed August demo period. A native dashboard no-data message is not certified here."
+  ]
+}

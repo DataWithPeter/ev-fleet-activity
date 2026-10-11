@@ -1,6 +1,6 @@
 # Run the fleet project
 
-The pipeline combines 30 telemetry files, a 24-vehicle SQL roster and weather for two depots over **1–30 August 2026, UTC**. The pipeline is split into [Bronze](notebooks/01_bronze_ingestion.ipynb), [Silver](notebooks/02_silver_cleaning.ipynb), and [Gold](notebooks/03_gold_activity.ipynb). Read and run them in that order. Each reads persisted tables rather than sharing Python variables. `weather.py` is the only imported project helper.
+The pipeline combines 30 telemetry files, a SQL roster and weather for two depots over **1–30 August 2026, UTC**. The default scenario has 24 registered vehicles; the optional `expanded_august_v1` scenario has 60. Run [Bronze](notebooks/01_bronze_ingestion.ipynb), [Silver](notebooks/02_silver_cleaning.ipynb), [Gold activity](notebooks/03_gold_activity.ipynb), then [Gold quality](notebooks/04_gold_quality.ipynb). Each reads persisted tables rather than sharing Python variables. `weather.py` is the only imported project helper.
 
 ## Setup and run locally
 
@@ -30,7 +30,7 @@ FLEET_REFRESH_WEATHER=1 python fleet_activity/run_notebook.py
 
 Offline mode never calls the API and fails if a snapshot is missing. Do not combine offline and refresh. `examples/weather/` contains real responses fetched on 10 September 2026, with request parameters and timestamps. Weather data is attributed to [Open-Meteo](https://open-meteo.com/en/docs/historical-weather-api), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Generated vehicle activity is independent of weather, so group differences demonstrate integration, not real effects.
 
-After the runner reports success, inspect the Gold Delta table under `output/delta/gold_daily_vehicle_activity/`. The output also includes three executed notebooks, two small validation CSVs, and a summary with input hashes. Build the report separately in Power BI; see [the handoff](POWER_BI.md). `execution_status.json` records whether the most recent runner invocation succeeded. After a failure, older output files may still exist; do not treat them as a successful new run.
+After the runner reports success, inspect the Gold Delta table under `output/delta/gold_daily_vehicle_activity/`. The output also includes four executed notebooks, two small validation CSVs, and a summary with input hashes. Build the report separately in Power BI; see [the handoff](POWER_BI.md). `execution_status.json` records whether the most recent runner invocation succeeded. After a failure, older output files may still exist; do not treat them as a successful new run.
 
 ## Pipeline stages
 
@@ -55,10 +55,30 @@ Other checks handle malformed JSON, missing/invalid fields, dates outside the re
 python -m pytest fleet_activity/tests -q
 ```
 
-Tests execute the actual notebook cells with small fixtures, plus API mocks. The full three-notebook run verifies actual malformed-file parsing, SQL extraction and Delta persistence. Tests cover resets, dips/rebounds, spikes, conflicts, missing telemetry, missing weather, join multiplication, period boundaries, and HTTP/timeout failures.
+Tests execute the actual notebook cells with small fixtures, plus API mocks. The full four-notebook run verifies actual malformed-file parsing, SQL extraction and Delta persistence. Tests cover resets, dips/rebounds, spikes, conflicts, missing telemetry, missing weather, join multiplication, period boundaries, and HTTP/timeout failures.
 
 The API makes at most three attempts for transient failures (two retries) with a 30-second request timeout. Exhausted errors, wrong units, unexpected dates or invalid payloads stop before final Gold publication. Rerunning fully replaces these demo tables and their schemas; it does not append duplicates. Keep these output paths dedicated to this project. **There is no cross-table transaction:** a failure can leave newer intermediate tables beside older Gold/export files. Use the runner status and rerun from saved inputs.
 
 ## Platform boundary
 
 The local pipeline is validated with Spark/Delta. The [Databricks companion](databricks/README.md) uses Unity Catalog managed tables and a volume, with the same business transformations. It explicitly replays saved real weather responses: the cloud live API attempt received HTTP 429 and stopped before Gold. See the evidence page for the completed platform checks. No remote database credentials or cloud account are required for the local run. SQLite is not a claimed remote JDBC source.
+
+## Choose and validate a scenario
+
+The commands above generate the original baseline. In a separate checkout/output directory, generate the expanded scenario explicitly:
+
+```bash
+python fleet_activity/generate_sources.py --scenario expanded_august_v1
+FLEET_OFFLINE=1 python fleet_activity/run_notebook.py
+python -m pytest fleet_activity/scenarios/test_expanded_august.py -q
+```
+
+`scenario.json` defines normal activity, `events.csv` is the expanded defect/coverage input, and `expected_vehicle_days.csv` is an independent expected-results fixture that the generator does not read. The same period and saved weather apply to both scenarios. A trusted partial-coverage day still reports only the observed distance between its available readings.
+
+Run the existing test suite against freshly generated **default baseline** output: source generation and the four-stage runner must finish before `python -m pytest fleet_activity/tests -q`. The quality tests read saved Delta tables and intentionally check the baseline fixture. Do not point that suite at expanded output. The expanded scenario tests are a separate command; they do not replace baseline regression tests.
+
+The expanded local review passed 23 scenario tests on each of two fresh runs. A separate fresh default run passed 62 tests (35 existing and 27 quality). These are local results; later CI results are reported separately.
+
+The quality notebook adds `gold_vehicle_day_quality`, `gold_vehicle_day_issue` and `gold_record_reconciliation`. The day and issue tables share `vehicle_day_key`; reconciliation is a disconnected snapshot. Counts of rejected records and held readings are separate. The arithmetic duplicate remainder is a residual, not independent evidence of deduplication.
+
+Expanded output has 1,805 activity/quality rows: 1,762 trusted, 18 untrusted, 9 insufficient and 16 missing. There are 52 issue occurrences across 47 days, including four trusted unregistered days. The expanded business output SHA-256 is `748ecf0d000032ea963e16567d3d63b187014be881780d815283cba0fb30dfea`; the unchanged baseline hash is `766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c`.

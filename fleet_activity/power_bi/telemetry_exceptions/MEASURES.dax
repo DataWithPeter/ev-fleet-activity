@@ -1,0 +1,59 @@
+-- Telemetry Exceptions & Reporting Impact. Imported Gold tables only.
+-- Snapshot measures are deliberately unrelated to day selections.
+
+Vehicle-days =
+COUNTROWS(gold_vehicle_day_quality)
+
+Trusted vehicle-days =
+COALESCE(CALCULATE(COUNTROWS(gold_vehicle_day_quality), KEEPFILTERS(gold_vehicle_day_quality[distance_status] = "trusted")), 0)
+
+Reporting-affected vehicle-days =
+CALCULATE(COUNTROWS(gold_vehicle_day_quality), KEEPFILTERS(gold_vehicle_day_quality[distance_status] <> "trusted"))
+
+Held vehicle-days =
+CALCULATE(COUNTROWS(gold_vehicle_day_quality), KEEPFILTERS(gold_vehicle_day_quality[distance_status] = "untrusted"))
+
+Exception-bearing vehicle-days =
+CALCULATE(COUNTROWS(gold_vehicle_day_quality), gold_vehicle_day_quality[issue_count] > 0)
+
+Registry-exception vehicle-days =
+CALCULATE(COUNTROWS(gold_vehicle_day_quality), gold_vehicle_day_quality[registered_vehicle] = FALSE())
+
+Issue occurrences =
+COUNTROWS(gold_vehicle_day_issue)
+
+Accepted readings in selection =
+SUM(gold_vehicle_day_quality[accepted_reading_count])
+
+Linked rejects in selection =
+SUM(gold_vehicle_day_quality[rejected_record_count])
+
+Held readings in selection =
+SUM(gold_vehicle_day_quality[held_reading_count])
+
+Reporting coverage =
+DIVIDE([Trusted vehicle-days], [Vehicle-days])
+
+Bronze records =
+SUM(gold_record_reconciliation[bronze_record_count])
+
+Accepted records =
+SUM(gold_record_reconciliation[accepted_record_count])
+
+Rejected records =
+SUM(gold_record_reconciliation[rejected_record_count])
+
+Held readings, snapshot =
+SUM(gold_record_reconciliation[held_record_count])
+
+Quarantine records =
+SUM(gold_record_reconciliation[quarantine_record_count])
+
+Linked rejects, snapshot =
+SUM(gold_record_reconciliation[linked_reject_count])
+
+Unlinked rejects, snapshot =
+SUM(gold_record_reconciliation[unlinked_reject_count])
+
+Remainder (expected removed duplicates) =
+SUM(gold_record_reconciliation[removed_duplicate_remainder])

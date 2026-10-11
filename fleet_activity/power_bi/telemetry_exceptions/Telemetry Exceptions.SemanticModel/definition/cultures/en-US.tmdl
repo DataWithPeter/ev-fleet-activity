@@ -1,0 +1,6995 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "gold_record_reconciliation.quarantine_records": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "Quarantine records"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarantine records": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "records": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarantine annals": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quarantine history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "annals": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "quarantine archive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "quarantine chronicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "quarantine account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "quarantine register": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "archive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "chronicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Quarantined: held + rejected": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.linked_rejects_snapshot": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "Linked rejects, snapshot"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "linked rejects, snapshot": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "linked reject, Polaroid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "linked reject, portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "linked reject, photo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "linked reject, photograph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "linked reject, picture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "linked reject, snap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "linked reject, print": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "linked reject, shot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "linked reject, idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "linked reject, description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "Rejected · linked to a day": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.rejected_records": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "Rejected records"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rejected records": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "records": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rejected annals": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rejected history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "annals": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "rejected archive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected chronicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected register": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "archive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "chronicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Rejected": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.remainder_expected_removed_duplicates": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "Remainder (expected removed duplicates)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "remainder (expected removed duplicates)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Residual": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.held_readings_snapshot": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "Held readings, snapshot"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "held readings, snapshot": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "held reading, Polaroid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held reading, portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held reading, photo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "held reading, photograph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "held reading, picture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "held reading, snap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "held reading, print": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "held reading, shot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "held reading, idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "held reading, description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "Held": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.unlinked_rejects_snapshot": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "Unlinked rejects, snapshot"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unlinked rejects, snapshot": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unlinked reject, Polaroid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "unlinked reject, portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "unlinked reject, photo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "unlinked reject, photograph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "unlinked reject, picture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "unlinked reject, snap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "unlinked reject, print": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "unlinked reject, shot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "unlinked reject, idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "unlinked reject, description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "Rejected · no day link": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.accepted_records": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "Accepted records"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "accepted records": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "records": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "accepted annals": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "accepted history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "annals": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "accepted archive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "accepted chronicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "accepted account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "accepted register": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "archive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "chronicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Accepted": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.bronze_records": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "Bronze records"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bronze records": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "records": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "bronze annals": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "bronze history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "annals": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "bronze archive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "bronze chronicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "bronze account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "bronze register": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "archive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "chronicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Source readings": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vehicle-days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vehicle-existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "vehicle-being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "vehicle-living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "vehicle being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "vehicle living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "vehicle-eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle-generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle-epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "Too few readings": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Held for review": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "No telemetry": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.distance_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "distance_status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distance_status": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "distance status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "distance category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "distance importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "distance prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "distance prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "distance condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "distance class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "distance grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "distance level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "distance position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "distance rank": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.reporting_coverage": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Reporting coverage"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reporting coverage": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "coverage": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "reporting attention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "reporting treatment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "reporting exposure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "reporting analysis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "reporting reportage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "attention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "treatment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "exposure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "analysis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "reportage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "Reportable share": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.model": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "model"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "model": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "perfect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "classic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ideal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "representative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mockup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "simulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "replica": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "copy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.registryexception_vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Registry-exception vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "registry-exception vehicle-days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "registry exception vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "exception vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "registry exception vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "exception vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "registry exception vehicle being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "registry exception vehicle living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "exception vehicle being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "exception vehicle living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "registry exception vehicle eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "registry exception vehicle generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "registry exception vehicle epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.depot_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "depot_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "depot name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "depot_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "depot nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "depot title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "depot label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "depot tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Depot": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.accepted_readings_in_selection": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Accepted readings in selection"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "accepted readings in selection": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "selection": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in selection": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "readings in selection": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "accepted interpretation in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accepted analysis in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accepted appraisal in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accepted evaluation in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accepted impression in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accepted comprehension in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accepted conception in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "accepted imagination in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "interpretation in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "analysis in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.event_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "event_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "event date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "event_date": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "event moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "event period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "gold_vehicle_day_quality.vehicle_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "vehicle_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vehicle id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vehicle_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "vehicle identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vehicle identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vehicle identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vehicle credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Vehicle": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.primary_issue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "primary_issue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "primary issue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "primary_issue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "primary topic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "primary subject": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "primary matter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "primary question": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "primary problem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "primary concern": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "primary dispute": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "primary production": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "primary distribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "primary circulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.reading_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "reading_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reading count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reading_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "reading amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.accepted_reading_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "accepted_reading_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "accepted reading count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "accepted_reading_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "accepted reading amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "Accepted": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.rejected_record_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "rejected_record_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rejected record count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rejected_record_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "record count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rejected record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.held_reading_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "held_reading_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "held reading count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "held_reading_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "held reading amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.exceptionbearing_vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Exception-bearing vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "exception-bearing vehicle-days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "exception bearing vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "bearing vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "exception bearing vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "bearing vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "exception bearing vehicle being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "exception bearing vehicle living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "bearing vehicle being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "bearing vehicle living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "exception bearing vehicle eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "exception bearing vehicle generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "exception bearing vehicle epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.reportingaffected_vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Reporting-affected vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reporting-affected vehicle-days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reporting affected vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "reporting affected vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "reporting affected vehicle being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "reporting affected vehicle living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "reporting affected vehicle eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "reporting affected vehicle generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "reporting affected vehicle epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "reporting affected vehicle period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "reporting affected vehicle age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "reporting affected vehicle daylight": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "reporting affected vehicle daytime": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "Vehicle-days excluded": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Vehicle-days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.linked_rejects_in_selection": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Linked rejects in selection"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "linked rejects in selection": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "selection": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in selection": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rejects in selection": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rejects": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in assortment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "in collection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "in variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "in mixture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "in medley": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "in miscellany": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "assortment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "collection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "mixture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.held_readings_in_selection": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Held readings in selection"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "held readings in selection": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "selection": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in selection": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "readings in selection": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "held interpretation in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held analysis in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held appraisal in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held evaluation in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held impression in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held comprehension in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held conception in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held imagination in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "interpretation in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "analysis in selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue.issue_occurrences": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_issue",
+			          "ConceptualProperty": "Issue occurrences"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "issue occurrences": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "occurrences": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "issue incidence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "issue existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "issue manifestation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "incidence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "manifestation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "issue rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "issue amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "issue episode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue.event_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_issue",
+			          "ConceptualProperty": "event_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "event date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "event_date": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "event moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "event period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "gold_vehicle_day_issue.vehicle_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_issue",
+			          "ConceptualProperty": "vehicle_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vehicle id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vehicle_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "vehicle identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vehicle identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vehicle identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vehicle credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Vehicle": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue.issue_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_issue",
+			          "ConceptualProperty": "issue_label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "issue label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "issue_label": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "issue sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "issue tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "issue decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "issue name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
+			          }
+			        },
+			        {
+			          "Issue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue.issue_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_issue",
+			          "ConceptualProperty": "issue_code"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "issue code": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "issue_code": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "issue id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "issue key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue.primary_priority": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_issue",
+			          "ConceptualProperty": "primary_priority"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "primary priority": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "primary_priority": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "primary importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "primary precedence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "primary urgency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "primary significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "primary primacy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "primary import": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gold record reconciliation": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "gold_record_reconciliation": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "reconciliation": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "record reconciliation": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gold record settlement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "gold record resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "gold record reunion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "gold record ceasefire": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "gold record appeasement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "record settlement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "record resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "record reunion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "record ceasefire": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "record appeasement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.bronze_record_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "bronze_record_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bronze record count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "bronze_record_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "record count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "bronze record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.accepted_record_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "accepted_record_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "accepted record count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "accepted_record_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "record count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "accepted record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.rejected_record_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "rejected_record_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rejected record count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rejected_record_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "record count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rejected record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.held_record_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "held_record_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "held record count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "held_record_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "record count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "held record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.quarantine_record_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "quarantine_record_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarantine record count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarantine_record_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "record count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarantine record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "record amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.linked_reject_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "linked_reject_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "linked reject count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "linked_reject_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "reject count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "linked reject amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "reject amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.unlinked_reject_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "unlinked_reject_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unlinked reject count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unlinked_reject_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "reject count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "unlinked reject amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "reject amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation.removed_duplicate_remainder": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_record_reconciliation",
+			          "ConceptualProperty": "removed_duplicate_remainder"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "removed duplicate remainder": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "removed_duplicate_remainder": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "duplicate remainder": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "removed duplicate residue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "duplicate residue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "removed duplicate rest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "removed duplicate balance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "duplicate rest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "duplicate balance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_issue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gold vehicle day issue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "gold_vehicle_day_issue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "day issue": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vehicle day issue": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gold vehicle day topic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "vehicle day topic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "day topic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gold vehicle day subject": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "gold vehicle day matter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "gold vehicle day question": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "gold vehicle day problem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "gold vehicle day concern": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "gold vehicle day dispute": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "vehicle day subject": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue.vehicle_day_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_issue",
+			          "ConceptualProperty": "vehicle_day_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "vehicle day key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vehicle_day_key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "key": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "day key": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vehicle day solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day recipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "basic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fundamental": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "central": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gold vehicle day quality": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "gold_vehicle_day_quality": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quality": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "day quality": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vehicle day quality": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gold vehicle day excellence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "gold vehicle day superiority": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "gold vehicle day eminence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "vehicle day excellence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "vehicle day superiority": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "vehicle day eminence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "day excellence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "day superiority": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "day eminence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gold vehicle day class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.vehicle_day_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "vehicle_day_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vehicle day key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vehicle_day_key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "key": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "day key": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vehicle day solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day recipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "vehicle day resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "basic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fundamental": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "central": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.depot_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "depot_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "depot id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "depot_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "depot identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "depot identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "depot identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "depot credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.registered_vehicle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "registered_vehicle"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "registered vehicle": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "registered_vehicle": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "registered car": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "registered lorry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "registered bus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "registered van": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "registered automobile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "registered truck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "registered mouthpiece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "registered agent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "registered conduit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "registered medium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.issue_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "issue_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "issue count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "issue_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "issue amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.primary_issue_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "primary_issue_display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "primary issue display": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "primary_issue_display": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "issue display": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "primary issue exhibition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "primary issue presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "primary issue demonstration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "primary issue spectacle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "primary issue ceremony": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "primary issue pageant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "issue exhibition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "issue presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "issue demonstration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "issue spectacle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "Cause": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Primary issue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Primary cause": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.distance_status_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "distance_status_display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distance status display": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "distance_status_display": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "status display": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "distance category display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "distance importance display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "distance prestige display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "distance prominence display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "category display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "importance display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prestige display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prominence display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "distance condition display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "distance class display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Distance status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.trusted_vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Trusted vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trusted vehicle-days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trusted vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "trusted vehicle-existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "trusted vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "trusted vehicle-being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "trusted vehicle-living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "trusted vehicle being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trusted vehicle living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trusted vehicle-eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "trusted vehicle-generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "trusted vehicle-epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality.held_vehicledays": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_vehicle_day_quality",
+			          "ConceptualProperty": "Held vehicle-days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "held vehicle-days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "held vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vehicle days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "held vehicle-existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "held vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "vehicle existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "held vehicle-being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "held vehicle-living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "held vehicle being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "held vehicle living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "held vehicle-eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "held vehicle-generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "held vehicle-epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "gold_record_reconciliation_is_Rejected": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.rejected_records": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.rejected_records"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Adjectives": [
+			              {
+			                "Rejected": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "gold_record_reconciliation.rejected_records"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rejected_records_indicates_how_Rejected_gold_record_reconciliations_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.rejected_records"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_rejected_records"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_is_Held": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.held_readings_snapshot": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.held_readings_snapshot"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Adjectives": [
+			              {
+			                "Held": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "gold_record_reconciliation.held_readings_snapshot"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "held_readings_snapshot_indicates_how_Held_gold_record_reconciliations_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.held_readings_snapshot"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_held_readings_snapshot"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_is_Accepted": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.accepted_records": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.accepted_records"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Adjectives": [
+			              {
+			                "Accepted": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "gold_record_reconciliation.accepted_records"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "accepted_records_indicates_how_Accepted_gold_record_reconciliations_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.accepted_records"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_accepted_records"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_is_Accepted": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.accepted_reading_count": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.accepted_reading_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Adjectives": [
+			              {
+			                "Accepted": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "gold_vehicle_day_quality.accepted_reading_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "accepted_reading_count_indicates_how_Accepted_gold_vehicle_day_qualities_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.accepted_reading_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_accepted_reading_counts"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_is_Rejected": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.rejected_record_count": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.rejected_record_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Adjectives": [
+			              {
+			                "Rejected": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "gold_vehicle_day_quality.rejected_record_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rejected_record_count_indicates_how_Rejected_gold_vehicle_day_qualities_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.rejected_record_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_rejected_record_counts"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_is_Held": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.held_reading_count": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.held_reading_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Adjectives": [
+			              {
+			                "Held": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "gold_vehicle_day_quality.held_reading_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "held_reading_count_indicates_how_Held_gold_vehicle_day_qualities_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.held_reading_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_held_reading_counts"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_is_evented_on_event_date": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.event_date": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.event_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "gold_vehicle_day_quality.event_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "event": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "gold_vehicle_day_qualities_are_evented_on_event_dates"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue_is_evented_on_event_date": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_issue"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_issue": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue"
+			          }
+			        },
+			        "gold_vehicle_day_issue.event_date": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue.event_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "gold_vehicle_day_issue.event_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "event": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "gold_vehicle_day_issue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "gold_vehicle_day_issues_are_evented_on_event_dates"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_quarantine_records": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.quarantine_records": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.quarantine_records"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.quarantine_records"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_quarantine_records"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_linked_rejects_snapshot": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.linked_rejects_snapshot": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.linked_rejects_snapshot"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.linked_rejects_snapshot"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_linked_rejects_snapshot"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_remainder_expected_removed_duplicates": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.remainder_expected_removed_duplicates": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.remainder_expected_removed_duplicates"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.remainder_expected_removed_duplicates"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_remainder_expected_removed_duplicates"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_unlinked_rejects_snapshot": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.unlinked_rejects_snapshot": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.unlinked_rejects_snapshot"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.unlinked_rejects_snapshot"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_unlinked_rejects_snapshot"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_bronze_records": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.bronze_records": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.bronze_records"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.bronze_records"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_bronze_records"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_vehicledays": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.vehicledays": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.vehicledays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.vehicledays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_vehicledays"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_distance_status": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.distance_status": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.distance_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.distance_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_distance_statuses"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_reporting_coverage": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.reporting_coverage": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.reporting_coverage"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.reporting_coverage"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_reporting_coverage"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_model": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.model": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.model"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.model"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_models"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_registryexception_vehicledays": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.registryexception_vehicledays": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.registryexception_vehicledays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.registryexception_vehicledays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_registryexception_vehicledays"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_depot_name": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.depot_name": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.depot_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.depot_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_depot_names"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_accepted_readings_in_selection": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.accepted_readings_in_selection": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.accepted_readings_in_selection"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.accepted_readings_in_selection"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_accepted_readings_in_selection"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_event_date": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.event_date": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.event_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.event_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_event_dates"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_vehicle_id": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.vehicle_id": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.vehicle_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.vehicle_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_vehicle_ids"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_primary_issue": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.primary_issue": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.primary_issue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.primary_issue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_primary_issues"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_reading_count": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.reading_count": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.reading_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.reading_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_reading_counts"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_exceptionbearing_vehicledays": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.exceptionbearing_vehicledays": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.exceptionbearing_vehicledays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.exceptionbearing_vehicledays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_exceptionbearing_vehicledays"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_reportingaffected_vehicledays": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.reportingaffected_vehicledays": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.reportingaffected_vehicledays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.reportingaffected_vehicledays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_reportingaffected_vehicledays"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_linked_rejects_in_selection": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.linked_rejects_in_selection": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.linked_rejects_in_selection"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.linked_rejects_in_selection"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_linked_rejects_in_selection"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_held_readings_in_selection": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.held_readings_in_selection": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.held_readings_in_selection"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.held_readings_in_selection"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_held_readings_in_selection"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue_has_issue_occurrences": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_issue"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_issue": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue"
+			          }
+			        },
+			        "gold_vehicle_day_issue.issue_occurrences": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue.issue_occurrences"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_issue"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_issue.issue_occurrences"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_issues_have_issue_occurrences"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue_has_event_date": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_issue"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_issue": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue"
+			          }
+			        },
+			        "gold_vehicle_day_issue.event_date": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue.event_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_issue"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_issue.event_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_issues_have_event_dates"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue_has_vehicle_id": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_issue"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_issue": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue"
+			          }
+			        },
+			        "gold_vehicle_day_issue.vehicle_id": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue.vehicle_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_issue"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_issue.vehicle_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_issues_have_vehicle_ids"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue_has_issue_label": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_issue"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_issue": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue"
+			          }
+			        },
+			        "gold_vehicle_day_issue.issue_label": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue.issue_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_issue"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_issue.issue_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_issues_have_issue_labels"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue_has_issue_code": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_issue"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_issue": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue"
+			          }
+			        },
+			        "gold_vehicle_day_issue.issue_code": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue.issue_code"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_issue"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_issue.issue_code"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_issues_have_issue_codes"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue_has_primary_priority": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_issue"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_issue": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue"
+			          }
+			        },
+			        "gold_vehicle_day_issue.primary_priority": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue.primary_priority"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_issue"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_issue.primary_priority"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_issues_have_primary_priorities"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_bronze_record_count": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.bronze_record_count": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.bronze_record_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.bronze_record_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_bronze_record_counts"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_accepted_record_count": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.accepted_record_count": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.accepted_record_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.accepted_record_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_accepted_record_counts"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_rejected_record_count": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.rejected_record_count": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.rejected_record_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.rejected_record_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_rejected_record_counts"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_held_record_count": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.held_record_count": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.held_record_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.held_record_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_held_record_counts"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_quarantine_record_count": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.quarantine_record_count": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.quarantine_record_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.quarantine_record_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_quarantine_record_counts"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_linked_reject_count": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.linked_reject_count": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.linked_reject_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.linked_reject_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_linked_reject_counts"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_unlinked_reject_count": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.unlinked_reject_count": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.unlinked_reject_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.unlinked_reject_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_unlinked_reject_counts"
+			        }
+			      ]
+			    },
+			    "gold_record_reconciliation_has_removed_duplicate_remainder": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_record_reconciliation"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_record_reconciliation": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation"
+			          }
+			        },
+			        "gold_record_reconciliation.removed_duplicate_remainder": {
+			          "Target": {
+			            "Entity": "gold_record_reconciliation.removed_duplicate_remainder"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_record_reconciliation"
+			            },
+			            "Object": {
+			              "Role": "gold_record_reconciliation.removed_duplicate_remainder"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_record_reconciliations_have_removed_duplicate_remainders"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_vehicle_day_key": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.vehicle_day_key": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.vehicle_day_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.vehicle_day_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_vehicle_day_keys"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_depot_id": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.depot_id": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.depot_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.depot_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_depot_ids"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_registered_vehicle": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.registered_vehicle": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.registered_vehicle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.registered_vehicle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_registered_vehicles"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_issue_count": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.issue_count": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.issue_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.issue_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_issue_counts"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_primary_issue_display": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.primary_issue_display": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.primary_issue_display"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.primary_issue_display"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_primary_issue_displays"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_distance_status_display": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.distance_status_display": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.distance_status_display"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.distance_status_display"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_distance_status_displays"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_trusted_vehicledays": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.trusted_vehicledays": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.trusted_vehicledays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.trusted_vehicledays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_trusted_vehicledays"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_quality_has_held_vehicledays": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_quality"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        },
+			        "gold_vehicle_day_quality.held_vehicledays": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality.held_vehicledays"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality.held_vehicledays"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_held_vehicledays"
+			        }
+			      ]
+			    },
+			    "gold_vehicle_day_issue_has_gold_vehicle_day_quality": {
+			      "Binding": {
+			        "ConceptualEntity": "gold_vehicle_day_issue"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_vehicle_day_issue": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_issue"
+			          }
+			        },
+			        "gold_vehicle_day_quality": {
+			          "Target": {
+			            "Entity": "gold_vehicle_day_quality"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_issue"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_quality"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_issues_have_gold_vehicle_day_qualities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_vehicle_day_quality"
+			            },
+			            "Object": {
+			              "Role": "gold_vehicle_day_issue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_vehicle_day_qualities_have_gold_vehicle_day_issues"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json

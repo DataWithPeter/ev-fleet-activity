@@ -1,0 +1,184 @@
+table gold_vehicle_day_quality
+	lineageTag: c0040775-28f1-4622-94a7-15f303f00a3a
+
+	measure Vehicle-days = COUNTROWS(gold_vehicle_day_quality)
+		formatString: #,0
+		lineageTag: aa938932-2459-4c1c-91f8-c16721396f2a
+
+	measure 'Trusted vehicle-days' = COALESCE(CALCULATE(COUNTROWS(gold_vehicle_day_quality), KEEPFILTERS(gold_vehicle_day_quality[distance_status] = "trusted")), 0)
+		formatString: #,0
+		lineageTag: f12da5a5-94ec-4934-96c4-e89a8f6bcc2d
+
+	measure 'Reporting-affected vehicle-days' = CALCULATE(COUNTROWS(gold_vehicle_day_quality), KEEPFILTERS(gold_vehicle_day_quality[distance_status] <> "trusted"))
+		formatString: #,0
+		lineageTag: e1fa05c7-162a-41ce-8652-a681435cac04
+
+	measure 'Held vehicle-days' = CALCULATE(COUNTROWS(gold_vehicle_day_quality), KEEPFILTERS(gold_vehicle_day_quality[distance_status] = "untrusted"))
+		formatString: #,0
+		lineageTag: 2777bab8-1038-4457-a855-ef71f77b4857
+
+	measure 'Exception-bearing vehicle-days' = CALCULATE(COUNTROWS(gold_vehicle_day_quality), gold_vehicle_day_quality[issue_count] > 0)
+		formatString: #,0
+		lineageTag: 22b43c96-aff4-4e43-9bbb-bd2563190821
+
+	measure 'Registry-exception vehicle-days' = CALCULATE(COUNTROWS(gold_vehicle_day_quality), gold_vehicle_day_quality[registered_vehicle] = FALSE())
+		formatString: #,0
+		lineageTag: e9e14361-0112-4564-ab47-0c3ffc98f19c
+
+	measure 'Accepted readings in selection' = SUM(gold_vehicle_day_quality[accepted_reading_count])
+		formatString: #,0
+		lineageTag: 1eb7305b-3883-49a0-aa2c-e91aacb0cb4c
+
+	measure 'Linked rejects in selection' = SUM(gold_vehicle_day_quality[rejected_record_count])
+		formatString: #,0
+		lineageTag: 8e69d41e-564f-478b-bd4a-7cc4abd7ac74
+
+	measure 'Held readings in selection' = SUM(gold_vehicle_day_quality[held_reading_count])
+		formatString: #,0
+		lineageTag: f4ca34f3-e3af-48a5-8564-6041f57c9d41
+
+	measure 'Reporting coverage' = DIVIDE([Trusted vehicle-days], [Vehicle-days])
+		formatString: 0.0%
+		lineageTag: 7deaffa2-d6c4-4973-9ebd-b95b1b674464
+
+	column vehicle_day_key
+		dataType: string
+		lineageTag: ad451c1d-2b88-494a-aa26-4eb0747dbeb6
+		summarizeBy: none
+		sourceColumn: vehicle_day_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column vehicle_id
+		dataType: string
+		lineageTag: b61c12ab-3fa2-487c-9208-1ef36daf7c38
+		summarizeBy: none
+		sourceColumn: vehicle_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_date
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: f1c1d589-32fb-4a2d-95e0-2f442734bc75
+		summarizeBy: none
+		sourceColumn: event_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column depot_id
+		dataType: string
+		lineageTag: b2ffd9e1-cc2f-402a-a0ab-bfc9b37c8747
+		summarizeBy: none
+		sourceColumn: depot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column depot_name
+		dataType: string
+		lineageTag: 5fa55f24-5dab-48f3-aaae-9d2fd5a08393
+		summarizeBy: none
+		sourceColumn: depot_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column model
+		dataType: string
+		lineageTag: 6c5af4a3-7899-4e08-be7d-1f56eb067529
+		summarizeBy: none
+		sourceColumn: model
+
+		annotation SummarizationSetBy = Automatic
+
+	column registered_vehicle
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4e855265-cb83-4ec3-b3a7-a99138e02ce9
+		summarizeBy: none
+		sourceColumn: registered_vehicle
+
+		annotation SummarizationSetBy = Automatic
+
+	column distance_status
+		dataType: string
+		lineageTag: a369a894-fcde-40b2-ba31-07c733683598
+		summarizeBy: none
+		sourceColumn: distance_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column reading_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 35cc409b-3709-43dd-a081-631025c4927b
+		summarizeBy: sum
+		sourceColumn: reading_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column accepted_reading_count
+		dataType: int64
+		formatString: 0
+		lineageTag: a5cb9c72-9f95-4457-bf93-39bbacafadbb
+		summarizeBy: sum
+		sourceColumn: accepted_reading_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column rejected_record_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b6ff2f6-00d2-4581-bf77-df5de1627551
+		summarizeBy: sum
+		sourceColumn: rejected_record_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column held_reading_count
+		dataType: int64
+		formatString: 0
+		lineageTag: e344191c-ae14-4b07-b84c-27e11e9dcce3
+		summarizeBy: sum
+		sourceColumn: held_reading_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue_count
+		dataType: int64
+		formatString: 0
+		lineageTag: cfbc0ae2-0511-4173-a112-76759773c85a
+		summarizeBy: sum
+		sourceColumn: issue_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_issue
+		dataType: string
+		lineageTag: 7927df22-ec94-466e-9813-fbda38d15001
+		summarizeBy: none
+		sourceColumn: primary_issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_issue_display = SWITCH(gold_vehicle_day_quality[primary_issue], "conflicting_timestamp", "Conflicting readings", "odometer_decreased", "Odometer decreased", "rejected_reading_in_day", "Rejected reading", "missing_telemetry", "No telemetry", "insufficient_readings", "Too few readings", "unregistered_vehicle", "Not in fleet roster", BLANK(), "No issue", gold_vehicle_day_quality[primary_issue])
+		dataType: string
+		lineageTag: 77e6fc3a-8623-4468-97e8-964d9bb9af25
+		summarizeBy: none
+
+	column distance_status_display = SWITCH(gold_vehicle_day_quality[distance_status], "trusted", "Reportable", "untrusted", "Held for review", "insufficient_readings", "Too few readings", "missing_telemetry", "No telemetry", gold_vehicle_day_quality[distance_status])
+		dataType: string
+		lineageTag: 44f3e917-80bc-4eb8-bb23-6f6ea55f83fd
+		summarizeBy: none
+
+	partition gold_vehicle_day_quality = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs(DatabricksHost, DatabricksHttpPath, [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", Protocol=null]),
+				    ev_telematics_Database = Source{[Name="ev_telematics",Kind="Database"]}[Data],
+				    fleet_activity_demo_20260910_Schema = ev_telematics_Database{[Name="fleet_activity_demo_20260910",Kind="Schema"]}[Data],
+				    gold_vehicle_day_quality_Table = fleet_activity_demo_20260910_Schema{[Name="gold_vehicle_day_quality",Kind="Table"]}[Data]
+				in
+				    gold_vehicle_day_quality_Table

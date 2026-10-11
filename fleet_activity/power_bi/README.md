@@ -11,7 +11,7 @@ For your own deployment:
 1. Run the [Databricks companion](../databricks/README.md) to create Gold.
 2. Open this PBIP in Desktop, then Transform data → Manage Parameters. Enter Server Hostname and HTTP Path from your SQL warehouse's Connection details.
 3. In `GoldSource`, adapt catalog/schema names if they differ from `ev_telematics.fleet_activity_demo_20260910`.
-4. Sign in with an authorized Databricks account and refresh. Compare the baseline below when using the included demo inputs.
+4. Sign in with an authorized Databricks account and refresh. Compare the historical baseline below only when using the default scenario; use the separately recorded expanded expectations for `expanded_august_v1`.
 5. Publish to your workspace, authenticate its cloud connection, and verify a Service refresh before enabling the schedule. See [refresh setup](REFRESH_SETUP.md).
 
 The offline CSV remains in `../evidence/` for validation. It is not a second Power BI model or an automatic fallback.
@@ -94,3 +94,21 @@ The Date filter was removed because the data covers one month; the line under ea
 The editable artifact is PBIP/TMDL; no PBIX is maintained. The report is published in Power BI Service and a public report link is recorded in `fleet_activity/POWER_BI.md`.
 
 Fleet and telemetry are synthetic. Weather is from Open-Meteo.
+
+## Expanded report expectations — 11 October 2026
+
+The expanded Gold activity CSV hash is `748ecf0d000032ea963e16567d3d63b187014be881780d815283cba0fb30dfea`. Applying the saved DAX definitions to these Gold rows gives the following full-selection expectations:
+
+| Page | Expected cards, in report order |
+| --- | --- |
+| Overview | 74,442 km; 63.52 km per driving day; 33.5% idle; 97.6% trusted; 43 days needing attention |
+| Vehicles | 60 registered vehicles; 590 idle vehicle-days; 1,172 driving vehicle-days; 33.5% idle |
+| Data Health | 97.6% trusted; 34 vehicles with problem days; 5 unregistered vehicle-days; 40 unregistered km |
+
+The Needs review table has 47 days: 43 reporting-affected days plus four trusted unregistered days. These figures were independently calculated from local expanded Gold using the existing measures and visual filters; they are distinct from the observed web checks below. The older screenshots and Desktop validation receipts still describe the original baseline.
+
+The separate Telemetry Exceptions report uses the quality, issue and disconnected reconciliation tables. Its Exceptions cards should show 43 excluded days, 18 held days, 9 days with too few readings, 16 missing days and 97.6% reportable share. The review table should contain 43 days and the registry table four trusted days. Its Record audit cards should show 10,652 source readings, 10,517 accepted, 19 rejected, 106 held, residual 10, quarantine 125, linked rejects 8 and unlinked rejects 11. These snapshot audit cards remain unchanged under day-level slicers.
+
+No Desktop refresh, synchronization or republish is part of this verification. The saved PBIP/TMDL represents editable definitions; it must not be described as carrying a newly refreshed expanded model cache. Power BI Service verification on 11 October confirmed Fleet Activity's completed refresh, 97.6% trusted coverage, 18 untrusted, 9 insufficient and 16 missing days, with Model C present. Owner-supplied Exceptions and Record audit screenshots confirmed the expanded card values and clean headers with all slicers set to All. Slicer interactions and Reset remain unverified; no Desktop refresh, synchronization or republish was performed. See [expanded web verification](validation_expanded_august_v1.json) and the [Telemetry Exceptions source/setup](telemetry_exceptions/README.md).
+
+The existing [Fleet Activity public link](https://app.powerbi.com/view?r=eyJrIjoiMzUzYmU0YWEtYzU4NC00NmE1LTk2NmYtZjI4YTViMDhjMjY1IiwidCI6IjhiYmMwZjRiLTVkNWItNGNiMy05ZWM5LTc1MTc0MjRmMzY0ZiJ9&pageName=overview) was verified in a fresh Incognito window on 11 October with no sign-in. It displayed 74,442 km, 63.52 km per driving day, 33.5% idle, 97.6% trusted and 43 days needing attention with filters set to All. This browser check did not produce a local screenshot file.

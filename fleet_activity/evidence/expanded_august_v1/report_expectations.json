@@ -1,0 +1,1339 @@
+{
+  "status": "EXPECTED_VALUES_FROM_ACTUAL_LOCAL_GOLD_NOT_UI_VALIDATION",
+  "calculated_at_utc": "2026-10-11T05:55:44.678689+00:00",
+  "scenario": "expanded_august_v1",
+  "business_output_sha256": "748ecf0d000032ea963e16567d3d63b187014be881780d815283cba0fb30dfea",
+  "actual_table_rows": {
+    "gold_daily_vehicle_activity": 1805,
+    "gold_vehicle_day_quality": 1805,
+    "gold_vehicle_day_issue": 52,
+    "gold_record_reconciliation": 1
+  },
+  "method": "Read actual Delta snapshots and verify business CSV against activity Delta; reproduce saved TMDL measure predicates, visual filters and number formats in Python using Decimal.",
+  "limitations": [
+    "No Power BI DAX engine, UI, service refresh, publication or native Databricks dashboard was operated by this calculation.",
+    "These expected values use cleared page/report filters and no chart selection except the explicitly named case filters.",
+    "Exact decimal sums are based on saved business CSV; model doubles can have insignificant binary rounding differences.",
+    "Status filter cases describe saved display-label/raw-status intersection semantics; a raw-status filter is not presented as an existing Fleet Activity slicer.",
+    "DAX BLANK is represented by null/raw and BLANK/display; the UI may render it differently."
+  ],
+  "fleet_activity": {
+    "All": {
+      "filters": {},
+      "measures": {
+        "Observed distance km": "74441.96",
+        "Average distance km": "42.24855845629965947786606129",
+        "Driving-day average km": "63.51703071672354948805460751",
+        "Idle share": "0.3348467650397275822928490352",
+        "Idle vehicle-days": 590,
+        "Trusted %": "0.9761772853185595567867036011",
+        "Days needing attention": 43,
+        "Registered vehicles": 60,
+        "Vehicles driving": 1172,
+        "Vehicles with problem days": 34,
+        "Unregistered vehicle-days": 5,
+        "Vehicle-days": 1805,
+        "Trusted vehicle-days": 1762,
+        "Trusted coverage": "1,762 / 1,805",
+        "Unregistered km (visual filter)": "40.0"
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "74,442 km",
+          "Km per driving day": "63.52 km",
+          "Idle days %": "33.5%",
+          "Data trusted": "97.6%",
+          "Days needing attention": "43"
+        },
+        "Vehicles": {
+          "Registered vehicles": "60",
+          "Idle vehicle-days": "590",
+          "Driving vehicle-days": "1,172",
+          "Idle days %": "33.5%"
+        },
+        "Data Health": {
+          "Data trusted": "97.6%",
+          "Vehicles with problem days": "34",
+          "Unregistered vehicle-days": "5",
+          "Unregistered km": "40 km"
+        }
+      },
+      "needs_review_rows": 47,
+      "status_counts": {
+        "insufficient_readings": 9,
+        "missing_telemetry": 16,
+        "trusted": 1762,
+        "untrusted": 18
+      }
+    },
+    "Chicago": {
+      "filters": {
+        "depot_name": "Chicago"
+      },
+      "measures": {
+        "Observed distance km": "35821.00",
+        "Average distance km": "40.84492588369441277080957811",
+        "Driving-day average km": "64.19534050179211469534050179",
+        "Idle share": "0.3637400228050171037628278221",
+        "Idle vehicle-days": 319,
+        "Trusted %": "0.9744444444444444444444444444",
+        "Days needing attention": 23,
+        "Registered vehicles": 30,
+        "Vehicles driving": 558,
+        "Vehicles with problem days": 17,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 900,
+        "Trusted vehicle-days": 877,
+        "Trusted coverage": "877 / 900",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "35,821 km",
+          "Km per driving day": "64.20 km",
+          "Idle days %": "36.4%",
+          "Data trusted": "97.4%",
+          "Days needing attention": "23"
+        },
+        "Vehicles": {
+          "Registered vehicles": "30",
+          "Idle vehicle-days": "319",
+          "Driving vehicle-days": "558",
+          "Idle days %": "36.4%"
+        },
+        "Data Health": {
+          "Data trusted": "97.4%",
+          "Vehicles with problem days": "17",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 23,
+      "status_counts": {
+        "insufficient_readings": 4,
+        "missing_telemetry": 10,
+        "trusted": 877,
+        "untrusted": 9
+      }
+    },
+    "Chicago + Wet": {
+      "filters": {
+        "depot_name": "Chicago",
+        "weather_condition": "Wet"
+      },
+      "measures": {
+        "Observed distance km": "21151.24",
+        "Average distance km": "38.31746376811594202898550725",
+        "Driving-day average km": "63.13802985074626865671641791",
+        "Idle share": "0.3931159420289855072463768116",
+        "Idle vehicle-days": 217,
+        "Trusted %": "0.9684210526315789473684210526",
+        "Days needing attention": 18,
+        "Registered vehicles": 30,
+        "Vehicles driving": 335,
+        "Vehicles with problem days": 13,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 570,
+        "Trusted vehicle-days": 552,
+        "Trusted coverage": "552 / 570",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "21,151 km",
+          "Km per driving day": "63.14 km",
+          "Idle days %": "39.3%",
+          "Data trusted": "96.8%",
+          "Days needing attention": "18"
+        },
+        "Vehicles": {
+          "Registered vehicles": "30",
+          "Idle vehicle-days": "217",
+          "Driving vehicle-days": "335",
+          "Idle days %": "39.3%"
+        },
+        "Data Health": {
+          "Data trusted": "96.8%",
+          "Vehicles with problem days": "13",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 18,
+      "status_counts": {
+        "insufficient_readings": 3,
+        "missing_telemetry": 9,
+        "trusted": 552,
+        "untrusted": 6
+      }
+    },
+    "Dallas": {
+      "filters": {
+        "depot_name": "Dallas"
+      },
+      "measures": {
+        "Observed distance km": "38580.96",
+        "Average distance km": "43.79223609534619750283768445",
+        "Driving-day average km": "63.24747540983606557377049180",
+        "Idle share": "0.3076049943246311010215664018",
+        "Idle vehicle-days": 271,
+        "Trusted %": "0.9788888888888888888888888889",
+        "Days needing attention": 19,
+        "Registered vehicles": 30,
+        "Vehicles driving": 610,
+        "Vehicles with problem days": 16,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 900,
+        "Trusted vehicle-days": 881,
+        "Trusted coverage": "881 / 900",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "38,581 km",
+          "Km per driving day": "63.25 km",
+          "Idle days %": "30.8%",
+          "Data trusted": "97.9%",
+          "Days needing attention": "19"
+        },
+        "Vehicles": {
+          "Registered vehicles": "30",
+          "Idle vehicle-days": "271",
+          "Driving vehicle-days": "610",
+          "Idle days %": "30.8%"
+        },
+        "Data Health": {
+          "Data trusted": "97.9%",
+          "Vehicles with problem days": "16",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 19,
+      "status_counts": {
+        "insufficient_readings": 4,
+        "missing_telemetry": 6,
+        "trusted": 881,
+        "untrusted": 9
+      }
+    },
+    "Model A": {
+      "filters": {
+        "model": "Model A"
+      },
+      "measures": {
+        "Observed distance km": "43111.24",
+        "Average distance km": "48.93443813847900113507377980",
+        "Driving-day average km": "74.84590277777777777777777778",
+        "Idle share": "0.3461975028376844494892167991",
+        "Idle vehicle-days": 305,
+        "Trusted %": "0.9788888888888888888888888889",
+        "Days needing attention": 19,
+        "Registered vehicles": 30,
+        "Vehicles driving": 576,
+        "Vehicles with problem days": 13,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 900,
+        "Trusted vehicle-days": 881,
+        "Trusted coverage": "881 / 900",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "43,111 km",
+          "Km per driving day": "74.85 km",
+          "Idle days %": "34.6%",
+          "Data trusted": "97.9%",
+          "Days needing attention": "19"
+        },
+        "Vehicles": {
+          "Registered vehicles": "30",
+          "Idle vehicle-days": "305",
+          "Driving vehicle-days": "576",
+          "Idle days %": "34.6%"
+        },
+        "Data Health": {
+          "Data trusted": "97.9%",
+          "Vehicles with problem days": "13",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 19,
+      "status_counts": {
+        "insufficient_readings": 2,
+        "missing_telemetry": 8,
+        "trusted": 881,
+        "untrusted": 9
+      }
+    },
+    "Model B": {
+      "filters": {
+        "model": "Model B"
+      },
+      "measures": {
+        "Observed distance km": "29916.32",
+        "Average distance km": "46.38189147286821705426356589",
+        "Driving-day average km": "55.09451197053406998158379374",
+        "Idle share": "0.1581395348837209302325581395",
+        "Idle vehicle-days": 102,
+        "Trusted %": "0.9772727272727272727272727273",
+        "Days needing attention": 15,
+        "Registered vehicles": 22,
+        "Vehicles driving": 543,
+        "Vehicles with problem days": 13,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 660,
+        "Trusted vehicle-days": 645,
+        "Trusted coverage": "645 / 660",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "29,916 km",
+          "Km per driving day": "55.09 km",
+          "Idle days %": "15.8%",
+          "Data trusted": "97.7%",
+          "Days needing attention": "15"
+        },
+        "Vehicles": {
+          "Registered vehicles": "22",
+          "Idle vehicle-days": "102",
+          "Driving vehicle-days": "543",
+          "Idle days %": "15.8%"
+        },
+        "Data Health": {
+          "Data trusted": "97.7%",
+          "Vehicles with problem days": "13",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 15,
+      "status_counts": {
+        "insufficient_readings": 3,
+        "missing_telemetry": 5,
+        "trusted": 645,
+        "untrusted": 7
+      }
+    },
+    "Model C": {
+      "filters": {
+        "model": "Model C"
+      },
+      "measures": {
+        "Observed distance km": "1374.40",
+        "Average distance km": "5.924137931034482758620689655",
+        "Driving-day average km": "28.04897959183673469387755102",
+        "Idle share": "0.7887931034482758620689655172",
+        "Idle vehicle-days": 183,
+        "Trusted %": "0.9666666666666666666666666667",
+        "Days needing attention": 8,
+        "Registered vehicles": 8,
+        "Vehicles driving": 49,
+        "Vehicles with problem days": 7,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 240,
+        "Trusted vehicle-days": 232,
+        "Trusted coverage": "232 / 240",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "1,374 km",
+          "Km per driving day": "28.05 km",
+          "Idle days %": "78.9%",
+          "Data trusted": "96.7%",
+          "Days needing attention": "8"
+        },
+        "Vehicles": {
+          "Registered vehicles": "8",
+          "Idle vehicle-days": "183",
+          "Driving vehicle-days": "49",
+          "Idle days %": "78.9%"
+        },
+        "Data Health": {
+          "Data trusted": "96.7%",
+          "Vehicles with problem days": "7",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 8,
+      "status_counts": {
+        "insufficient_readings": 3,
+        "missing_telemetry": 3,
+        "trusted": 232,
+        "untrusted": 2
+      }
+    },
+    "Unknown depot": {
+      "filters": {
+        "depot_name": "Unknown depot"
+      },
+      "measures": {
+        "Observed distance km": "40.0",
+        "Average distance km": "10.0",
+        "Driving-day average km": "10.0",
+        "Idle share": "0",
+        "Idle vehicle-days": 0,
+        "Trusted %": "0.8",
+        "Days needing attention": 1,
+        "Registered vehicles": null,
+        "Vehicles driving": 4,
+        "Vehicles with problem days": 1,
+        "Unregistered vehicle-days": 5,
+        "Vehicle-days": 5,
+        "Trusted vehicle-days": 4,
+        "Trusted coverage": "4 / 5",
+        "Unregistered km (visual filter)": "40.0"
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "40 km",
+          "Km per driving day": "10.00 km",
+          "Idle days %": "0.0%",
+          "Data trusted": "80.0%",
+          "Days needing attention": "1"
+        },
+        "Vehicles": {
+          "Registered vehicles": "BLANK",
+          "Idle vehicle-days": "0",
+          "Driving vehicle-days": "4",
+          "Idle days %": "0.0%"
+        },
+        "Data Health": {
+          "Data trusted": "80.0%",
+          "Vehicles with problem days": "1",
+          "Unregistered vehicle-days": "5",
+          "Unregistered km": "40 km"
+        }
+      },
+      "needs_review_rows": 5,
+      "status_counts": {
+        "insufficient_readings": 1,
+        "trusted": 4
+      }
+    },
+    "Unknown model": {
+      "filters": {
+        "model": "Unknown model"
+      },
+      "measures": {
+        "Observed distance km": "40.0",
+        "Average distance km": "10.0",
+        "Driving-day average km": "10.0",
+        "Idle share": "0",
+        "Idle vehicle-days": 0,
+        "Trusted %": "0.8",
+        "Days needing attention": 1,
+        "Registered vehicles": null,
+        "Vehicles driving": 4,
+        "Vehicles with problem days": 1,
+        "Unregistered vehicle-days": 5,
+        "Vehicle-days": 5,
+        "Trusted vehicle-days": 4,
+        "Trusted coverage": "4 / 5",
+        "Unregistered km (visual filter)": "40.0"
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "40 km",
+          "Km per driving day": "10.00 km",
+          "Idle days %": "0.0%",
+          "Data trusted": "80.0%",
+          "Days needing attention": "1"
+        },
+        "Vehicles": {
+          "Registered vehicles": "BLANK",
+          "Idle vehicle-days": "0",
+          "Driving vehicle-days": "4",
+          "Idle days %": "0.0%"
+        },
+        "Data Health": {
+          "Data trusted": "80.0%",
+          "Vehicles with problem days": "1",
+          "Unregistered vehicle-days": "5",
+          "Unregistered km": "40 km"
+        }
+      },
+      "needs_review_rows": 5,
+      "status_counts": {
+        "insufficient_readings": 1,
+        "trusted": 4
+      }
+    },
+    "Wet": {
+      "filters": {
+        "weather_condition": "Wet"
+      },
+      "measures": {
+        "Observed distance km": "25473.78",
+        "Average distance km": "38.02056716417910447761194030",
+        "Driving-day average km": "62.43573529411764705882352941",
+        "Idle share": "0.3910447761194029850746268657",
+        "Idle vehicle-days": 262,
+        "Trusted %": "0.9710144927536231884057971014",
+        "Days needing attention": 20,
+        "Registered vehicles": 60,
+        "Vehicles driving": 408,
+        "Vehicles with problem days": 15,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 690,
+        "Trusted vehicle-days": 670,
+        "Trusted coverage": "670 / 690",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "25,474 km",
+          "Km per driving day": "62.44 km",
+          "Idle days %": "39.1%",
+          "Data trusted": "97.1%",
+          "Days needing attention": "20"
+        },
+        "Vehicles": {
+          "Registered vehicles": "60",
+          "Idle vehicle-days": "262",
+          "Driving vehicle-days": "408",
+          "Idle days %": "39.1%"
+        },
+        "Data Health": {
+          "Data trusted": "97.1%",
+          "Vehicles with problem days": "15",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 20,
+      "status_counts": {
+        "insufficient_readings": 3,
+        "missing_telemetry": 9,
+        "trusted": 670,
+        "untrusted": 8
+      }
+    },
+    "Dry": {
+      "filters": {
+        "weather_condition": "Dry"
+      },
+      "measures": {
+        "Observed distance km": "48928.18",
+        "Average distance km": "44.97075367647058823529411765",
+        "Driving-day average km": "64.37918421052631578947368421",
+        "Idle share": "0.3014705882352941176470588235",
+        "Idle vehicle-days": 328,
+        "Trusted %": "0.9801801801801801801801801802",
+        "Days needing attention": 22,
+        "Registered vehicles": 60,
+        "Vehicles driving": 760,
+        "Vehicles with problem days": 19,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 1110,
+        "Trusted vehicle-days": 1088,
+        "Trusted coverage": "1,088 / 1,110",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "48,928 km",
+          "Km per driving day": "64.38 km",
+          "Idle days %": "30.1%",
+          "Data trusted": "98.0%",
+          "Days needing attention": "22"
+        },
+        "Vehicles": {
+          "Registered vehicles": "60",
+          "Idle vehicle-days": "328",
+          "Driving vehicle-days": "760",
+          "Idle days %": "30.1%"
+        },
+        "Data Health": {
+          "Data trusted": "98.0%",
+          "Vehicles with problem days": "19",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 22,
+      "status_counts": {
+        "insufficient_readings": 5,
+        "missing_telemetry": 7,
+        "trusted": 1088,
+        "untrusted": 10
+      }
+    },
+    "trusted (filter context)": {
+      "filters": {
+        "distance_status": "trusted"
+      },
+      "measures": {
+        "Observed distance km": "74441.96",
+        "Average distance km": "42.24855845629965947786606129",
+        "Driving-day average km": "63.51703071672354948805460751",
+        "Idle share": "0.3348467650397275822928490352",
+        "Idle vehicle-days": 590,
+        "Trusted %": "1",
+        "Days needing attention": 0,
+        "Registered vehicles": 60,
+        "Vehicles driving": 1172,
+        "Vehicles with problem days": 0,
+        "Unregistered vehicle-days": 4,
+        "Vehicle-days": 1762,
+        "Trusted vehicle-days": 1762,
+        "Trusted coverage": "1,762 / 1,762",
+        "Unregistered km (visual filter)": "40.0"
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "74,442 km",
+          "Km per driving day": "63.52 km",
+          "Idle days %": "33.5%",
+          "Data trusted": "100.0%",
+          "Days needing attention": "0"
+        },
+        "Vehicles": {
+          "Registered vehicles": "60",
+          "Idle vehicle-days": "590",
+          "Driving vehicle-days": "1,172",
+          "Idle days %": "33.5%"
+        },
+        "Data Health": {
+          "Data trusted": "100.0%",
+          "Vehicles with problem days": "0",
+          "Unregistered vehicle-days": "4",
+          "Unregistered km": "40 km"
+        }
+      },
+      "needs_review_rows": 4,
+      "status_counts": {
+        "trusted": 1762
+      }
+    },
+    "untrusted (filter context)": {
+      "filters": {
+        "distance_status": "untrusted"
+      },
+      "measures": {
+        "Observed distance km": null,
+        "Average distance km": null,
+        "Driving-day average km": null,
+        "Idle share": null,
+        "Idle vehicle-days": 0,
+        "Trusted %": "0",
+        "Days needing attention": 18,
+        "Registered vehicles": 16,
+        "Vehicles driving": 0,
+        "Vehicles with problem days": 16,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 18,
+        "Trusted vehicle-days": 0,
+        "Trusted coverage": "0 / 18",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "BLANK",
+          "Km per driving day": "BLANK",
+          "Idle days %": "BLANK",
+          "Data trusted": "0.0%",
+          "Days needing attention": "18"
+        },
+        "Vehicles": {
+          "Registered vehicles": "16",
+          "Idle vehicle-days": "0",
+          "Driving vehicle-days": "0",
+          "Idle days %": "BLANK"
+        },
+        "Data Health": {
+          "Data trusted": "0.0%",
+          "Vehicles with problem days": "16",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 18,
+      "status_counts": {
+        "untrusted": 18
+      }
+    },
+    "No data 2026-10-11": {
+      "filters": {
+        "event_date": "2026-10-11"
+      },
+      "measures": {
+        "Observed distance km": null,
+        "Average distance km": null,
+        "Driving-day average km": null,
+        "Idle share": null,
+        "Idle vehicle-days": 0,
+        "Trusted %": null,
+        "Days needing attention": 0,
+        "Registered vehicles": null,
+        "Vehicles driving": 0,
+        "Vehicles with problem days": 0,
+        "Unregistered vehicle-days": 0,
+        "Vehicle-days": 0,
+        "Trusted vehicle-days": 0,
+        "Trusted coverage": "0 / 0",
+        "Unregistered km (visual filter)": null
+      },
+      "cards": {
+        "Overview": {
+          "Distance": "BLANK",
+          "Km per driving day": "BLANK",
+          "Idle days %": "BLANK",
+          "Data trusted": "BLANK",
+          "Days needing attention": "0"
+        },
+        "Vehicles": {
+          "Registered vehicles": "BLANK",
+          "Idle vehicle-days": "0",
+          "Driving vehicle-days": "0",
+          "Idle days %": "BLANK"
+        },
+        "Data Health": {
+          "Data trusted": "BLANK",
+          "Vehicles with problem days": "0",
+          "Unregistered vehicle-days": "0",
+          "Unregistered km": "BLANK"
+        }
+      },
+      "needs_review_rows": 0,
+      "status_counts": {}
+    }
+  },
+  "telemetry_exceptions": {
+    "All": {
+      "filters": {},
+      "measures": {
+        "Vehicle-days": 1805,
+        "Trusted vehicle-days": 1762,
+        "Reporting-affected vehicle-days": 43,
+        "Held vehicle-days": 18,
+        "Exception-bearing vehicle-days": 47,
+        "Registry-exception vehicle-days": 5,
+        "Issue occurrences": 52,
+        "Accepted readings in selection": 10517,
+        "Linked rejects in selection": 8,
+        "Held readings in selection": 106,
+        "Reporting coverage": "0.9761772853185595567867036011"
+      },
+      "cards": {
+        "Vehicle-days excluded": "43",
+        "Held for review": "18",
+        "Too few readings": "9",
+        "No telemetry": "16",
+        "Reportable share": "97.6%"
+      },
+      "review_table_rows": 43,
+      "registry_table_rows": 4,
+      "affected_primary_cause_counts": {
+        "conflicting_timestamp": 6,
+        "insufficient_readings": 9,
+        "missing_telemetry": 16,
+        "odometer_decreased": 6,
+        "rejected_reading_in_day": 6
+      },
+      "issue_occurrences_by_code": {
+        "conflicting_timestamp": 6,
+        "insufficient_readings": 9,
+        "missing_telemetry": 16,
+        "odometer_decreased": 8,
+        "rejected_reading_in_day": 8,
+        "unregistered_vehicle": 5
+      }
+    },
+    "Chicago": {
+      "filters": {
+        "depot_name": "Chicago"
+      },
+      "measures": {
+        "Vehicle-days": 900,
+        "Trusted vehicle-days": 877,
+        "Reporting-affected vehicle-days": 23,
+        "Held vehicle-days": 9,
+        "Exception-bearing vehicle-days": 23,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": 25,
+        "Accepted readings in selection": 5242,
+        "Linked rejects in selection": 4,
+        "Held readings in selection": 53,
+        "Reporting coverage": "0.9744444444444444444444444444"
+      },
+      "cards": {
+        "Vehicle-days excluded": "23",
+        "Held for review": "9",
+        "Too few readings": "4",
+        "No telemetry": "10",
+        "Reportable share": "97.4%"
+      },
+      "review_table_rows": 23,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "conflicting_timestamp": 3,
+        "insufficient_readings": 4,
+        "missing_telemetry": 10,
+        "odometer_decreased": 3,
+        "rejected_reading_in_day": 3
+      },
+      "issue_occurrences_by_code": {
+        "conflicting_timestamp": 3,
+        "insufficient_readings": 4,
+        "missing_telemetry": 10,
+        "odometer_decreased": 4,
+        "rejected_reading_in_day": 4
+      }
+    },
+    "Dallas": {
+      "filters": {
+        "depot_name": "Dallas"
+      },
+      "measures": {
+        "Vehicle-days": 900,
+        "Trusted vehicle-days": 881,
+        "Reporting-affected vehicle-days": 19,
+        "Held vehicle-days": 9,
+        "Exception-bearing vehicle-days": 19,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": 21,
+        "Accepted readings in selection": 5266,
+        "Linked rejects in selection": 4,
+        "Held readings in selection": 53,
+        "Reporting coverage": "0.9788888888888888888888888889"
+      },
+      "cards": {
+        "Vehicle-days excluded": "19",
+        "Held for review": "9",
+        "Too few readings": "4",
+        "No telemetry": "6",
+        "Reportable share": "97.9%"
+      },
+      "review_table_rows": 19,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "conflicting_timestamp": 3,
+        "insufficient_readings": 4,
+        "missing_telemetry": 6,
+        "odometer_decreased": 3,
+        "rejected_reading_in_day": 3
+      },
+      "issue_occurrences_by_code": {
+        "conflicting_timestamp": 3,
+        "insufficient_readings": 4,
+        "missing_telemetry": 6,
+        "odometer_decreased": 4,
+        "rejected_reading_in_day": 4
+      }
+    },
+    "Model A": {
+      "filters": {
+        "model": "Model A"
+      },
+      "measures": {
+        "Vehicle-days": 900,
+        "Trusted vehicle-days": 881,
+        "Reporting-affected vehicle-days": 19,
+        "Held vehicle-days": 9,
+        "Exception-bearing vehicle-days": 19,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": 20,
+        "Accepted readings in selection": 5272,
+        "Linked rejects in selection": 3,
+        "Held readings in selection": 54,
+        "Reporting coverage": "0.9788888888888888888888888889"
+      },
+      "cards": {
+        "Vehicle-days excluded": "19",
+        "Held for review": "9",
+        "Too few readings": "2",
+        "No telemetry": "8",
+        "Reportable share": "97.9%"
+      },
+      "review_table_rows": 19,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "conflicting_timestamp": 3,
+        "insufficient_readings": 2,
+        "missing_telemetry": 8,
+        "odometer_decreased": 3,
+        "rejected_reading_in_day": 3
+      },
+      "issue_occurrences_by_code": {
+        "conflicting_timestamp": 3,
+        "insufficient_readings": 2,
+        "missing_telemetry": 8,
+        "odometer_decreased": 4,
+        "rejected_reading_in_day": 3
+      }
+    },
+    "Model B": {
+      "filters": {
+        "model": "Model B"
+      },
+      "measures": {
+        "Vehicle-days": 660,
+        "Trusted vehicle-days": 645,
+        "Reporting-affected vehicle-days": 15,
+        "Held vehicle-days": 7,
+        "Exception-bearing vehicle-days": 15,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": 18,
+        "Accepted readings in selection": 3849,
+        "Linked rejects in selection": 4,
+        "Held readings in selection": 41,
+        "Reporting coverage": "0.9772727272727272727272727273"
+      },
+      "cards": {
+        "Vehicle-days excluded": "15",
+        "Held for review": "7",
+        "Too few readings": "3",
+        "No telemetry": "5",
+        "Reportable share": "97.7%"
+      },
+      "review_table_rows": 15,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "conflicting_timestamp": 3,
+        "insufficient_readings": 3,
+        "missing_telemetry": 5,
+        "odometer_decreased": 2,
+        "rejected_reading_in_day": 2
+      },
+      "issue_occurrences_by_code": {
+        "conflicting_timestamp": 3,
+        "insufficient_readings": 3,
+        "missing_telemetry": 5,
+        "odometer_decreased": 3,
+        "rejected_reading_in_day": 4
+      }
+    },
+    "Model C": {
+      "filters": {
+        "model": "Model C"
+      },
+      "measures": {
+        "Vehicle-days": 240,
+        "Trusted vehicle-days": 232,
+        "Reporting-affected vehicle-days": 8,
+        "Held vehicle-days": 2,
+        "Exception-bearing vehicle-days": 8,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": 8,
+        "Accepted readings in selection": 1387,
+        "Linked rejects in selection": 1,
+        "Held readings in selection": 11,
+        "Reporting coverage": "0.9666666666666666666666666667"
+      },
+      "cards": {
+        "Vehicle-days excluded": "8",
+        "Held for review": "2",
+        "Too few readings": "3",
+        "No telemetry": "3",
+        "Reportable share": "96.7%"
+      },
+      "review_table_rows": 8,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "insufficient_readings": 3,
+        "missing_telemetry": 3,
+        "odometer_decreased": 1,
+        "rejected_reading_in_day": 1
+      },
+      "issue_occurrences_by_code": {
+        "insufficient_readings": 3,
+        "missing_telemetry": 3,
+        "odometer_decreased": 1,
+        "rejected_reading_in_day": 1
+      }
+    },
+    "Unknown depot": {
+      "filters": {
+        "depot_name": "Unknown depot"
+      },
+      "measures": {
+        "Vehicle-days": 5,
+        "Trusted vehicle-days": 4,
+        "Reporting-affected vehicle-days": 1,
+        "Held vehicle-days": null,
+        "Exception-bearing vehicle-days": 5,
+        "Registry-exception vehicle-days": 5,
+        "Issue occurrences": 6,
+        "Accepted readings in selection": 9,
+        "Linked rejects in selection": 0,
+        "Held readings in selection": 0,
+        "Reporting coverage": "0.8"
+      },
+      "cards": {
+        "Vehicle-days excluded": "1",
+        "Held for review": "BLANK",
+        "Too few readings": "1",
+        "No telemetry": "BLANK",
+        "Reportable share": "80.0%"
+      },
+      "review_table_rows": 1,
+      "registry_table_rows": 4,
+      "affected_primary_cause_counts": {
+        "insufficient_readings": 1
+      },
+      "issue_occurrences_by_code": {
+        "insufficient_readings": 1,
+        "unregistered_vehicle": 5
+      }
+    },
+    "Unknown model": {
+      "filters": {
+        "model": "Unknown model"
+      },
+      "measures": {
+        "Vehicle-days": 5,
+        "Trusted vehicle-days": 4,
+        "Reporting-affected vehicle-days": 1,
+        "Held vehicle-days": null,
+        "Exception-bearing vehicle-days": 5,
+        "Registry-exception vehicle-days": 5,
+        "Issue occurrences": 6,
+        "Accepted readings in selection": 9,
+        "Linked rejects in selection": 0,
+        "Held readings in selection": 0,
+        "Reporting coverage": "0.8"
+      },
+      "cards": {
+        "Vehicle-days excluded": "1",
+        "Held for review": "BLANK",
+        "Too few readings": "1",
+        "No telemetry": "BLANK",
+        "Reportable share": "80.0%"
+      },
+      "review_table_rows": 1,
+      "registry_table_rows": 4,
+      "affected_primary_cause_counts": {
+        "insufficient_readings": 1
+      },
+      "issue_occurrences_by_code": {
+        "insufficient_readings": 1,
+        "unregistered_vehicle": 5
+      }
+    },
+    "trusted (filter context)": {
+      "filters": {
+        "distance_status": "trusted"
+      },
+      "measures": {
+        "Vehicle-days": 1762,
+        "Trusted vehicle-days": 1762,
+        "Reporting-affected vehicle-days": null,
+        "Held vehicle-days": null,
+        "Exception-bearing vehicle-days": 4,
+        "Registry-exception vehicle-days": 4,
+        "Issue occurrences": 4,
+        "Accepted readings in selection": 10508,
+        "Linked rejects in selection": 0,
+        "Held readings in selection": 0,
+        "Reporting coverage": "1"
+      },
+      "cards": {
+        "Vehicle-days excluded": "BLANK",
+        "Held for review": "BLANK",
+        "Too few readings": "BLANK",
+        "No telemetry": "BLANK",
+        "Reportable share": "100.0%"
+      },
+      "review_table_rows": 0,
+      "registry_table_rows": 4,
+      "affected_primary_cause_counts": {},
+      "issue_occurrences_by_code": {
+        "unregistered_vehicle": 4
+      }
+    },
+    "untrusted (filter context)": {
+      "filters": {
+        "distance_status": "untrusted"
+      },
+      "measures": {
+        "Vehicle-days": 18,
+        "Trusted vehicle-days": 0,
+        "Reporting-affected vehicle-days": 18,
+        "Held vehicle-days": 18,
+        "Exception-bearing vehicle-days": 18,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": 22,
+        "Accepted readings in selection": 0,
+        "Linked rejects in selection": 8,
+        "Held readings in selection": 106,
+        "Reporting coverage": "0"
+      },
+      "cards": {
+        "Vehicle-days excluded": "18",
+        "Held for review": "18",
+        "Too few readings": "BLANK",
+        "No telemetry": "BLANK",
+        "Reportable share": "0.0%"
+      },
+      "review_table_rows": 18,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "conflicting_timestamp": 6,
+        "odometer_decreased": 6,
+        "rejected_reading_in_day": 6
+      },
+      "issue_occurrences_by_code": {
+        "conflicting_timestamp": 6,
+        "odometer_decreased": 8,
+        "rejected_reading_in_day": 8
+      }
+    },
+    "No data 2026-10-11": {
+      "filters": {
+        "event_date": "2026-10-11"
+      },
+      "measures": {
+        "Vehicle-days": null,
+        "Trusted vehicle-days": 0,
+        "Reporting-affected vehicle-days": null,
+        "Held vehicle-days": null,
+        "Exception-bearing vehicle-days": null,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": null,
+        "Accepted readings in selection": null,
+        "Linked rejects in selection": null,
+        "Held readings in selection": null,
+        "Reporting coverage": null
+      },
+      "cards": {
+        "Vehicle-days excluded": "BLANK",
+        "Held for review": "BLANK",
+        "Too few readings": "BLANK",
+        "No telemetry": "BLANK",
+        "Reportable share": "BLANK"
+      },
+      "review_table_rows": 0,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {},
+      "issue_occurrences_by_code": {}
+    },
+    "Too few readings": {
+      "filters": {
+        "distance_status": "insufficient_readings"
+      },
+      "measures": {
+        "Vehicle-days": 9,
+        "Trusted vehicle-days": 0,
+        "Reporting-affected vehicle-days": 9,
+        "Held vehicle-days": null,
+        "Exception-bearing vehicle-days": 9,
+        "Registry-exception vehicle-days": 1,
+        "Issue occurrences": 10,
+        "Accepted readings in selection": 9,
+        "Linked rejects in selection": 0,
+        "Held readings in selection": 0,
+        "Reporting coverage": "0"
+      },
+      "cards": {
+        "Vehicle-days excluded": "9",
+        "Held for review": "BLANK",
+        "Too few readings": "9",
+        "No telemetry": "BLANK",
+        "Reportable share": "0.0%"
+      },
+      "review_table_rows": 9,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "insufficient_readings": 9
+      },
+      "issue_occurrences_by_code": {
+        "insufficient_readings": 9,
+        "unregistered_vehicle": 1
+      }
+    },
+    "No telemetry": {
+      "filters": {
+        "distance_status": "missing_telemetry"
+      },
+      "measures": {
+        "Vehicle-days": 16,
+        "Trusted vehicle-days": 0,
+        "Reporting-affected vehicle-days": 16,
+        "Held vehicle-days": null,
+        "Exception-bearing vehicle-days": 16,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": 16,
+        "Accepted readings in selection": 0,
+        "Linked rejects in selection": 0,
+        "Held readings in selection": 0,
+        "Reporting coverage": "0"
+      },
+      "cards": {
+        "Vehicle-days excluded": "16",
+        "Held for review": "BLANK",
+        "Too few readings": "BLANK",
+        "No telemetry": "16",
+        "Reportable share": "0.0%"
+      },
+      "review_table_rows": 16,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "missing_telemetry": 16
+      },
+      "issue_occurrences_by_code": {
+        "missing_telemetry": 16
+      }
+    },
+    "Conflicting readings primary": {
+      "filters": {
+        "primary_issue": "conflicting_timestamp"
+      },
+      "measures": {
+        "Vehicle-days": 6,
+        "Trusted vehicle-days": 0,
+        "Reporting-affected vehicle-days": 6,
+        "Held vehicle-days": 6,
+        "Exception-bearing vehicle-days": 6,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": 8,
+        "Accepted readings in selection": 0,
+        "Linked rejects in selection": 0,
+        "Held readings in selection": 42,
+        "Reporting coverage": "0"
+      },
+      "cards": {
+        "Vehicle-days excluded": "6",
+        "Held for review": "6",
+        "Too few readings": "BLANK",
+        "No telemetry": "BLANK",
+        "Reportable share": "0.0%"
+      },
+      "review_table_rows": 6,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "conflicting_timestamp": 6
+      },
+      "issue_occurrences_by_code": {
+        "conflicting_timestamp": 6,
+        "odometer_decreased": 2
+      }
+    },
+    "Odometer decrease primary": {
+      "filters": {
+        "primary_issue": "odometer_decreased"
+      },
+      "measures": {
+        "Vehicle-days": 6,
+        "Trusted vehicle-days": 0,
+        "Reporting-affected vehicle-days": 6,
+        "Held vehicle-days": 6,
+        "Exception-bearing vehicle-days": 6,
+        "Registry-exception vehicle-days": null,
+        "Issue occurrences": 8,
+        "Accepted readings in selection": 0,
+        "Linked rejects in selection": 2,
+        "Held readings in selection": 34,
+        "Reporting coverage": "0"
+      },
+      "cards": {
+        "Vehicle-days excluded": "6",
+        "Held for review": "6",
+        "Too few readings": "BLANK",
+        "No telemetry": "BLANK",
+        "Reportable share": "0.0%"
+      },
+      "review_table_rows": 6,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "odometer_decreased": 6
+      },
+      "issue_occurrences_by_code": {
+        "odometer_decreased": 6,
+        "rejected_reading_in_day": 2
+      }
+    },
+    "Registry primary": {
+      "filters": {
+        "primary_issue": "unregistered_vehicle"
+      },
+      "measures": {
+        "Vehicle-days": 4,
+        "Trusted vehicle-days": 4,
+        "Reporting-affected vehicle-days": null,
+        "Held vehicle-days": null,
+        "Exception-bearing vehicle-days": 4,
+        "Registry-exception vehicle-days": 4,
+        "Issue occurrences": 4,
+        "Accepted readings in selection": 8,
+        "Linked rejects in selection": 0,
+        "Held readings in selection": 0,
+        "Reporting coverage": "1"
+      },
+      "cards": {
+        "Vehicle-days excluded": "BLANK",
+        "Held for review": "BLANK",
+        "Too few readings": "BLANK",
+        "No telemetry": "BLANK",
+        "Reportable share": "100.0%"
+      },
+      "review_table_rows": 0,
+      "registry_table_rows": 4,
+      "affected_primary_cause_counts": {},
+      "issue_occurrences_by_code": {
+        "unregistered_vehicle": 4
+      }
+    },
+    "UNREG002 August 22": {
+      "filters": {
+        "vehicle_id": "UNREG002",
+        "event_date": "2026-08-22"
+      },
+      "measures": {
+        "Vehicle-days": 1,
+        "Trusted vehicle-days": 0,
+        "Reporting-affected vehicle-days": 1,
+        "Held vehicle-days": null,
+        "Exception-bearing vehicle-days": 1,
+        "Registry-exception vehicle-days": 1,
+        "Issue occurrences": 2,
+        "Accepted readings in selection": 1,
+        "Linked rejects in selection": 0,
+        "Held readings in selection": 0,
+        "Reporting coverage": "0"
+      },
+      "cards": {
+        "Vehicle-days excluded": "1",
+        "Held for review": "BLANK",
+        "Too few readings": "1",
+        "No telemetry": "BLANK",
+        "Reportable share": "0.0%"
+      },
+      "review_table_rows": 1,
+      "registry_table_rows": 0,
+      "affected_primary_cause_counts": {
+        "insufficient_readings": 1
+      },
+      "issue_occurrences_by_code": {
+        "insufficient_readings": 1,
+        "unregistered_vehicle": 1
+      }
+    }
+  },
+  "record_audit_all_selections": {
+    "Source readings": 10652,
+    "Accepted": 10517,
+    "Rejected": 19,
+    "Held": 106,
+    "Residual": 10,
+    "Quarantined: held + rejected": 125,
+    "Rejected \u00b7 linked to a day": 8,
+    "Rejected \u00b7 no day link": 11
+  },
+  "reconciliation": {
+    "bronze_record_count": 10652,
+    "accepted_record_count": 10517,
+    "rejected_record_count": 19,
+    "held_record_count": 106,
+    "quarantine_record_count": 125,
+    "linked_reject_count": 8,
+    "unlinked_reject_count": 11,
+    "removed_duplicate_remainder": 10
+  },
+  "snapshot_relationship_note": "The reconciliation table has no relationship; quality date/depot/model/status/primary-cause selections do not change the eight audit cards.",
+  "definition_note": "Expectations use the reviewed report measures and visual filters; public Exceptions partitions substitute connection parameters without changing those measures or filters."
+}

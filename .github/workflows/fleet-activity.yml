@@ -25,11 +25,11 @@ jobs:
           distribution: temurin
           java-version: '17'
       - run: python -m pip install -r fleet_activity/requirements.txt
-      - run: python -m pytest fleet_activity/tests -q
       - run: python fleet_activity/generate_sources.py
       - run: python fleet_activity/run_notebook.py
         env:
           FLEET_OFFLINE: '1'
+      - run: python -m pytest fleet_activity/tests -q
       - name: Compare fresh output with published evidence
         run: |
           python - <<'PY'

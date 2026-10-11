@@ -1,0 +1,117 @@
+table gold_record_reconciliation
+	lineageTag: 0eb30457-05c1-43d6-8020-5789070a4ec7
+
+	measure 'Bronze records' = SUM(gold_record_reconciliation[bronze_record_count])
+		formatString: #,0
+		lineageTag: 1bd63eeb-cebc-463e-b1b9-855219308aef
+
+	measure 'Accepted records' = SUM(gold_record_reconciliation[accepted_record_count])
+		formatString: #,0
+		lineageTag: 69a7b4ec-ba8c-4561-a631-f7998a7514d6
+
+	measure 'Rejected records' = SUM(gold_record_reconciliation[rejected_record_count])
+		formatString: #,0
+		lineageTag: 3804c259-54a8-4c78-aeac-035453583417
+
+	measure 'Held readings, snapshot' = SUM(gold_record_reconciliation[held_record_count])
+		formatString: #,0
+		lineageTag: 3e3268c0-c954-4bce-a66b-d49cd40af88a
+
+	measure 'Quarantine records' = SUM(gold_record_reconciliation[quarantine_record_count])
+		formatString: #,0
+		lineageTag: bdb74d27-87c3-48a7-b4dd-4e0d9699029b
+
+	measure 'Linked rejects, snapshot' = SUM(gold_record_reconciliation[linked_reject_count])
+		formatString: #,0
+		lineageTag: 6934bc07-4e16-41a3-9b4e-96db2890da7c
+
+	measure 'Unlinked rejects, snapshot' = SUM(gold_record_reconciliation[unlinked_reject_count])
+		formatString: #,0
+		lineageTag: a9fabbdb-d0f5-430c-9536-db89b979888e
+
+	measure 'Remainder (expected removed duplicates)' = SUM(gold_record_reconciliation[removed_duplicate_remainder])
+		formatString: #,0
+		lineageTag: bb7ba1ca-3ece-449a-83b0-1be9270727c6
+
+	column bronze_record_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 26c79d47-5183-4321-8400-4575915f6f03
+		summarizeBy: sum
+		sourceColumn: bronze_record_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column accepted_record_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 40b89d6a-9943-4843-8fba-89ab6f5db883
+		summarizeBy: sum
+		sourceColumn: accepted_record_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column rejected_record_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ae0b105-4265-43a4-a979-bb316f01d520
+		summarizeBy: sum
+		sourceColumn: rejected_record_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column held_record_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 15d1e893-c255-4cd6-9da1-f73feda17583
+		summarizeBy: sum
+		sourceColumn: held_record_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarantine_record_count
+		dataType: int64
+		formatString: 0
+		lineageTag: e2385a7d-e838-458f-9eb7-485ad3cc867f
+		summarizeBy: sum
+		sourceColumn: quarantine_record_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column linked_reject_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e7bf397-d98f-425c-8e56-602a8fa876e8
+		summarizeBy: sum
+		sourceColumn: linked_reject_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column unlinked_reject_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 6bd982c0-c787-455f-8e63-7fd8449ef538
+		summarizeBy: sum
+		sourceColumn: unlinked_reject_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column removed_duplicate_remainder
+		dataType: int64
+		formatString: 0
+		lineageTag: 54758c7f-985e-48ca-9c9b-e590e5c7d303
+		summarizeBy: sum
+		sourceColumn: removed_duplicate_remainder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_record_reconciliation = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs(DatabricksHost, DatabricksHttpPath, [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", Protocol=null]),
+				    ev_telematics_Database = Source{[Name="ev_telematics",Kind="Database"]}[Data],
+				    fleet_activity_demo_20260910_Schema = ev_telematics_Database{[Name="fleet_activity_demo_20260910",Kind="Schema"]}[Data],
+				    gold_record_reconciliation_Table = fleet_activity_demo_20260910_Schema{[Name="gold_record_reconciliation",Kind="Table"]}[Data]
+				in
+				    gold_record_reconciliation_Table

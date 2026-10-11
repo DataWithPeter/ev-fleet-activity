@@ -7,7 +7,7 @@ schedule, concurrency, run history and the scheduled Gold task's proof output.
 The daily trigger has fired successfully. A later user screenshot showed
 job-level Success and Failure email enabled. Success-email delivery was confirmed on 13 September; failure-email delivery remains untested.
 
-## What the current notebooks support
+## September baseline notebook support
 
 The repository notebooks were inspected for this review:
 
@@ -29,7 +29,7 @@ and Delta history may change. The scheduled Gold output confirmed the fixed
 period, saved weather mode and unchanged business CSV hash. This review did
 not export and compare every cloud source cell against the repository.
 
-## Verified configuration
+## Configuration verified in September
 
 Notebook paths below are relative to the job owner's Databricks user workspace folder.
 All tasks use Workspace sources, not a Git checkout.
@@ -133,3 +133,15 @@ returning to and reloading the graph; it did not change the recorded run result.
 No job changes, new runs, pipeline/model edits, commit or push were made.
 Workspace URLs, organization IDs and private notification addresses are
 omitted from this record. The September 13 follow-up is based on supplied screenshots, not a new live configuration inspection.
+
+## Expanded manual replay — 11 October 2026
+
+Manual run `250966450620707` completed successfully. Runtime evidence was verified at 05:43 UTC on 11 October; all four tasks succeeded and total duration was 4m 22s. Bronze took 1m 15s, Silver 1m 15s, Gold activity 45s and Gold quality 1m 3s. This records the observed manual run, not a new certification of all settings in the historical configuration section above.
+
+The executed Gold proof reports the fixed August period, 10,652 Bronze records, 1,805 Gold activity rows, 125 quarantined records and business SHA-256 `748ecf0d000032ea963e16567d3d63b187014be881780d815283cba0fb30dfea`. Quality reports 1,805 day rows, 52 issue rows and one reconciliation row. There are 1,762 trusted, 18 untrusted, 9 insufficient and 16 missing days.
+
+Record reconciliation is `10,652 = 10,517 accepted + 19 rejected + 106 held + 10 residual`. Quarantine is `19 + 106 = 125`, and rejected records split into 8 linked and 11 unlinked. The remainder is not an independent deduplication proof. The separate local source recount found ten exact duplicates.
+
+The run used the reviewed expanded preparation and proof changes. Gold quality retained the live polished narrative and its preview of days with rejected or held records. No distance business rule changed. Local repeat runs matched the same expanded business hash; the default baseline retained its original hash and passed its regression tests separately.
+
+Pipeline completion does not establish that either Power BI import or the native dashboard refreshed. Those checks require separate web evidence. Power BI Service verification on 11 October confirmed Fleet Activity's completed refresh, 97.6% trusted coverage, 18 untrusted, 9 insufficient and 16 missing days, with Model C present. Owner-supplied Exceptions and Record audit screenshots confirmed the expanded card values and clean headers with all slicers set to All. Slicer interactions and Reset remain unverified; no Desktop refresh, synchronization or republish was performed. See [expanded web checks](../power_bi/validation_expanded_august_v1.json). The report verification work does not require a Desktop refresh, synchronization or republish. Historical screenshots, baseline evidence and September schedule/notification observations remain preserved.

@@ -1,0 +1,78 @@
+{
+  "checked_at_utc": "2026-10-11T06:11:04.365286+00:00",
+  "status": "ISOLATED_INTEGRATION_TESTS_PASSED",
+  "runs": {
+    "baseline": {
+      "execution": {
+        "state": "succeeded",
+        "started_at": "2026-10-11T06:05:40.435474+00:00",
+        "completed": [
+          "01_bronze_ingestion",
+          "02_silver_cleaning",
+          "03_gold_activity",
+          "04_gold_quality"
+        ],
+        "current_notebook": "04_gold_quality",
+        "finished_at": "2026-10-11T06:07:40.511710+00:00"
+      },
+      "business_output_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c",
+      "csv_sha256": "766345118556c0b8901c8fbed8998a143c7741910c9faac6daade370e532c44c",
+      "gold_rows": 721,
+      "bronze_rows": 4316,
+      "status_counts": {
+        "missing_telemetry": 1,
+        "insufficient_readings": 1,
+        "trusted": 716,
+        "untrusted": 3
+      },
+      "spark_version": "4.1.0",
+      "quality_issue_reconciliation_rows": [
+        721,
+        6,
+        1
+      ],
+      "tests_passed": 62,
+      "pytest_summary": "62 passed in 99.33s (0:01:39)"
+    },
+    "expanded": {
+      "execution": {
+        "state": "succeeded",
+        "started_at": "2026-10-11T06:05:42.845907+00:00",
+        "completed": [
+          "01_bronze_ingestion",
+          "02_silver_cleaning",
+          "03_gold_activity",
+          "04_gold_quality"
+        ],
+        "current_notebook": "04_gold_quality",
+        "finished_at": "2026-10-11T06:07:40.708510+00:00"
+      },
+      "business_output_sha256": "748ecf0d000032ea963e16567d3d63b187014be881780d815283cba0fb30dfea",
+      "csv_sha256": "748ecf0d000032ea963e16567d3d63b187014be881780d815283cba0fb30dfea",
+      "gold_rows": 1805,
+      "bronze_rows": 10652,
+      "status_counts": {
+        "insufficient_readings": 9,
+        "missing_telemetry": 16,
+        "trusted": 1762,
+        "untrusted": 18
+      },
+      "spark_version": "4.1.0",
+      "quality_issue_reconciliation_rows": [
+        1805,
+        52,
+        1
+      ],
+      "tests_passed": 23,
+      "pytest_summary": "23 passed in 24.65s"
+    }
+  },
+  "static_checks_passed": 19,
+  "protected_files_unchanged": 126,
+  "scope": "Fresh integrated source: polished 04 explanations/preview with learning notes retained, expanded R3 generation/proof, parameterized Exceptions report definitions, baseline CI order correction.",
+  "limitations": [
+    "Local macOS Spark tests; GitHub Linux CI is a separate run.",
+    "Static report definition checks do not execute DAX or certify UI interaction behavior.",
+    "Pipeline execution was limited to isolated copies."
+  ]
+}

@@ -1,4 +1,4 @@
-"""Run Bronze, Silver and Gold in separate kernels and preserve their outputs."""
+"""Run Bronze, Silver, Gold activity and Gold quality in separate kernels and preserve outputs."""
 
 import json
 import os
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     status_path = output_dir / "execution_status.json"
     status_path.write_text(json.dumps(status, indent=2))
     try:
-        for name in ["01_bronze_ingestion", "02_silver_cleaning", "03_gold_activity"]:
+        for name in ["01_bronze_ingestion", "02_silver_cleaning", "03_gold_activity", "04_gold_quality"]:
             status["current_notebook"] = name
             status_path.write_text(json.dumps(status, indent=2))
             notebook = nbformat.read(project_dir / "notebooks" / f"{name}.ipynb", as_version=4)
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     finally:
         status["finished_at"] = datetime.now(timezone.utc).isoformat()
         status_path.write_text(json.dumps(status, indent=2))
-    print("Bronze, Silver and Gold passed in separate kernels.")
+    print("Bronze, Silver, Gold activity and Gold quality passed in separate kernels.")

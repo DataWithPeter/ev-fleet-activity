@@ -1,0 +1,95 @@
+{
+  "scenario": "expanded_august_v1",
+  "seed": 42,
+  "start_date": "2026-08-01",
+  "end_date": "2026-08-30",
+  "reading_hours": [
+    8,
+    10,
+    12,
+    14,
+    16,
+    18
+  ],
+  "vehicle_multiplier_range": [
+    0.8,
+    1.2
+  ],
+  "initial_odometer_km": 10000,
+  "odometer_spacing_km": 1000,
+  "depots": [
+    [
+      "CHI",
+      "Chicago",
+      41.88,
+      -87.63
+    ],
+    [
+      "DAL",
+      "Dallas",
+      32.78,
+      -96.8
+    ]
+  ],
+  "fleet_groups": [
+    [
+      1,
+      18,
+      "Model A",
+      "CHI"
+    ],
+    [
+      19,
+      26,
+      "Model B",
+      "CHI"
+    ],
+    [
+      27,
+      30,
+      "Model C",
+      "CHI"
+    ],
+    [
+      31,
+      42,
+      "Model A",
+      "DAL"
+    ],
+    [
+      43,
+      56,
+      "Model B",
+      "DAL"
+    ],
+    [
+      57,
+      60,
+      "Model C",
+      "DAL"
+    ]
+  ],
+  "profiles": {
+    "Model A": {
+      "weekday_probability": 0.9,
+      "weekend_probability": 0.15,
+      "low_km": 8,
+      "high_km": 22
+    },
+    "Model B": {
+      "weekday_probability": 0.85,
+      "weekend_probability": 0.85,
+      "low_km": 5,
+      "high_km": 18
+    },
+    "Model C": {
+      "weekday_probability": 0.25,
+      "weekend_probability": 0.1,
+      "low_km": 2,
+      "high_km": 10
+    }
+  },
+  "events_file": "events.csv",
+  "weather": "Unchanged saved real CHI/DAL responses for2026-08-01 through2026-08-30; no fetch",
+  "interpretation": "Synthetic activity independent of weather; partial readings cover08:00\u201314:00 only."
+}

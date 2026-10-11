@@ -1,0 +1,8 @@
+-- Approved display-only mapping columns; raw fields remain unchanged.
+-- SWITCH maps known codes; unknown codes stay visible. BLANK primary issue means No issue.
+
+primary_issue_display =
+SWITCH(gold_vehicle_day_quality[primary_issue], "conflicting_timestamp", "Conflicting readings", "odometer_decreased", "Odometer decreased", "rejected_reading_in_day", "Rejected reading", "missing_telemetry", "No telemetry", "insufficient_readings", "Too few readings", "unregistered_vehicle", "Not in fleet roster", BLANK(), "No issue", gold_vehicle_day_quality[primary_issue])
+
+distance_status_display =
+SWITCH(gold_vehicle_day_quality[distance_status], "trusted", "Reportable", "untrusted", "Held for review", "insufficient_readings", "Too few readings", "missing_telemetry", "No telemetry", gold_vehicle_day_quality[distance_status])
