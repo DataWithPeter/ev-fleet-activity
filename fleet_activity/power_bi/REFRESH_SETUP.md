@@ -48,7 +48,7 @@ These are focused public UI checks, not a complete rerun of the earlier interact
 
 1. The saved Windows PBIP/TMDL has been synchronized. This repository uses required host/path parameters instead of the original warehouse identifiers. Set them and authenticate before refreshing a clone.
 2. The first scheduled Service refresh is confirmed for 13 September. Continue to inspect Refresh history when investigating stale results.
-3. After a Gold data change, inspect refresh history and the public report. The current public URL is in [POWER_BI.md](../POWER_BI.md). Footer publication and focused interaction checks passed above; broader interaction coverage and propagation of a future Gold data change remain unverified.
+3. After a Gold data change, inspect refresh history and the public report. The current public URL is in [POWER_BI.md](../POWER_BI.md). Footer publication and focused baseline interaction checks passed above. Expanded data propagation and anonymous access were verified on 11 October; expanded slicer and Reset interactions remain unverified. See [expanded web verification](validation_expanded_august_v1.json).
 
 Obtain connection details from SQL Warehouses → the warehouse → Connection details. Authenticate with an authorized Databricks account in Desktop and Service, configure the semantic model's cloud connection, run Refresh now, and inspect Refresh history for Completed before relying on the schedule. This documentation omits private workspace identifiers and notification addresses.
 

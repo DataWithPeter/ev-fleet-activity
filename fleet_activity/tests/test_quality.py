@@ -1,4 +1,4 @@
-"""Checkpoint B: execute notebook cells against saved demo and adversarial fixtures."""
+"""Validate Gold quality notebook cells against baseline and adversarial fixtures."""
 from datetime import date
 from pathlib import Path
 

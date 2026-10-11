@@ -69,7 +69,7 @@
   },
   "static_checks_passed": 19,
   "protected_files_unchanged": 126,
-  "scope": "Fresh integrated source: polished 04 explanations/preview with learning notes retained, expanded R3 generation/proof, parameterized Exceptions report definitions, baseline CI order correction.",
+  "scope": "Fresh integrated source: 04 quality notebook and exception preview, expanded R3 generation/proof, parameterized Exceptions report definitions, baseline CI order correction.",
   "limitations": [
     "Local macOS Spark tests; GitHub Linux CI is a separate run.",
     "Static report definition checks do not execute DAX or certify UI interaction behavior.",

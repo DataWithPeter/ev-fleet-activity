@@ -77,6 +77,6 @@ Read it as: **trusted zero-distance days divided by all trusted days**.
 
 `Vehicles driving` counts trusted vehicle-days with distance above zero. In the daily chart that equals vehicles driving on that day. Across a month it counts **driving vehicle-days**, not distinct vehicles. The Vehicles page uses that full label.
 
-The approved simplification removes `Idle days per vehicle` and `Most idle vehicle`. Their cards now show **Driving vehicle-days** and **Idle days %** using existing measures. The native vehicle leaderboard still shows each vehicle's idle days; no virtual-table, iterator, TOPN or text-concatenation ranking measure is needed.
+The Vehicles page shows **Driving vehicle-days** and **Idle days %** using the model's existing measures. The native vehicle leaderboard still shows each vehicle's idle days; no virtual-table, iterator, TOPN or text-concatenation ranking measure is needed.
 
 The saved model uses **TMDL** in `Fleet Activity.SemanticModel/definition/`. `MEASURES.dax` is a readable reference copy, not a second executable model.

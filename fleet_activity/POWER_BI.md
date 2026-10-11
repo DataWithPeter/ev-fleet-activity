@@ -38,10 +38,16 @@ The CSV remains an offline validation baseline, not the current Power BI source.
 
 Fleet and telemetry are synthetic; weather is real Open-Meteo data. These visuals demonstrate integration, not real fleet behavior or weather effects. The report includes Open-Meteo attribution.
 
-## Current status
+## Fleet Activity source and historical migration
 
 The editable three-page project is in `power_bi/`. It was synchronized from the saved Windows working copy on 12 September. Set `DatabricksHost` and `DatabricksHttpPath` to your own warehouse details in Power Query and authenticate. The template deliberately omits the original workspace identifiers. Catalog/schema navigation uses the demo names above; adapt it if you deploy elsewhere.
 
-The running post-migration Desktop model reconciled to all 721 baseline rows and 14 original fields. This proves the imported snapshot matches; it does not prove a future refresh or every report interaction. See [setup](power_bi/README.md), [migration validation](power_bi/migration_validation.json), and [refresh evidence](power_bi/REFRESH_SETUP.md).
+The September post-migration Desktop model reconciled to all 721 baseline rows and 14 original fields. This proves the imported snapshot matches; it does not prove a future refresh or every report interaction. See [setup](power_bi/README.md), [migration validation](power_bi/migration_validation.json), and [refresh evidence](power_bi/REFRESH_SETUP.md).
 
 Public interactive report: [Fleet Activity](https://app.powerbi.com/view?r=eyJrIjoiMzUzYmU0YWEtYzU4NC00NmE1LTk2NmYtZjI4YTViMDhjMjY1IiwidCI6IjhiYmMwZjRiLTVkNWItNGNiMy05ZWM5LTc1MTc0MjRmMzY0ZiJ9&pageName=overview). It is intentionally public and may be indexed by search engines; it contains synthetic fleet/telemetry data and real Open-Meteo weather context.
+
+## Expanded data and Telemetry Exceptions
+
+The current expanded scenario contains 1,805 activity/quality days, 52 issue occurrences and one reconciliation row. The original 721-row baseline remains the local generator default and historical validation fixture.
+
+Fleet Activity imports `gold_daily_vehicle_activity`. The separate [Telemetry Exceptions report](power_bi/telemetry_exceptions/README.md) imports `gold_vehicle_day_quality`, `gold_vehicle_day_issue` and the disconnected `gold_record_reconciliation` snapshot. Both reports' public links and expanded display checks are recorded in [web verification](power_bi/validation_expanded_august_v1.json). Slicer/Reset interactions remain outside that verification scope.

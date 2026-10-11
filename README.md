@@ -102,8 +102,6 @@ The current showcase is entirely in `fleet_activity/`. It is implemented with di
 
 This project demonstrates correctness and integration; it is not a scale benchmark or production deployment.
 
-This is a curated repository with a fresh Git history. It contains the runnable fleet project and its required evidence, without the earlier development repository's unrelated prototypes or private review conversations.
-
 The editable Power BI project uses Databricks Import with connection parameters. A clone needs its own SQL warehouse and OAuth sign-in; the local pipeline and tests run without cloud credentials. See [Power BI setup](fleet_activity/power_bi/README.md).
 
 ## Expanded August demo and telemetry exceptions
